@@ -1,0 +1,73 @@
+<head>
+    <title>{{ site.data.settings.title }}</title>
+    <!-- Basic Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Basic meta and OG tags-->
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="{{ site.data.settings.title }}">
+    <meta itemprop="description" content="{{ site.data.settings.seo.description }}">
+    <meta itemprop="image" content="{{ site.data.settings.url }}/logo.png ">
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="website">
+    <meta name="twitter:site" content="{{ site.data.settings.seo.twitter-site }}">
+    <meta name="twitter:title" content="{{ site.data.settings.title }}" <meta name="twitter:description" content="{{ site.data.settings.seo.description }}">
+    <meta name="twitter:creator" content="{{ site.data.settings.seo.twitter-creator }}">
+    <meta name="twitter:image" content="{{ site.data.settings.url }}/assets/logo.png">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{ site.data.settings.title }}" />
+    <meta property="og:site_name" content="{{ site.data.settings.title }}" />
+    <meta property="og:type" content="{{ site.data.settings.seo.type }}" />
+    <meta property="og:url" content="{{ site.data.settings.url }}" />
+    <meta property="og:image" content="{{ site.data.settings.url }}/assets/logo.png" />
+    <meta property="og:description" content="{{ site.data.settings.seo.description }}" />
+    <link rel="shortcut icon" href="{{ site.data.settings.url }}/favicon.ico" type="image/x-icon">
+    <!-- Frameworks -->
+    <!-- Font Awsome-->
+    <link href="{{ site.data.settings.url }}/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!--Bootstrap -->
+    <link href="{{ site.data.settings.url }}/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom-->
+    <link rel="stylesheet" href="{{ site.data.settings.url }}/css/style.css">
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top" id="scroll_navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button id="ChangeToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <div id="navbar-hamburger">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+                            </div>
+                <div id="navbar-close" class="hidden">
+          <span class="glyphicon glyphicon-remove"></span>
+        </div>
+      </button>
+            <a class="navbar-brand navbar-logo logo-desktop" href="/"><img alt="Brand" src="{{ site.data.settings.url }}/img/logo_text.png"></a>
+            <!-- <a class="navbar-brand navbar-logo logo-mobile" href="/"><img alt="Brand" src="{{ site.data.settings.url }}/img/logo.png"></a> -->
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#work">Work</a>
+                </li>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>

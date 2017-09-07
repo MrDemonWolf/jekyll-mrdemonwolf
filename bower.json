@@ -1,0 +1,21 @@
+{
+  "name": "mrdemonwolf.github.io",
+  "description": "mrdemonwolf.github.io",
+  "main": "gulpfile.js",
+  "authors": [
+    "DemonWolf"
+  ],
+  "license": "BSD-2-Clause",
+  "homepage": "https://github.com/MrDemonWolf/mrdemonwolf.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "https://github.com/FortAwesome/Font-Awesome.git#^4.7.0",
+    "bootstrap": "https://github.com/twbs/bootstrap.git#^3.3.7"
+  }
+}
