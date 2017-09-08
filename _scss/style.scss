@@ -1,4 +1,8 @@
-body {
-    background-color: black;
-}
-    
+@import "_partials/mixins";
+@import "_partials/typography";
+@import "_partials/variables";
+@import "_global/nav";
+@import "_global/footer";
+@import "_global/returntotop";
+@import "_global/social_icons";
+@import "_component/jumbotron";

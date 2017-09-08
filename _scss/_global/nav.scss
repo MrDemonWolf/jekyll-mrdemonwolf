@@ -1,0 +1,93 @@
+/* nav.scss */
+@media (max-width: 768px) {
+    .logo-desktop {
+        display:none;
+    }
+    .logo-mobile {
+        display: block !important;
+    }
+    .navbar-brand {
+        padding: 2px 10px !important;
+    }
+}
+.navbar-logo>img {
+	height: 50px;
+  padding-left: 10px;
+}
+.logo-mobile {
+  display:none;
+}
+.navbar-brand {
+	padding: 2px 2px;
+}
+.navbar-default {
+  background-color: $nav-bgDefault;
+  border-color: $nav-bgHighlight;
+  .navbar-brand {
+    color: $nav-colDefault;
+    &:hover, &:focus {
+      color: $nav-colHighlight; }}
+  .navbar-text {
+    color: $nav-colDefault; }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $nav-colDefault;
+        &:hover,  &:focus {
+          color: $nav-colHighlight; }}
+      @if $nav-dropdown {
+        > .nav-dropdown-menu {
+          background-color: $nav-bgDefault;
+          > li {
+            > a {
+              color: $nav-colDefault;
+              &:hover,  &:focus {
+                color: $nav-colHighlight;
+                background-color: $nav-bgHighlight; }}
+            &.divider {
+              background-color: $nav-bgHighlight;}}}}}
+    @if $nav-dropdown {
+      .open .nav-dropdown-menu > .active {
+        > a, > a:hover, > a:focus {
+          color: $nav-colHighlight;
+          background-color: $nav-bgHighlight; }}}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $nav-colHighlight;
+        background-color: $nav-bgHighlight; }}
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $nav-colHighlight;
+        background-color: $nav-bgHighlight; }}}
+  .navbar-toggle {
+    border-color: $nav-bgHighlight;
+    &:hover, &:focus {
+      background-color: $nav-bgHighlight; }
+    .icon-bar {
+      background-color: $nav-colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $nav-colDefault; }
+  .navbar-link {
+    color: $nav-colDefault;
+    &:hover {
+      color: $nav-colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .nav-dropdown-menu {
+    > li > a {
+      color: $nav-colDefault;
+      &:hover, &:focus {
+        color: $nav-colHighlight; }}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $nav-colHighlight;
+        background-color: $nav-bgHighlight; }}}
+}
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+    margin-bottom: 0.2em;
+}
+#navbar-close {
+    color: $nav-colHighlight;
+    width: 22px;
+    height: 14px;
+}

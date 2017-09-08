@@ -1,0 +1,69 @@
+/* jumbotron.scss */
+.jumbotron {
+	background-color: transparent !important;
+}
+.hero { 
+    text-align: center;
+    color: white;
+    background: url(#{$site-url}/img/hero_bg.jpg) no-repeat bottom center;
+    background-size: cover;
+    height: 100%;
+	padding-top: 8%;
+    padding-bottom: 8%;
+}
+.hero-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+.hero-heading {
+    font-size: 2em;
+}
+.hero-text {
+	color: #ffffff;
+	font-family: $main-font;
+	font-size: 2em;
+	display: inline-block;
+}
+.hero-animate-text {
+	font-family: $main-font;
+	font-size: 2em;
+    flex-wrap: wrap;
+    display: flex;
+	justify-content: center;
+	& span {
+	position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    color: $hero-animate-text;
+    -webkit-animation: animateWord 18s linear infinite 0s;
+    -ms-animation: animateWord 18s linear infinite 0s;
+    animation: animateWord 18s linear infinite 0s;
+	}
+	& > span:nth-child(2) { 
+    -webkit-animation-delay: 3s; 
+    -ms-animation-delay: 3s; 
+    animation-delay: 3s; 
+    color: $hero-animate-text;
+    }
+      & > span:nth-child(3) { 
+        -webkit-animation-delay: 6s; 
+        -ms-animation-delay: 6s; 
+        animation-delay: 6s; 
+        color: $hero-animate-text; 
+    }
+     & > span:nth-child(4) { 
+        -webkit-animation-delay: 9s; 
+        -ms-animation-delay: 9s; 
+        animation-delay: 9s; 
+        color: $hero-animate-text;
+    }
+}
+@-webkit-keyframes animateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); }
+    5% { opacity: 1; -webkit-transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); }
+    20% { opacity: 0; -webkit-transform: translateY(30px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}

@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "font-awesome": "https://github.com/FortAwesome/Font-Awesome.git#^4.7.0",
-    "bootstrap": "https://github.com/twbs/bootstrap.git#^3.3.7"
+    "bootstrap": "https://github.com/twbs/bootstrap.git#^3.3.7",
+    "letteringjs": "https://github.com/davatron5000/Lettering.js.git#^0.7.0"
   }
 }

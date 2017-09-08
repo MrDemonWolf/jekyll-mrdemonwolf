@@ -30,7 +30,14 @@
     <link href="{{ site.data.settings.url }}/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <!-- Custom-->
     <link rel="stylesheet" href="{{ site.data.settings.url }}/css/style.css">
-
+    <!-- Google Analytics -->
+    <script>
+        window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+        ga('create', '{{ site.data.settings.google-analytics-ua }}g', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <!-- Navbar -->
@@ -49,7 +56,7 @@
         </div>
       </button>
             <a class="navbar-brand navbar-logo logo-desktop" href="/"><img alt="Brand" src="{{ site.data.settings.url }}/img/logo_text.png"></a>
-            <!-- <a class="navbar-brand navbar-logo logo-mobile" href="/"><img alt="Brand" src="{{ site.data.settings.url }}/img/logo.png"></a> -->
+            <a class="navbar-brand navbar-logo logo-mobile" href="/"><img alt="Brand" src="{{ site.data.settings.url }}/img/logo.png"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
