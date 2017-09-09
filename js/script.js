@@ -17,3 +17,19 @@ $(document).on('click', '.navbar-collapse.in', function (e) {
         $(this).collapse('hide');
     }
 });
+// Contact us effect for when clicked into the form.
+$('.js-input').keyup(function () {
+    if ($(this).val()) {
+        $(this).addClass('not-empty');
+    } else {
+        $(this).removeClass('not-empty');
+    }
+});
+$(document).ready(function () {
+    //FANCYBOX
+    //https://github.com/fancyapps/fancyBox
+    $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+});

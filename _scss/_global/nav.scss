@@ -91,3 +91,12 @@
     width: 22px;
     height: 14px;
 }
+
+.navbar-default .navbar-nav > li > a {
+  font-family: $main-font;
+  font-size: 1.5em;
+}
+.dropdown-menu > li > a {
+  font-family: $main-font;
+  font-size: 1.5em;
+}

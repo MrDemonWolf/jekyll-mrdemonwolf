@@ -6,3 +6,28 @@
 @import "_global/returntotop";
 @import "_global/social_icons";
 @import "_component/jumbotron";
+@import "_component/about";
+@import "_component/contact";
+
+.img-circle {
+    border-radius: 50%;
+}
+// Page Header
+.page-header {
+  font-family: $main-font;
+}
+
+// Custom spaceings (Fix this)
+.big-content-top {
+	padding-top: 25px;
+}
+.small-content-top {
+	padding-top: 10px;
+}
+.page-header_center {
+	text-align: center;
+}
+// 
+#contact {
+  padding-top: 20px;
+}

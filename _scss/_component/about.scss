@@ -1,0 +1,29 @@
+/* about.scss */
+.illustration {
+    @extend .img-circle;
+    width: 75%;
+    height: 75%;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    background-color: black;}
+.about_text {
+    padding-top: 3em;
+    font-family: $main-font;
+    font-size: 1.5em;
+    font-style: normal;
+    display: flex;
+    justify-content: center; /* align horizontal */
+}
+@media (max-width: 991px) {
+    .about_text {
+        padding-top: 2em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .illustration {
+        width: 40%;
+        height: 40%;
+        float: none;
+        margin: 0 auto;
+    }
+}
