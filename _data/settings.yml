@@ -35,7 +35,7 @@ about: >
 
 #-------------------------------
 # Hero
-menu:
+hero:
 - {name: Streamer}
 - {name: YouTuber}
 - {name: UX Designer}
