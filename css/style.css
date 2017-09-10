@@ -1,5 +1,4 @@
 /* variables.scss */
-/* Dev */
 /* nav.scss */
 @media (max-width: 768px) { .logo-desktop { display: none; }
   .logo-mobile { display: block !important; }
@@ -146,7 +145,7 @@
 /* jumbotron.scss */
 .jumbotron { background-color: transparent !important; }
 
-.hero { text-align: center; color: white; background: url(http://localhost:3000/img/hero_bg.jpg) no-repeat bottom center; background-size: cover; height: 100%; padding-top: 8%; padding-bottom: 8%; }
+.hero { text-align: center; color: white; background: url(https://mrdemonwolf.github.io/img/hero_bg.jpg) no-repeat bottom center; background-size: cover; height: 100%; padding-top: 8%; padding-bottom: 8%; }
 
 .hero-body { display: table-cell; vertical-align: middle; }
 
