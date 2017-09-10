@@ -31,27 +31,27 @@
     display: flex;
 	justify-content: center;
 	& span {
-	position: absolute;
-    opacity: 0;
-    overflow: hidden;
-    color: $hero-animate-text;
-    -webkit-animation: animateWord 18s linear infinite 0s;
-    -ms-animation: animateWord 18s linear infinite 0s;
-    animation: animateWord 18s linear infinite 0s;
+	    position: absolute;
+        opacity: 0;
+        overflow: hidden;
+        color: $hero-animate-text;
+        -webkit-animation: animateWord 18s linear infinite 0s;
+        -ms-animation: animateWord 18s linear infinite 0s;
+        animation: animateWord 18s linear infinite 0s;
 	}
 	& > span:nth-child(2) { 
-    -webkit-animation-delay: 3s; 
-    -ms-animation-delay: 3s; 
-    animation-delay: 3s; 
-    color: $hero-animate-text;
+        -webkit-animation-delay: 3s; 
+        -ms-animation-delay: 3s; 
+        animation-delay: 3s; 
+        color: $hero-animate-text;
     }
-      & > span:nth-child(3) { 
+    & > span:nth-child(3) { 
         -webkit-animation-delay: 6s; 
         -ms-animation-delay: 6s; 
         animation-delay: 6s; 
         color: $hero-animate-text; 
     }
-     & > span:nth-child(4) { 
+    & > span:nth-child(4) { 
         -webkit-animation-delay: 9s; 
         -ms-animation-delay: 9s; 
         animation-delay: 9s; 

@@ -6,9 +6,11 @@
                     <div class="jumbotron">
                         <h1 class="hero-text">DemonWolf is a </h1>
                         <div class="hero-animate-text">
-                            <span>Streamer</span> <span>YouTuber</span> <span>UX Designer</span> <span>Gamer</span>
+                             {% for item in site.data.settings.hero %}
+                            <span><{{ item.name }}</span> 
+                            {% endfor %}
                         </div>
-                    </div><a class="btn btn-primary btn-lg btn-white" href="#" role="button">Learn more</a>
+                    </div><a class="btn btn-primary btn-lg btn-white" href="#contact" role="button">Contact Me</a>
                 </div>
             </div>
         </div>
