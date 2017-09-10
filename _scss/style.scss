@@ -12,11 +12,6 @@
 .img-circle {
     border-radius: 50%;
 }
-// Page Header
-.page-header {
-  font-family: $main-font;
-}
-
 // Custom spaceings (Fix this)
 .big-content-top {
 	padding-top: 25px;
@@ -25,9 +20,21 @@
 	padding-top: 10px;
 }
 .page-header_center {
-	text-align: center;
+  text-align: center;
 }
-// 
+// Center Row
+.row-centered {
+    text-align:center;
+}
+// Center Col
+.col-centered {
+    display:inline-block;
+    float:none;
+    text-align:left;
+    margin-right:-4px;
+}
+
+// #s
 #contact {
   padding-top: 20px;
 }

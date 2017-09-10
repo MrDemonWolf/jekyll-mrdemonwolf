@@ -26,13 +26,11 @@
     <!-- Frameworks -->
     <!-- Font Awsome-->
     <link href="{{ site.data.settings.url }}/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-
     <!--Bootstrap -->
     <link href="{{ site.data.settings.url }}/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <!-- Custom-->
     <link rel="stylesheet" href="{{ site.data.settings.url }}/css/style.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" media="screen">
     <!-- Google Analytics -->
     <script>
         window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
@@ -64,15 +62,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+                {% for item in site.data.settings.menu %}
                 <li>
-                    <a href="#about">About</a>
+                    <a href="{{ item.url }}">{{ item.name }}</a>
                 </li>
-                <li>
-                    <a href="#work">Work</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
+                {% endfor %}
             </ul>
         </div>
     </div>
