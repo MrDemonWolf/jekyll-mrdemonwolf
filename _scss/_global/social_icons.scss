@@ -1,0 +1,122 @@
+.twitter-color {
+	color: $twitter-color;
+	&:hover {
+		color: darken($twitter_color, 10%);
+		transition: all 3s;
+		-webkit-transition: all 3s;
+		-moz-transition: all 3s;
+	}
+}
+.youtube-color {
+	color: $google_plus-color;
+	&:hover {
+		color: darken($google_plus-color, 10%);
+		transition: all 3s;
+		-webkit-transition: all 3s;
+		-moz-transition: all 3s;
+	}
+}
+.google_plus-color {
+	color: $google_plus-color;
+	&:hover {
+		color: darken($google_plus-color, 10%);
+		transition: all 3s;
+		-webkit-transition: all 3s;
+		-moz-transition: all 3s;
+	}
+}
+.twitch-color {
+	color: $twitch-color;
+	&:hover {
+		color: darken($twitch-color, 10%);
+		transition: all 3s;
+		-webkit-transition: all 3s;
+		-moz-transition: all 3s;
+	}
+}
+.github-color {
+	color: $github-color;
+	&:hover {
+		color: darken($github-color, 10%);
+		transition: all 3s;
+		-webkit-transition: all 3s;
+		-moz-transition: all 3s;
+	}
+}
+.facebook-color {
+	color: $facebook-color;
+	&:hover {
+		color: darken($facebook-color, 10%);
+		transition: all 3s;
+		-webkit-transition: all 3s;
+		-moz-transition: all 3s;
+	}
+}
+.spotify-color {
+	color: $spotify-color;
+	&:hover {
+		color: darken($spotify-color, 10%);
+		transition: all 3s;
+		-webkit-transition: all 3s;
+		-moz-transition: all 3s;
+	}
+}
+.behance-color {
+	color: $behance-color;
+	&:hover {
+		color: darken($behance-color, 10%);
+		transition: all 3s;
+		-webkit-transition: all 3s;
+		-moz-transition: all 3s;
+	}
+}
+/* Background */
+.twitter-color_background {
+	background-color: $twitter-color;
+	&:hover {
+		background-color: darken($twitter_color, 10%);
+	}
+}
+.youtube-color_background {
+	background-color: $google_plus-color;
+	&:hover {
+		background-color: darken($google_plus-color, 10%);
+
+	}
+}
+.google-plus-color_background {
+	background-color: $google-plus-color;
+	&:hover {
+		background-color: darken($google-plus-color, 10%);
+	}
+}
+.twitch-color_background {
+	background-color: $twitch-color;
+	&:hover {
+		background-color: darken($twitch-color, 10%);
+	}
+}
+.github-color_background {
+	background-color: $github-color;
+	&:hover {
+		background-color: darken($github-color, 10%);
+	}
+}
+.facebook-color_background {
+	background-color: $facebook-color;
+	&:hover {
+		background-color: darken($facebook-color, 10%);
+	}
+}
+.spotify-color_background {
+	background-color: $spotify-color;
+	&:hover {
+		background-color: darken($spotify-color, 10%);
+	}
+}
+.behance-color_background {
+	background-color: $behance-color;
+	&:hover {
+		background-color: darken($behance-color, 10%);
+	}
+}

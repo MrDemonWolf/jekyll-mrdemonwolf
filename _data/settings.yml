@@ -50,9 +50,9 @@ blurb: >
 # Contact Section
 
 social:
-- {icon: 'twitter', link: 'http://twitter.com/mrdemonwolf'}
-- {icon: 'github', link: 'https://dribbble.com/travisneilson'}
-- {icon: 'behance', link: 'https://www.behance.net/mrdemonwolf'}
-- {icon: 'youtube', link: 'https://www.youtube.com/mrdemonwolf'}
-- {icon: 'twitch', link: 'http://www.twitch.tv/mrdemonwolf/'}
-- {icon: 'spotfity', link: 'http://www.twitch.tv/mrdemonwolf/'}
+- {icon: 'spotify', url: 'https://open.spotify.com/user/demonwolf97/'}
+- {icon: 'twitter', url: 'http://www.twitter.com/mrdemonwolf'}
+- {icon: 'github', url: 'https://www.github.com/travisneilson'}
+- {icon: 'behance', url: 'https://www.behance.net/mrdemonwolf'}
+- {icon: 'youtube', url: 'https://www.youtube.com/mrdemonwolf'}
+- {icon: 'twitch', url: 'https://www.twitch.tv/mrdemonwolf/'}

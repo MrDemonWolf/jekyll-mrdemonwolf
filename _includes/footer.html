@@ -11,12 +11,9 @@
                 </div>
             </div>
             <div class="col-md-4 col-md-offset-2 col-sm-12 footer-social ">
-                <li><a href="https://www.twitter.com/mrdemonwolf"><i class="fa fa-twitter social-icon twitter-color" aria-hidden="true"></i></a></li>
-                <li><a href="https:/www.youtube.com/"><i class="fa fa-youtube-play social-icon youtube-color" aria-hidden="true"></i></a></li>
-                <li><a href="https://"><i class="fa fa-google-plus social-icon google_plus-color" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.twitch.tv/mrdemonwolf/"><i class="fa fa-twitch social-icon twitch-color" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.github.com/mrdemonwolf/"><i class="fa fa-github social-icon github-color" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.github.com/mrdemonwolf/"><i class="fa fa-github social-icon github-color" aria-hidden="true"></i></a></li>
+                 {% for item in site.data.settings.social %}
+                <li><a href="{{ item.url }}"><i class="fa fa-{{ item.icon }} social-icon {{ item.icon }}-color" aria-hidden="true"></i></a></li>
+                 {% endfor %}
             </div>
         </div>
     </div>
