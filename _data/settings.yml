@@ -9,7 +9,7 @@ url: https://mrdemonwolf.github.io
 #url: http://localhost:3000  #Dev URL
 
 menu:
-- {name: About, url: '#about-me'}
+- {name: About, url: '#about'}
 - {name: Work, url: '#work'}
 - {name: Contact, url: '#contact'}
 
