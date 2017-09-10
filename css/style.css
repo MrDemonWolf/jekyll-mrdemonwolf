@@ -1,4 +1,5 @@
 /* variables.scss */
+/* Dev */
 /* nav.scss */
 @media (max-width: 768px) { .logo-desktop { display: none; }
   .logo-mobile { display: block !important; }
@@ -66,8 +67,6 @@
 
 .footer-copyright a:hover { color: white; text-decoration: none; }
 
-.footer-copyright span { display: none; }
-
 .copyright { background-color: #57565c; }
 
 .social-icon { width: 40px; height: 40px; font-size: 24px; background-color: #d4d4d4; color: #fff; text-align: center; margin-right: 10px; padding-top: 8px; border-radius: 50%; }
@@ -75,7 +74,17 @@
 .footer-social li { float: right; display: flex; }
 
 @media (max-width: 768px) { .footer-social { display: flex; justify-content: center; }
-  .footer-copyright { text-align: center; } }
+  .footer-copyright { text-align: center; }
+  .footer-copyright span { display: none; } }
+
+/* returntotop.scss */
+#return-to-top { position: fixed; bottom: 20px; right: 0px; background: black; background: rgba(0, 0, 0, 0.7); width: 35px; height: 35px; display: block; text-decoration: none; display: none; -webkit-transition: all 0.3s linear; -moz-transition: all 0.3s ease; -ms-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
+
+#return-to-top:hover { background: rgba(0, 0, 0, 0.9); }
+
+#return-to-top i { color: #fff; margin: 0; position: relative; left: 12px; top: 8px; font-size: 20px; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -ms-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
+
+#return-to-top:hover { color: #fff; top: 5px; }
 
 .twitter-color { color: #1da1f2; }
 
@@ -145,7 +154,7 @@
 /* jumbotron.scss */
 .jumbotron { background-color: transparent !important; }
 
-.hero { text-align: center; color: white; background: url(https://mrdemonwolf.github.io/img/hero_bg.jpg) no-repeat bottom center; background-size: cover; height: 100%; padding-top: 8%; padding-bottom: 8%; }
+.hero { text-align: center; color: white; background: url(http://localhost:3000/img/hero_bg.jpg) no-repeat bottom center; background-size: cover; height: 100%; }
 
 .hero-body { display: table-cell; vertical-align: middle; }
 
@@ -174,6 +183,12 @@
     -webkit-transform: translateY(30px); }
   80% { opacity: 0; }
   100% { opacity: 0; } }
+
+.btn { border-radius: 5px; margin: 21px 0 0 0; font-weight: 700; }
+
+.btn.btn-cta { background: #fff; color: #666; border-bottom: 4px solid #ddd; }
+
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary:hover { color: #fff; background-color: #204d74; border-color: #ddd; transition: all 500ms; -webkit-transition: all 500ms; -moz-transition: all 500ms; }
 
 /* about.scss */
 .illustration { width: 75%; height: 75%; display: flex; justify-content: center; /* align horizontal */ background-color: black; }
@@ -226,4 +241,8 @@
 
 .col-centered { display: inline-block; float: none; text-align: left; margin-right: -4px; }
 
-#contact { padding-top: 20px; }
+#about { padding-top: 50px; }
+
+#work { padding-top: 50px; }
+
+#contact { padding-top: 50px; }

@@ -8,8 +8,8 @@
     background: url(#{$site-url}/img/hero_bg.jpg) no-repeat bottom center;
     background-size: cover;
     height: 100%;
-	padding-top: 8%;
-    padding-bottom: 8%;
+	// padding-top: 8%;
+    // padding-bottom: 8%;
 }
 .hero-body {
     display: table-cell;
@@ -66,4 +66,22 @@
     20% { opacity: 0; -webkit-transform: translateY(30px); }
     80% { opacity: 0; }
     100% { opacity: 0; }
+}
+.btn {
+    border-radius: 5px;
+    margin: 21px 0 0 0;
+    font-weight:700;
+}
+.btn.btn-cta {
+    background: #fff;
+    color: #666;
+    border-bottom: 4px solid #ddd;
+}
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover , .btn-primary:hover {
+    color: $button_background_effect_font;
+    background-color: $button_background_effect;
+    border-color: #ddd;
+  	transition: all 500ms;
+		-webkit-transition: all 500ms;
+		-moz-transition: all 500ms;
 }

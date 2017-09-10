@@ -11,9 +11,6 @@
 		color: lighten($footer-color_link, 15%);
 		text-decoration: none;
   }
-  span {
-    display: none;
-  }
 }
 .copyright {
   background-color: #57565c;
@@ -44,4 +41,8 @@
     .footer-copyright {
       text-align: center
     }
+    .footer-copyright span {
+      display: none;
+    }
+    
 }
