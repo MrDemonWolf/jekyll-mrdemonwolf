@@ -45,8 +45,8 @@ hero:
 # Work Section
 
 work:
-- {name: 'spotify', picture: 'https://open.spotify.com/user/demonwolf97/'}
-- {name: 'twitter', picture: 'http://www.twitter.com/mrdemonwolf'}
+- {name: 'JSL Hub', picture: 'https://placehold.it/300x320.png'}
+- {name: 'twitter', picture: 'https://placehold.it/300x320.png'}
 #-------------------------------
 # Contact Section
 

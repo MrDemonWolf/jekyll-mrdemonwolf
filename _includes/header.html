@@ -63,12 +63,10 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                {% for item in site.data.settings.menu %}
+            <ul class="nav navbar-nav navbar-right">{% for item in site.data.settings.menu %}
                 <li>
                     <a href="{{ item.url }}">{{ item.name }}</a>
-                </li>
-                {% endfor %}
+                </li>{% endfor %}
             </ul>
         </div>
     </div>
