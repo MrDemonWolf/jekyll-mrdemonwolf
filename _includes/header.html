@@ -10,7 +10,7 @@
     <meta itemprop="description" content="{{ site.data.settings.seo.description }}">
     <meta itemprop="image" content="{{ site.data.settings.url }}/logo.png ">
     <!-- Twitter Card data -->
-    <meta name="twitter:card" content="website">
+    <meta name="twitter:card" content="{{ site.data.settings.seo.type }}">
     <meta name="twitter:site" content="{{ site.data.settings.seo.twitter-site }}">
     <meta name="twitter:title" content="{{ site.data.settings.title }}" <meta name="twitter:description" content="{{ site.data.settings.seo.description }}">
     <meta name="twitter:creator" content="{{ site.data.settings.seo.twitter-creator }}">
@@ -33,7 +33,6 @@
     <!-- Custom-->
     <link rel="stylesheet" href="{{ site.data.settings.url }}/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
-    
     <!-- Google Analytics -->
     <script>
         window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
@@ -59,8 +58,8 @@
           <span class="glyphicon glyphicon-remove"></span>
         </div>
       </button>
-            <a class="navbar-brand navbar-logo logo-desktop" href="/"><img alt="Brand" src="{{ site.data.settings.url }}/img/logo_text.png"></a>
-            <a class="navbar-brand navbar-logo logo-mobile" href="/"><img alt="Brand" src="{{ site.data.settings.url }}/img/logo.png"></a>
+            <a class="navbar-brand navbar-logo logo-desktop" href="/"><img alt="{{ site.data.settings.title }}" src="{{ site.data.settings.url }}/img/logo_text.png"></a>
+            <a class="navbar-brand navbar-logo logo-mobile" href="/"><img alt="{{ site.data.settings.title }}" src="{{ site.data.settings.url }}/img/logo.png"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

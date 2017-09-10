@@ -35,6 +35,7 @@ about: >
 
 #-------------------------------
 # Hero
+
 hero:
 - {name: Streamer}
 - {name: YouTuber}
@@ -43,13 +44,15 @@ hero:
 #-------------------------------
 # Work Section
 
+work:
+- {name: 'spotify', picture: 'https://open.spotify.com/user/demonwolf97/'}
+- {name: 'twitter', picture: 'http://www.twitter.com/mrdemonwolf'}
 #-------------------------------
 # Contact Section
 
 social:
 - {icon: 'spotify', url: 'https://open.spotify.com/user/demonwolf97/'}
 - {icon: 'twitter', url: 'http://www.twitter.com/mrdemonwolf'}
-- {icon: 'github', url: 'https://www.github.com/travisneilson'}
-- {icon: 'behance', url: 'https://www.behance.net/mrdemonwolf'}
+- {icon: 'github', url: 'https://www.github.com/mrdemonwolf'}
 - {icon: 'youtube', url: 'https://www.youtube.com/mrdemonwolf'}
 - {icon: 'twitch', url: 'https://www.twitch.tv/mrdemonwolf/'}
