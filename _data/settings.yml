@@ -43,10 +43,10 @@ hero:
 - {name: Gamer}
 #-------------------------------
 # Work Section
-
+# Make sure you put images in the /img/work/ folder.
 work:
-- {name: 'JSL Hub', picture: 'https://placehold.it/300x320.png'}
-- {name: 'twitter', picture: 'https://placehold.it/300x320.png'}
+- {name: 'JSL Hub', picture: 'jslhub.jpg'}
+- {name: 'Aishazart', picture: 'aishazart.jpg'}
 #-------------------------------
 # Contact Section
 

@@ -1,9 +1,9 @@
 <div class="container" id="work">
     <div class="row">
         <div class='list-group gallery'>{% for item in site.data.settings.work %}
-            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="{{ item.picture }}">
-                    <img class="img-responsive" alt="{{ item.name }} Project" src="{{ item.picture }}" />
+            <div class='col-xs-12 col-md-4'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="{{ site.data.settings.url }}/img/work/{{ item.picture }}">
+                    <img class="img-responsive" alt="{{ item.name }} Project" src="{{ site.data.settings.url }}/img/work/{{ item.picture }}" />
                     <div class='text-right'>
                         <small class='text-muted'>{{ item.name }}</small>
                     </div>
