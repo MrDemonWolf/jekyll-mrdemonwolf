@@ -1,5 +1,4 @@
 /* variables.scss */
-/* Dev */
 /* nav.scss */
 @media (max-width: 768px) { .logo-desktop { display: none; }
   .logo-mobile { display: block !important; }
@@ -145,7 +144,7 @@
 /* jumbotron.scss */
 .jumbotron { background-color: transparent !important; }
 
-.hero { text-align: center; color: white; background: url(http://localhost:3000/img/hero_bg.jpg) no-repeat bottom center; background-size: cover; height: 100%; }
+.hero { text-align: center; color: white; background: url(https://mrdemonwolf.github.io/img/hero_bg.jpg) no-repeat bottom center; background-size: cover; height: 100%; }
 
 .hero-body { display: table-cell; vertical-align: middle; }
 
@@ -177,9 +176,9 @@
 
 .btn { border-radius: 5px; margin: 21px 0 0 0; font-weight: 700; }
 
-.btn.btn-cta { background: #fff; color: #666; border-bottom: 4px solid #ddd; }
+.btn.btn-cta { color: #fff; background-color: #204d74; }
 
-.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary:hover { color: #fff; background-color: #204d74; border-color: #ddd; transition: all 500ms; -webkit-transition: all 500ms; -moz-transition: all 500ms; }
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary:hover { background: #fff; color: #666; transition: all 500ms; -webkit-transition: all 500ms; -moz-transition: all 500ms; }
 
 /* about.scss */
 .illustration { width: 75%; height: 75%; display: flex; justify-content: center; /* align horizontal */ background-color: black; }
