@@ -1,0 +1,41 @@
+{
+    "name": "MrDemonWolf.github.io",
+    "short_name": "Blu3monkey",
+    "icons": [
+        {
+            "src": "/android-icon-36x36.png",
+            "sizes": "36x36",
+            "type": "image\/png",
+            "density": "0.75"
+        },
+        {
+            "src": "/android-icon-48x48.png",
+            "sizes": "48x48",
+            "type": "image\/png"
+        },
+        {
+            "src": "/android-icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image\/png"
+        },
+        {
+            "src": "/android-icon-96x96.png",
+            "sizes": "96x96",
+            "type": "image\/png"
+        },
+        {
+            "src": "/android-icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image\/png"
+        },
+        {
+            "src": "/android-icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image\/png"
+        }
+    ],
+    "background_color": "#FAFAFA",
+    "theme_color": "#00328d",
+    "display": "standalone",
+    "orientation": "portrait"
+}
