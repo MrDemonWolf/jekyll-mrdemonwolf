@@ -11,6 +11,7 @@ url: https://mrdemonwolf.github.io
 menu:
 - {name: About, url: '#about'}
 - {name: Work, url: '#work'}
+- {name: Contact, url: '#contact'}
 
 #-------------------------------
 # SEO Section
