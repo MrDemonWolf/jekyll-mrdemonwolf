@@ -11,7 +11,6 @@ url: https://mrdemonwolf.github.io
 menu:
 - {name: About, url: '#about'}
 - {name: Work, url: '#work'}
-- {name: Contact, url: '#contact'}
 
 #-------------------------------
 # SEO Section
@@ -25,7 +24,7 @@ seo:
 #-------------------------------
 # Google Analytics Section
 
-google-analytics-ua: UA-XXXXXX-X
+google-analytics-ua: UA-106544789-1
 
 #-------------------------------
 # About Section
