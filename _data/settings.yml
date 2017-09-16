@@ -14,7 +14,7 @@ menu:
 - {name: Contact, url: '#contact'}
 
 legal:
-- {name: Privacy Statement, url: 'privacy-statement.html'}
+- {name: Privacy Statement, url: 'privacy-statement'}
 
 #-------------------------------
 # SEO Section
