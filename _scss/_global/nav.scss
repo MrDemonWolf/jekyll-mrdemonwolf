@@ -13,6 +13,7 @@
 .navbar-logo>img {
 	height: 50px;
   padding-left: 10px;
+  padding-top: 12.5px;
 }
 .logo-mobile {
   display:none;
@@ -33,6 +34,7 @@
     > li {
       > a {
         color: $nav-colDefault;
+        line-height: 35px;
         &:hover,  &:focus {
           color: $nav-colHighlight; }}
       @if $nav-dropdown {
@@ -82,6 +84,13 @@
       > a, > a:hover, > a:focus {
         color: $nav-colHighlight;
         background-color: $nav-bgHighlight; }}}
+    .navbar-nav>li>a {
+      padding-top: 16px;
+    }
+    .navbar-logo > img {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
 }
 .container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
     margin-bottom: 0.2em;

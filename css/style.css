@@ -1,10 +1,11 @@
 /* variables.scss */
+/* Dev */
 /* nav.scss */
 @media (max-width: 768px) { .logo-desktop { display: none; }
   .logo-mobile { display: block !important; }
   .navbar-brand { padding: 2px 10px !important; } }
 
-.navbar-logo > img { height: 50px; padding-left: 10px; }
+.navbar-logo > img { height: 50px; padding-left: 10px; padding-top: 12.5px; }
 
 .logo-mobile { display: none; }
 
@@ -18,7 +19,7 @@
 
 .navbar-default .navbar-text { color: #25aae1; }
 
-.navbar-default .navbar-nav > li > a { color: #25aae1; }
+.navbar-default .navbar-nav > li > a { color: #25aae1; line-height: 35px; }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus { color: #00328d; }
 
@@ -50,7 +51,9 @@
 
 @media (max-width: 767px) { .navbar-default .navbar-nav .open .nav-dropdown-menu > li > a { color: #25aae1; }
   .navbar-default .navbar-nav .open .nav-dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .nav-dropdown-menu > li > a:focus { color: #00328d; }
-  .navbar-default .navbar-nav .open .nav-dropdown-menu > .active > a, .navbar-default .navbar-nav .open .nav-dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .nav-dropdown-menu > .active > a:focus { color: #00328d; background-color: #ffffff; } }
+  .navbar-default .navbar-nav .open .nav-dropdown-menu > .active > a, .navbar-default .navbar-nav .open .nav-dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .nav-dropdown-menu > .active > a:focus { color: #00328d; background-color: #ffffff; }
+  .navbar-nav > li > a { padding-top: 16px; }
+  .navbar-logo > img { padding-top: 8px; padding-bottom: 8px; } }
 
 .container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse { margin-bottom: 0.2em; }
 
@@ -152,7 +155,7 @@
 /* jumbotron.scss */
 .jumbotron { background-color: transparent !important; }
 
-.hero { text-align: center; color: white; background: url(https://mrdemonwolf.github.io/img/hero_bg.jpg) no-repeat bottom center; background-size: cover; height: 100%; }
+.hero { text-align: center; color: white; background: url(http://localhost:3000/img/hero_bg.jpg) no-repeat bottom center; background-size: cover; height: 100%; }
 
 .hero-body { display: table-cell; vertical-align: middle; }
 
@@ -226,6 +229,14 @@
 .contact-form .label { position: absolute; left: 20px; bottom: -2px; font-family: "Oswald", sans-serif; font-size: 18px; line-height: 26px; font-weight: 400; color: #888; cursor: text; -webkit-transition: -webkit-transform .2s ease-in-out; transition: -webkit-transform .2s ease-in-out; transition: transform .2s ease-in-out; transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out; }
 
 .contact-form .submit-btn { display: inline-block; background: #666; color: #ffffff; border-bottom: 4px solid #ddd; font-family: "Oswald", sans-serif; text-transform: uppercase; letter-spacing: 2px; font-size: 16px; line-height: 24px; padding: 8px 16px; border: none; cursor: pointer; }
+
+.privacy-statement-text { font-size: 1em; font-family: "Oswald", sans-serif; }
+
+.privacy-statement-text a { color: #313131; }
+
+.privacy-statement-text a:hover { color: #717171; }
+
+.modified-date { font-size: .75em; font-family: "Oswald", sans-serif; }
 
 .img-circle, .illustration { border-radius: 50%; }
 
