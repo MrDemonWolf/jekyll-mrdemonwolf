@@ -1,3 +1,14 @@
 .privacy-statement-text {
-
+    font-size: 1em;
+    font-family: $main-font;
+    a {
+    color: #313131;
+    }
+    a:hover {
+    color: lighten(#313131, 25)
+    }
+}
+.modified-date {
+    font-size: .75em;
+    font-family: $main-font;
 }

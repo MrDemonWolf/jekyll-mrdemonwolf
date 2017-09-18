@@ -35,6 +35,7 @@ gulp.task('sass', function () {
         .pipe(bs.reload({ stream: true }))
         .pipe(gulp.dest('css'));
 });
+    
 // Here to rerun the sass when a error happens
 gulp.task('sass:watch', function () {
     gulp.watch('_sass/*.scss', ['sass']);

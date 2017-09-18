@@ -5,7 +5,7 @@ title: MrDemonWolf
 name: MrDemonWolf
 description: UX Designer // Content Maker
 email: demonwolf@demonwolfdev.com
-url: https://mrdemonwolf.github.io
+url: https://mrdemonwolf.me
 #url: http://localhost:3000  #Dev URL
 
 menu:
@@ -20,7 +20,6 @@ legal:
 # SEO Section
 
 seo:
-  description: 'MrDemonWolf is UX Designer, Gamer, Streamer, Youtuber. Freelancer for UX Design and Wordpress site builds. Want a new website for your company or etc.'
   twitter-creator: 'https://www.twitter.com/mrdemonwolf'
   twitter-site: 'https://www.twitter.com/mrdemonwolf'
   type: 'website'
