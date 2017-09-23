@@ -5,7 +5,7 @@
         <div class="col-md-12 text-right">
             <div class="footer-legal">
                 {% for item in site.data.settings.legal %}
-                <a href="{{ site.data.settings.url }}/{{ item.url }}">{{ item.name }}</a>{% endfor %}
+                <a href="{{ item.url }}">{{ item.name }}</a>{% endfor %}
             </div>
         </div>
     </div>

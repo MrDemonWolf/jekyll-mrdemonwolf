@@ -13,13 +13,15 @@
   }
 }
 .copyright {
-  background-color: #57565c;
+  background-color: $footer-background;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 .social-icon {
   width: 40px;
   height: 40px;
   font-size: 24px;
-  background-color: #d4d4d4;
+  background-color: $social-icon;
   color: #fff;
   text-align: center;
   margin-right: 10px;
@@ -36,7 +38,7 @@
       display: flex;
       justify-content: center;
     }
-    .footer-copyright {
+    .footer-copyright , .footer-legal {
       text-align: center
     }
     .footer-copyright span {

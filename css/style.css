@@ -70,14 +70,14 @@
 
 .footer-copyright a:hover { color: white; text-decoration: none; }
 
-.copyright { background-color: #57565c; }
+.copyright { background-color: #25aae1; padding-top: 8px; padding-bottom: 8px; }
 
-.social-icon { width: 40px; height: 40px; font-size: 24px; background-color: #d4d4d4; color: #fff; text-align: center; margin-right: 10px; padding-top: 8px; border-radius: 50%; }
+.social-icon { width: 40px; height: 40px; font-size: 24px; background-color: #ffffff; color: #fff; text-align: center; margin-right: 10px; padding-top: 8px; border-radius: 50%; }
 
 .footer-social li { float: right; display: flex; }
 
 @media (max-width: 768px) { .footer-social { display: flex; justify-content: center; }
-  .footer-copyright { text-align: center; }
+  .footer-copyright, .footer-legal { text-align: center; }
   .footer-copyright span { display: none; } }
 
 .footer-legal { font-size: 1.15em; color: #000000; padding: 10px 0; margin-bottom: 0; }
@@ -186,9 +186,9 @@
 
 .btn { border-radius: 5px; margin: 21px 0 0 0; font-weight: 700; }
 
-.btn.btn-cta { color: #fff; background-color: #204d74; }
+.btn.btn-primary { color: #fff; background-color: #00709f; }
 
-.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary:hover { background: #fff; color: #666; transition: all 500ms; -webkit-transition: all 500ms; -moz-transition: all 500ms; }
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary:hover { background: #003a53; color: button_background_effect_font; transition: all 500ms; -webkit-transition: all 500ms; -moz-transition: all 500ms; }
 
 /* about.scss */
 .illustration { width: 75%; height: 75%; display: flex; justify-content: center; /* align horizontal */ background-color: black; }
@@ -228,6 +228,8 @@
 .contact-form .label { position: absolute; left: 20px; bottom: -2px; font-family: "Oswald", sans-serif; font-size: 18px; line-height: 26px; font-weight: 400; color: #888; cursor: text; -webkit-transition: -webkit-transform .2s ease-in-out; transition: -webkit-transform .2s ease-in-out; transition: transform .2s ease-in-out; transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out; }
 
 .contact-form .submit-btn { display: inline-block; background: #666; color: #ffffff; border-bottom: 4px solid #ddd; font-family: "Oswald", sans-serif; text-transform: uppercase; letter-spacing: 2px; font-size: 16px; line-height: 24px; padding: 8px 16px; border: none; cursor: pointer; }
+
+@media (max-width: 768px) { .get-in-touch { max-width: 100%; } }
 
 .privacy-statement-text { font-size: 1em; font-family: "Oswald", sans-serif; }
 

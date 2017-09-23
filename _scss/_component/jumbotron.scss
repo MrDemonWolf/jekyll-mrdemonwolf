@@ -72,14 +72,14 @@
     margin: 21px 0 0 0;
     font-weight:700;
 }
-.btn.btn-cta {
+.btn.btn-primary {
     color: $button_background_effect_font;
     background-color: $button_background_effect;
     // border-bottom: 4px solid #ddd;
 }
 .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover , .btn-primary:hover {
-    background: #fff;
-    color: #666;
+    background: darken($button_background_effect, 15%);
+    color: button_background_effect_font;
     // border-color: #ddd;
   	transition: all 500ms;
 		-webkit-transition: all 500ms;
