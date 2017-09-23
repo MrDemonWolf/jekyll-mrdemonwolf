@@ -5,8 +5,8 @@ title: MrDemonWolf
 name: MrDemonWolf
 description: UX Designer // Content Maker
 email: demonwolf@demonwolfdev.com
-url: https://mrdemonwolf.me
-#url: http://localhost:3001  #Dev URL
+# url: https://mrdemonwolf.me
+url: http://localhost:3001  #Dev URL
 
 menu:
 - {name: About, url: '#about'}

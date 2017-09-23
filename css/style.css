@@ -1,4 +1,5 @@
 /* variables.scss */
+/* Dev */
 /* nav.scss */
 @media (max-width: 768px) { .logo-desktop { display: none; }
   .logo-mobile { display: block !important; }
@@ -70,7 +71,7 @@
 
 .footer-copyright a:hover { color: white; text-decoration: none; }
 
-.copyright { background-color: #25aae1; padding-top: 8px; padding-bottom: 8px; }
+.copyright { background-color: #015274; padding-top: 8px; padding-bottom: 8px; }
 
 .social-icon { width: 40px; height: 40px; font-size: 24px; background-color: #ffffff; color: #fff; text-align: center; margin-right: 10px; padding-top: 8px; border-radius: 50%; }
 
@@ -154,7 +155,7 @@
 /* jumbotron.scss */
 .jumbotron { background-color: transparent !important; }
 
-.hero { text-align: center; color: white; background: url(https://mrdemonwolf.me/img/hero_bg.jpg) no-repeat bottom center; background-size: cover; height: 100%; }
+.hero { text-align: center; color: white; background: url(http://localhost:3000/img/hero_bg.jpg) no-repeat bottom center; background-size: cover; height: 100%; }
 
 .hero-body { display: table-cell; vertical-align: middle; }
 
@@ -164,13 +165,13 @@
 
 .hero-animate-text { font-family: "Oswald", sans-serif; font-size: 2em; flex-wrap: wrap; display: flex; justify-content: center; }
 
-.hero-animate-text span { position: absolute; opacity: 0; overflow: hidden; color: #fff; -webkit-animation: animateWord 18s linear infinite 0s; -ms-animation: animateWord 18s linear infinite 0s; animation: animateWord 18s linear infinite 0s; }
+.hero-animate-text span { position: absolute; opacity: 0; overflow: hidden; color: #ffffff; -webkit-animation: animateWord 18s linear infinite 0s; -ms-animation: animateWord 18s linear infinite 0s; animation: animateWord 18s linear infinite 0s; }
 
-.hero-animate-text > span:nth-child(2) { -webkit-animation-delay: 3s; -ms-animation-delay: 3s; animation-delay: 3s; color: #fff; }
+.hero-animate-text > span:nth-child(2) { -webkit-animation-delay: 3s; -ms-animation-delay: 3s; animation-delay: 3s; color: #ffffff; }
 
-.hero-animate-text > span:nth-child(3) { -webkit-animation-delay: 6s; -ms-animation-delay: 6s; animation-delay: 6s; color: #fff; }
+.hero-animate-text > span:nth-child(3) { -webkit-animation-delay: 6s; -ms-animation-delay: 6s; animation-delay: 6s; color: #ffffff; }
 
-.hero-animate-text > span:nth-child(4) { -webkit-animation-delay: 9s; -ms-animation-delay: 9s; animation-delay: 9s; color: #fff; }
+.hero-animate-text > span:nth-child(4) { -webkit-animation-delay: 9s; -ms-animation-delay: 9s; animation-delay: 9s; color: #ffffff; }
 
 @-webkit-keyframes animateWord { 0% { opacity: 0; }
   2% { opacity: 0;
@@ -186,12 +187,12 @@
 
 .btn { border-radius: 5px; margin: 21px 0 0 0; font-weight: 700; }
 
-.btn.btn-primary { color: #fff; background-color: #00709f; }
+.btn.btn-primary { color: #ffffff; background-color: #00709f; }
 
 .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary:hover { background: #003a53; color: button_background_effect_font; transition: all 500ms; -webkit-transition: all 500ms; -moz-transition: all 500ms; }
 
 /* about.scss */
-.illustration { width: 75%; height: 75%; display: flex; justify-content: center; /* align horizontal */ background-color: black; }
+.illustration { width: 75%; height: 75%; display: flex; justify-content: center; /* align horizontal */ background-color: #015274; }
 
 .about_text { padding-top: 3em; font-family: "Oswald", sans-serif; font-size: 1.5em; font-style: normal; display: flex; justify-content: center; /* align horizontal */ }
 
@@ -251,8 +252,8 @@
 
 .col-centered { display: inline-block; float: none; text-align: left; margin-right: -4px; }
 
-#about { padding-top: 50px; }
+#about { padding-top: 25px; padding-bottom: 25px; }
 
-#work { padding-top: 50px; }
+#work { padding-top: 25px; padding-bottom: 25px; }
 
-#contact { padding-top: 50px; }
+#contact { padding-top: 25px; padding-bottom: 25px; }
