@@ -26,10 +26,18 @@ $('.js-input').keyup(function () {
     }
 });
 $(document).ready(function () {
-    //FANCYBOX
-    //https://github.com/fancyapps/fancyBox
     $(".fancybox").fancybox({
         openEffect: "none",
         closeEffect: "none"
     });
 });
+
+
+$(document).ready(function () {
+    setTimeout(function () {
+        $("#cookieConsent").fadeIn(200);
+    }, 4000);
+    $("#closeCookieConsent, .cookieConsentOK").click(function () {
+        $("#cookieConsent").fadeOut(200);
+    });
+}); 

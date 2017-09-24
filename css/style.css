@@ -213,7 +213,7 @@
 
 .row-contact .col.x-100 { width: 100%; }
 
-.get-in-touch { max-width: 75%; margin: 0 auto; position: relative; }
+.get-in-touch { max-width: 85%; margin: 0 auto; position: relative; }
 
 .get-in-touch .title { text-align: center; font-family: "Oswald", sans-serif; text-transform: uppercase; letter-spacing: 3px; font-size: 1.75em; line-height: 48px; padding-bottom: 32px; }
 
@@ -249,7 +249,7 @@
 
 .row-centered { text-align: center; }
 
-.col-centered { display: inline-block; float: none; text-align: left; margin-right: -4px; }
+.col-centered { margin: 0 auto; float: none; }
 
 #about { padding-top: 25px; padding-bottom: 25px; }
 
