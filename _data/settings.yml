@@ -25,11 +25,6 @@ seo:
   type: 'website'
 
 #-------------------------------
-# Google Analytics Section
-
-google-analytics-ua: UA-106544789-1
-
-#-------------------------------
 # About Section
 
 about: >
@@ -53,8 +48,8 @@ work:
 # Contact Section
 
 social:
-- {icon: 'spotify', url: 'https://open.spotify.com/user/demonwolf97/'}
-- {icon: 'twitter', url: 'http://www.twitter.com/mrdemonwolf'}
-- {icon: 'github', url: 'https://www.github.com/mrdemonwolf'}
-- {icon: 'youtube', url: 'https://www.youtube.com/mrdemonwolf'}
-- {icon: 'twitch', url: 'https://www.twitch.tv/mrdemonwolf/'}
+- {icon: 'fa-spotify', color: 'spotify-color', url: 'https://open.spotify.com/user/demonwolf97/'}
+- {icon: 'fa-twitter', color: 'twitter-color', url: 'http://www.twitter.com/mrdemonwolf'}
+- {icon: 'fa-github', color: 'github-color', url: 'https://www.github.com/mrdemonwolf'}
+- {icon: 'fa-youtube', color: 'youtube-color', url: 'https://www.youtube.com/mrdemonwolf'}
+- {icon: 'fa-twitch', color: 'twitch-color', url: 'https://www.twitch.tv/mrdemonwolf/'}
