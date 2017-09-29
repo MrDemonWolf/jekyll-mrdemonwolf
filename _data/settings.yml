@@ -5,16 +5,20 @@ title: MrDemonWolf
 name: MrDemonWolf
 description: MrDemonWolf is UX Designer, Gamer, Streamer, Youtuber. Freelancer for UX Design and Wordpress site builds. Want a new website for your company or etc.
 email: demonwolf@demonwolfdev.com
+
+#-------------------------------
+# Website URL Section
+
 # url: https://mrdemonwolf.me
 url: http://localhost:3000  #Dev URL
+
+#-------------------------------
+# Menu Section
 
 menu:
 - {name: About, url: '#about'}
 - {name: Work, url: '#work'}
 - {name: Contact, url: '#contact'}
-
-legal:
-- {name: Privacy Statement, url: 'privacy-statement'}
 
 #-------------------------------
 # SEO Section
@@ -38,14 +42,17 @@ hero:
 - {name: YouTuber}
 - {name: UX Designer}
 - {name: Gamer}
+
 #-------------------------------
 # Work Section
 # Make sure you put images in the /img/work/ folder.
+
 work:
 - {name: 'JSL Hub', picture: 'jslhub.jpg'}
 - {name: 'Aishazart', picture: 'aishazart.jpg'}
+
 #-------------------------------
-# Contact Section
+# Social Icons and URls
 
 social:
 - {icon: 'fa-spotify', color: 'spotify-color', url: 'https://open.spotify.com/user/demonwolf97/'}
@@ -53,3 +60,10 @@ social:
 - {icon: 'fa-github', color: 'github-color', url: 'https://www.github.com/mrdemonwolf'}
 - {icon: 'fa-youtube', color: 'youtube-color', url: 'https://www.youtube.com/mrdemonwolf'}
 - {icon: 'fa-twitch', color: 'twitch-color', url: 'https://www.twitch.tv/mrdemonwolf/'}
+
+#-------------------------------
+# Modified Date
+
+modified-date: September 25, 2017
+
+#-------------------------------
