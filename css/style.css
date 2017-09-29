@@ -1,4 +1,5 @@
 /* variables.scss */
+/* Dev */
 /* nav.scss */
 @media (max-width: 768px) { .logo-desktop { display: none; }
   .logo-mobile { display: block !important; }
@@ -154,7 +155,7 @@
 /* jumbotron.scss */
 .jumbotron { background-color: transparent !important; }
 
-.hero { text-align: center; color: white; background: url(https://mrdemonwolf.me/img/hero_bg.jpg) no-repeat bottom center; background-size: cover; height: 100%; }
+.hero { text-align: center; color: white; background: url(http://localhost:3000/img/hero_bg.jpg) no-repeat bottom center; background-size: cover; height: 100%; }
 
 .hero-body { display: table-cell; vertical-align: middle; }
 
@@ -189,6 +190,14 @@
 .btn.btn-primary { color: #ffffff; background-color: #00709f; }
 
 .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary:hover { background: #003a53; color: button_background_effect_font; transition: all 500ms; -webkit-transition: all 500ms; -moz-transition: all 500ms; }
+
+.gallery { display: inline-block; margin-top: 20px; }
+
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active { border-color: #25aae1; }
+
+.project-name { font-size: 1.25em; text-align: center; text-decoration: none; }
+
+.project-name:hover { text-decoration: none; }
 
 /* about.scss */
 .illustration { width: 75%; height: 75%; display: flex; justify-content: center; /* align horizontal */ background-color: #015274; }
