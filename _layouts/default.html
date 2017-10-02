@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>{{ page.title }} - {{ site.data.settings.title }}</title>
+    <!-- Basic Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Basic meta and OG tags-->
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="{{ site.data.settings.title }}">
+    <meta itemprop="description" content="{{ page.description }}">
+    <meta itemprop="image" content="{{ site.data.settings.url }}/logo.png ">
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="{{ site.data.settings.seo.type }}">
+    <meta name="twitter:site" content="{{ site.data.settings.seo.twitter-site }}">
+    <meta name="twitter:title" content="{{ site.data.settings.title }} - {{ page.title }}" <meta name="twitter:description" content="{{ page.description }}">
+    <meta name="twitter:creator" content="{{ site.data.settings.seo.twitter-creator }}">
+    <meta name="twitter:image" content="{{ site.data.settings.url }}/assets/logo.png">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{ site.data.settings.title }} - {{ page.title }}" />
+    <meta property="og:site_name" content="{{ site.data.settings.title }}" />
+    <meta property="og:type" content="{{ site.data.settings.seo.type }}" />
+    <meta property="og:url" content="{{ site.data.settings.url }}" />
+    <meta property="og:image" content="{{ site.data.settings.url }}/assets/logo.png" />
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" href="{{ site.data.settings.url }}/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ site.data.settings.url }}/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ site.data.settings.url }}/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ site.data.settings.url }}/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ site.data.settings.url }}/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ site.data.settings.url }}/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ site.data.settings.url }}/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ site.data.settings.url }}/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ site.data.settings.url }}/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.data.settings.url }}/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ site.data.settings.url }}/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.data.settings.url }}/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ site.data.settings.url }}/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.data.settings.url }}/favicon-16x16.png">
+    <link rel="manifest" href="{{ site.data.settings.url }}/manifest.json">
+
+    <!-- Frameworks -->
+    <!-- Font Awsome-->
+    <link href="{{ site.data.settings.url }}/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" -->
+    <!-- crossorigin="anonymous" /> -->
+    <!--Bootstrap -->
+    <link href="{{ site.data.settings.url }}/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" -->
+    <!-- crossorigin="anonymous" /> -->
+    <!-- Fancybox -->
+    <link href="{{ site.data.settings.url }}/lib/fancybox/dist/jquery.fancybox.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css" integrity="sha256-Plq9l9jMJkIx2PX9Rax0AkgNzFXpaC3YU/XFlL5MYFE=" -->
+    <!-- crossorigin="anonymous" /> -->
+    <!-- EU Cookie notice -->
+    <link href="{{ site.data.settings.url }}/lib/cookieconsent/build/cookieconsent.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.4/cookieconsent.min.css" integrity="sha256-RWqxpxUH7ZGrrhTJ0I+v+zc6e8cRpm5ENBt7i3u3KrQ=" -->
+    <!-- crossorigin="anonymous" /> -->
+    <script src="{{ site.data.settings.url }}/lib/cookieconsent/build/cookieconsent.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.4/cookieconsent.min.js" integrity="sha256-r0xmg4FKpSfK9TvePQIeaq/gCDO0Xy3q0EPIfteGRnQ=" -->
+    <!-- crossorigin="anonymous"></script> -->
+    <!-- Custom-->
+    <link rel="stylesheet" href="{{ site.data.settings.url }}/css/style.css">
+    <!-- Google Analytics -->
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107275871-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments) };
+        gtag('js', new Date());
+
+        gtag('config', 'UA-107275871-1');
+    </script> -->
+    <!-- End Google Analytics -->
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top" id="scroll_navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button id="ChangeToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <div id="navbar-hamburger">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+                            </div>
+                <div id="navbar-close" class="hidden">
+          <span class="glyphicon glyphicon-remove"></span>
+        </div>
+      </button>
+            <a class="navbar-brand navbar-logo logo-desktop" href="/"><img alt="{{ site.data.settings.title }}" src="{{ site.data.settings.url }}/img/logo_text.png"></a>
+            <a class="navbar-brand navbar-logo logo-mobile" href="/"><img alt="{{ site.data.settings.title }}" src="{{ site.data.settings.url }}/img/logo.png"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">{% for item in site.data.settings.menu %}
+                <li>
+                    <a href="{{ item.url }}" alt="{{ item.title }}">{{ item.name }}</a>
+                </li>{% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Cookie Consent -->
+<script>
+    window.addEventListener("load", function () {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#ffffff",
+                    "text": "#000000"
+                },
+                "button": {
+                    "background": "#00709f"
+                }
+            },
+            "position": "bottom-right",
+            "content": {
+                "href": "https://mrdemonwolf.me/legal/privacy-statement"
+            }
+        })
+    });
+
+</script>
+
+<body>
+    {{ content }}
+</body>
+<!-- Footer -->
+<footer>
+    <!-- Legal Infos -->
+    <div class="container">
+        <div class="col-md-12 text-right">
+            <div class="footer-legal">
+                <a href="{{ site.data.settings.url }}/legal/privacy-statement/">Privacy Statement</a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer copyright with auto update year. -->
+    <div class="copyright">
+        <div class="container">
+            <div class="col-md-6 col-sm-12">
+                <div class="footer-copyright"> Copyright ©
+                    <script>
+                        document.write("" + new Date().getFullYear());
+                    </script> <a href="/">{{ site.data.settings.title }}</a> <span>, All rights reserved</span>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-offset-2 col-sm-12 footer-social ">{% for item in site.data.settings.social %}
+                <li><a href="{{ item.url }}"><i class="fa {{ item.icon }} social-icon {{ item.color }}" aria-hidden="true"></i></a></li>{%
+                endfor %}
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Loadidng JS in footer -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{{ site.data.settings.url }}/lib/jquery/dist/jquery.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" -->
+<!-- crossorigin="anonymous"></script> -->
+<script src="{{ site.data.settings.url }}/lib/letteringjs/jquery.lettering.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js" integrity="sha256-7sov0P4cWkfKMVHQ/NvnWVqcLSPYrPwxdz+MtZ+ahl8=" -->
+<!-- crossorigin="anonymous"></script> -->
+<script src="{{ site.data.settings.url }}/lib/fancybox/dist/jquery.fancybox.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js" integrity="sha256-PyeEn7y37Cfw5xCU4Ub3G+A8Qx9zqMnAIaRGKjnfWiI=" -->
+<!-- crossorigin="anonymous"></script> -->
+<!-- Bootstrap Javascript -->
+<script src="{{ site.data.settings.url }}/lib/bootstrap/dist/js/bootstrap.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" -->
+<!-- crossorigin="anonymous"></script> -->
+<!-- Custom -->
+<script src="{{ site.data.settings.url }}/js/script.js"></script>
+
+</html>
