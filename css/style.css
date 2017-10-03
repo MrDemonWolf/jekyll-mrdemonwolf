@@ -1,3 +1,5 @@
+/* _mixins */
+/* _typography.scss */
 /* variables.scss */
 /* Dev */
 /* nav.scss */
@@ -155,7 +157,7 @@
 /* jumbotron.scss */
 .jumbotron { background-color: transparent !important; }
 
-.hero { text-align: center; color: white; background: url(http://localhost:3001/img/hero_bg.jpg) no-repeat bottom center; background-size: cover; height: 100%; }
+.hero { text-align: center; color: white; background: url(http://192.168.1.2:3000/img/hero_bg.jpg) no-repeat bottom center; background-size: cover; height: 100%; }
 
 .hero-body { display: table-cell; vertical-align: middle; }
 
@@ -245,6 +247,12 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active { border-color: #25aae1
 .privacy-statement-text a { color: #313131; }
 
 .privacy-statement-text a:hover { color: #717171; transition: all 500ms; -webkit-transition: all 500ms; -moz-transition: all 500ms; }
+
+.terms-of-service-text { font-size: 1.25em; font-family: "Times New Roman", Times, serif; }
+
+.terms-of-service-text a { color: #313131; }
+
+.terms-of-service-text a:hover { color: #717171; transition: all 500ms; -webkit-transition: all 500ms; -moz-transition: all 500ms; }
 
 .last-modified { font-size: 1em; font-family: "Times New Roman", Times, serif; }
 

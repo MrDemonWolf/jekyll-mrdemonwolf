@@ -12,10 +12,16 @@ $(function () {
         });
 
 });
+
 $(document).on('click', '.navbar-collapse.in', function (e) {
     if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
         $(this).collapse('hide');
     }
+});
+$(function () {
+    $(document).click(function (event) {
+        $('.navbar-collapse').collapse('hide');
+    });
 });
 // Contact us effect for when clicked into the form.
 $('.js-input').keyup(function () {
