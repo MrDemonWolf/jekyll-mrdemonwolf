@@ -10,15 +10,15 @@ email: demonwolf@demonwolfdev.com
 # Website URL Section
 
 # url: https://mrdemonwolf.me
-url: http://localhost:3000  #Dev URL
+url: http://localhost:3001  #Dev URL
 
 #-------------------------------
 # Menu Section
 
 menu:
-- {name: About, url: '#about'}
-- {name: Work, url: '#work'}
-- {name: Contact, url: '#contact'}
+- {title: About, url: '#about'}
+- {title: Work, url: '#work'}
+- {title: Contact, url: '#contact'}
 
 #-------------------------------
 # SEO Section
@@ -45,7 +45,7 @@ hero:
 
 #-------------------------------
 # Work Section
-# Make sure you put images in the /img/work/ folder.
+# Make sure  put images in the /img/work/ folder.
 
 work:
 - {name: 'JSL Hub', picture: 'jslhub.jpg'}
