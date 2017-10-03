@@ -256,6 +256,12 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active { border-color: #25aae1
 
 .last-modified { font-size: 1em; font-family: "Times New Roman", Times, serif; }
 
+.project_name { font-family: "Oswald", sans-serif; font-size: 1em; }
+
+.project_dates { font-family: "Oswald", sans-serif; font-size: 1em; }
+
+.project_description { font-family: "Oswald", sans-serif; font-size: 1em; }
+
 .img-circle, .illustration { border-radius: 50%; }
 
 .big-content-top { padding-top: 30px; }
