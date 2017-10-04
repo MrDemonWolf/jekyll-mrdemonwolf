@@ -29,13 +29,13 @@ layout: default
 </div>
 <div class="container">
     <div class="row">
-        <div class='list-group gallery'>{% for item in page.project_images %}
+        <div class="list-group gallery">{% for item in page.project_images %}
             <div class='col-xs-12 col-md-6'>
                                     <div class='text-right'>
                                         <div class='text-muted project-name'>{{ item.title }}</div>
                                     </div>
-                <a class="thumbnail fancybox" rel="ligthbox" href="{{ site.data.settings.url }}/img/work/{{ item.picture }}">
-                    <img class="img-responsive" alt="{{ item.name }} Project" src="{{ site.data.settings.url }}/img/work/{{ item.picture }}"
+                <a class="thumbnail fancybox" rel="ligthbox" href="{{ site.data.settings.url }}/img/projects/{{ page.project_name }}/{{ item.picture }}">
+                    <img class="img-responsive" alt="{{ item.name }} Project" src="{{ site.data.settings.url }}/img/projects/{{ page.project_name }}/{{ item.picture }}"
                     />
                 </a>
             </div>{% endfor %}
