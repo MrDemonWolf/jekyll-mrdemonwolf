@@ -1,10 +1,10 @@
-<!-- Showcase of my work -->
+<!-- Showcase of my past projects -->
 <div class="container" id="work">
     <div class="row">
         <div class='list-group gallery'>{% for item in site.data.settings.work %}
             <div class='col-xs-12 col-md-4'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="{{ site.data.settings.url }}/img/work/{{ item.picture }}">
-                    <img class="img-responsive" alt="{{ item.name }} Project" src="{{ site.data.settings.url }}/img/work/{{ item.picture }}" />
+                <a class="thumbnail fancybox" rel="ligthbox" href="{{ site.data.settings.url }}/img/projects/thumbnails/{{ item.picture }}">
+                    <img class="img-responsive" alt="{{ item.name }} Project" src="{{ site.data.settings.url }}/img/projects/thumbnails/{{ item.picture }}" />
                     <div class='text-right'>
                         <div class='text-muted project-name'>{{ item.name }}</div>
                     </div>

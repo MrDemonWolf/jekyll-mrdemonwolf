@@ -1,4 +1,7 @@
+/* _mixins */
+/* _typography.scss */
 /* variables.scss */
+/* Dev */
 /* nav.scss */
 @media (max-width: 768px) { .logo-desktop { display: none; }
   .logo-mobile { display: block !important; }
@@ -154,7 +157,7 @@
 /* jumbotron.scss */
 .jumbotron { background-color: transparent !important; }
 
-.hero { text-align: center; color: white; background: url(https://mrdemonwolf.me/img/hero_bg.jpg) no-repeat bottom center; background-size: cover; height: 100%; }
+.hero { text-align: center; color: white; background: url(http://192.168.1.2:3000/img/hero_bg.jpg) no-repeat bottom center; background-size: cover; height: 100%; }
 
 .hero-body { display: table-cell; vertical-align: middle; }
 
@@ -239,25 +242,43 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active { border-color: #25aae1
 
 @media (max-width: 768px) { .get-in-touch { max-width: 100%; } }
 
-.privacy-statement-text { font-size: 1em; font-family: "Oswald", sans-serif; }
+.privacy-statement-text { font-size: 1.25em; font-family: "Times New Roman", Times, serif; }
 
 .privacy-statement-text a { color: #313131; }
 
-.privacy-statement-text a:hover { color: #717171; }
+.privacy-statement-text a:hover { color: #717171; transition: all 500ms; -webkit-transition: all 500ms; -moz-transition: all 500ms; }
 
-.modified-date { font-size: .75em; font-family: "Oswald", sans-serif; }
+.terms-of-service-text { font-size: 1.25em; font-family: "Times New Roman", Times, serif; }
+
+.terms-of-service-text a { color: #313131; }
+
+.terms-of-service-text a:hover { color: #717171; transition: all 500ms; -webkit-transition: all 500ms; -moz-transition: all 500ms; }
+
+.last-modified { font-size: 1em; font-family: "Times New Roman", Times, serif; }
+
+.project_title { font-family: "Oswald", sans-serif; font-size: 1em; }
+
+.project_dates { font-family: "Oswald", sans-serif; font-size: 1em; }
+
+.project_description { font-family: "Oswald", sans-serif; font-size: 1em; }
 
 .img-circle, .illustration { border-radius: 50%; }
 
-.big-content-top { padding-top: 25px; }
+.big-content-top { padding-top: 30px; }
+
+.big-content-bottom { padding-bottom: 30px; }
 
 .small-content-top { padding-top: 10px; }
+
+.small-content-bottom { padding-bottom: 10px; }
 
 .page-header_center { text-align: center; }
 
 .row-centered { text-align: center; }
 
 .col-centered { margin: 0 auto; float: none; }
+
+.project { padding-top: 75px; }
 
 #about { padding-top: 25px; padding-bottom: 25px; }
 

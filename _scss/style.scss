@@ -9,16 +9,23 @@
 @import "_component/about";
 @import "_component/contact";
 @import "_component/legal";
+@import "_component/projects";
 
 .img-circle {
     border-radius: 50%;
 }
 // Custom spaceings
 .big-content-top {
-	padding-top: 25px;
+	padding-top: 30px;
+}
+.big-content-bottom {
+	padding-bottom: 30px;
 }
 .small-content-top {
 	padding-top: 10px;
+}
+.small-content-bottom {
+	padding-bottom: 10px;
 }
 .page-header_center {
   text-align: center;
@@ -32,7 +39,9 @@
     margin: 0 auto;
     float: none;
 }
-
+.project {
+  padding-top: 75px;
+}
 // #s
 #about {
   padding-top: 25px;

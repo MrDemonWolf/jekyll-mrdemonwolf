@@ -9,16 +9,16 @@ email: demonwolf@demonwolfdev.com
 #-------------------------------
 # Website URL Section
 
-url: https://mrdemonwolf.me
-#url: http://localhost:3000  #Dev URL
+# url: https://mrdemonwolf.me
+url: http://192.168.1.2:3000  #Dev URL
 
 #-------------------------------
 # Menu Section
 
 menu:
-- {name: About, url: '#about'}
-- {name: Work, url: '#work'}
-- {name: Contact, url: '#contact'}
+- {title: About, url: '#about'}
+- {title: Projects, url: 'projects'}
+- {title: Contact, url: '#contact'}
 
 #-------------------------------
 # SEO Section
@@ -44,10 +44,10 @@ hero:
 - {name: Gamer}
 
 #-------------------------------
-# Work Section
-# Make sure you put images in the /img/work/ folder.
-
-work:
+# Examples Section
+# Make sure  put images in the /img/examples/ folder.
+# Also a Max of 3
+examples:
 - {name: 'JSL Hub', picture: 'jslhub.jpg'}
 - {name: 'Aishazart', picture: 'aishazart.jpg'}
 
