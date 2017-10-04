@@ -1,7 +1,6 @@
 /* _mixins */
 /* _typography.scss */
 /* variables.scss */
-/* Dev */
 /* nav.scss */
 @media (max-width: 768px) { .logo-desktop { display: none; }
   .logo-mobile { display: block !important; }
