@@ -16,6 +16,7 @@ url: http://192.168.1.2:3000  #Dev URL
 # Menu Section
 
 menu:
+- {title: Home, url: '#'}
 - {title: About, url: '#about'}
 - {title: Projects, url: 'projects'}
 - {title: Contact, url: '#contact'}
@@ -60,10 +61,9 @@ project_gallery-fliter:
 - {title: 'Adobe XD', name: 'adobe-xd'}
 - {title: 'HTML', name: 'html'}
 - {title: 'Wordpress', name: 'wordpress'}
-- {title: 'Personal', name: 'personal'}
-- {title: 'Cleints', name: 'cleints'}
 
 project_gallery-thumbnails:
+#Make sure  put images in the /img/project/thumbnails folder.
 - {title: 'JSL Hub', fliter: 'wordpress', picture: 'jslhub.jpg' , url: 'jslhub'}
 - {title: 'Aishazart', fliter: 'wordpress', picture: 'aishazart.jpg', url: 'aishazart'}
 

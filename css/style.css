@@ -256,26 +256,38 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active { border-color: #25aae1
 
 .last-modified { font-size: 1em; font-family: "Times New Roman", Times, serif; }
 
-.project_title { font-family: "Oswald", sans-serif; font-size: 1em; }
+.project_title { color: #00328d; font-family: "Oswald", sans-serif; font-size: 2.5em; text-align: center; }
 
-.project_dates { font-family: "Oswald", sans-serif; font-size: 1em; }
+.project_headers { font-family: "Oswald", sans-serif; font-size: 1.5em; }
 
-.project_description { font-family: "Oswald", sans-serif; font-size: 1em; }
+.project_dates { font-family: "Oswald", sans-serif; font-size: 1.25em; }
 
 /* project_gallery.scss */
-.project_gallery-title { font-size: 36px; color: #42B32F; text-align: center; font-weight: 500; margin-bottom: 70px; }
+.project_gallery-title { font-size: 2em; font-family: "Oswald", sans-serif; color: #00328d; text-align: center; font-weight: 500; margin-bottom: 25px; }
 
-.project_gallery-title:after { content: ""; position: absolute; width: 7.5%; left: 46.5%; height: 45px; border-bottom: 1px solid #5e5e5e; }
+.project_gallery_filter { padding-bottom: 10px; }
 
-.project_gallery_filter-button { font-size: 18px; border: 1px solid #42B32F; border-radius: 5px; text-align: center; color: #42B32F; margin-bottom: 30px; }
+.project_gallery_filter-button { font-size: 1.15em; border: 1px solid #25aae1; border-radius: 5px; text-align: center; color: #25aae1; }
 
-.project_gallery_filter-button:hover { font-size: 18px; border: 1px solid #42B32F; border-radius: 5px; text-align: center; color: #ffffff; background-color: #42B32F; }
+.project_gallery_filter-button:hover { font-size: 1.15em; border: 1px solid #25aae1; border-radius: 5px; text-align: center; color: #ffffff; background-color: #25aae1; }
 
-.btn-default:active .project_gallery_filter-button:active { background-color: #42B32F; color: #ffffff; }
+.btn-default:active .project_gallery_filter-button:active { background-color: #25aae1; color: #ffffff; }
 
 .project_gallery_image { width: 100%; }
 
 .project_gallery_product { margin-bottom: 30px; }
+
+.project_gallery_product a > img:hover { border: 2px solid rgba(37, 170, 225, 0.75); transition: all 1s; -webkit-transition: all 1s; -moz-transition: all 1s; }
+
+html, body { height: 100%; /* The html and body elements cannot have any padding or margin. */ }
+
+/* Wrapper for page content to push down footer */
+#wrap { min-height: 100%; height: auto; /* Negative indent footer by its height */ margin: 0 auto -60px; /* Pad bottom by footer height */ padding: 0 0 60px; }
+
+/* Set the fixed height of the footer here */
+#footer { height: 100px; }
+
+@media (max-width: 768px) { #footer { height: 140px; } }
 
 .img-circle, .illustration { border-radius: 50%; }
 

@@ -1,40 +1,35 @@
 /* project_gallery.scss */
 .project_gallery-title {
-	font-size: 36px;
-	color: #42B32F;
+	font-size: 2em;
+	font-family: $main-font;
+	color: $brand-color;
 	text-align: center;
 	font-weight: 500;
-	margin-bottom: 70px;
-	&:after {
-		content: "";
-		position: absolute;
-		width: 7.5%;
-		left: 46.5%;
-		height: 45px;
-		border-bottom: 1px solid #5e5e5e;
-	}
+	margin-bottom: 25px;
+}
+.project_gallery_filter{ 
+	padding-bottom: 10px;
 }
 .project_gallery_filter-button {
-	font-size: 18px;
-	border: 1px solid #42B32F;
+	font-size: 1.15em;
+	border: 1px solid $brand-color-alt;
 	border-radius: 5px;
 	text-align: center;
-	color: #42B32F;
-	margin-bottom: 30px;
+	color: $brand-color-alt;
 	&:hover {
-		font-size: 18px;
-		border: 1px solid #42B32F;
+		font-size: 1.15em;
+		border: 1px solid $brand-color-alt;
 		border-radius: 5px;
 		text-align: center;
 		color: #ffffff;
-		background-color: #42B32F;
+		background-color: $brand-color-alt;
 	}
 }
 .btn-default {
 	&:active {
 		.project_gallery_filter-button {
 			&:active {
-				background-color: #42B32F;
+				background-color: $brand-color-alt;
 				color: #ffffff;
 			}
 		}
@@ -45,4 +40,10 @@
 }
 .project_gallery_product {
 	margin-bottom: 30px;
+	a > img:hover{
+		border: 2px solid rgba( $brand-color-alt, .75);
+		transition: all 1s;
+		-webkit-transition: all 1s;
+		-moz-transition: all 1s;
+	}
 }

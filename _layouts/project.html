@@ -10,39 +10,46 @@ layout: default
             </div>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="project_dates">
-            {{ page.project_description }}
+    <div class="row">
+        <div class="col-md-4">
+            <div class="project_header">
+                Start Date
+            </div>
+            <div class="project_dates">
+                {{ page.project_start_date }}
+            </div>
         </div>
-    </div>
-    <div class="col-md-4">
-        <div class="project_dates">
-            {{ page.project_start_date }} {{ page.project_end_date }}
+        <div class="col-md-4">
+            <div class="project_header">
+                End Date
+            </div>
+            <div class="project_dates">
+                {{ page.project_end_date }}
+            </div>
         </div>
-    </div>
-    <div class="col-md-4">
-        <div class="project_colors">
-            <img class="img-responsive" alt="{{ page.project_title }} Project Colors" src="{{ site.data.settings.url }}/img/projects/{{ page.project_name }}/colors.jpeg"
+        <div class="col-md-4">
+            <div class="project_header">
+                Colors
+            </div <div class="project_colors">
+            <img class="img-responsive" alt="{{ page.project_title }} Project Colors" src="{{ site.data.settings.url }}/img/projects/{{ page.project_name }}/{{ page.project_colors }}"
             />
         </div>
     </div>
-</div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="list-group gallery">{% for item in page.project_images %}
-            <div class='col-xs-12 col-md-4'>
-                <div class='text-right'>
-                    <div class='text-muted project-name'>{{ item.title }}</div>
-                </div>
-                <a class="thumbnail fancybox" rel="ligthbox" href="{{ site.data.settings.url }}/img/projects/{{ page.project_name }}/{{ item.picture }}">
+    <div class="container">
+        <div class="row">
+            <div class="list-group gallery">{% for item in page.project_images %}
+                <div class='col-xs-12 col-md-4'>
+                    <div class='text-right'>
+                        <div class='text-muted project-name'>{{ item.title }}</div>
+                    </div>
+                    <a class="thumbnail fancybox" rel="ligthbox" href="{{ site.data.settings.url }}/img/projects/{{ page.project_name }}/{{ item.picture }}">
                     <img class="img-responsive" alt="{{ item.name }} Project" src="{{ site.data.settings.url }}/img/projects/{{ page.project_name }}/{{ item.picture }}"
                     />
                 </a>
-            </div>{% endfor %}
+                </div>{% endfor %}
+            </div>
         </div>
     </div>
-</div>
 
 
 </div>
