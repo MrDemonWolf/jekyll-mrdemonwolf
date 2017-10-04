@@ -1,6 +1,6 @@
---- 
+---
 layout: default
---- 
+---
 {{ content }}
 <div class="container project">
     <div class="row">
@@ -22,7 +22,8 @@ layout: default
     </div>
     <div class="col-md-4">
         <div class="project_colors">
-            <img class="img-responsive" alt="{{ page.project_title }} Project Colors" src="{{ site.data.settings.url }}/img/projects/{{ page.project_name }}/colors.jpeg"/>
+            <img class="img-responsive" alt="{{ page.project_title }} Project Colors" src="{{ site.data.settings.url }}/img/projects/{{ page.project_name }}/colors.jpeg"
+            />
         </div>
     </div>
 </div>
@@ -30,10 +31,10 @@ layout: default
 <div class="container">
     <div class="row">
         <div class="list-group gallery">{% for item in page.project_images %}
-            <div class='col-xs-12 col-md-6'>
-                                    <div class='text-right'>
-                                        <div class='text-muted project-name'>{{ item.title }}</div>
-                                    </div>
+            <div class='col-xs-12 col-md-4'>
+                <div class='text-right'>
+                    <div class='text-muted project-name'>{{ item.title }}</div>
+                </div>
                 <a class="thumbnail fancybox" rel="ligthbox" href="{{ site.data.settings.url }}/img/projects/{{ page.project_name }}/{{ item.picture }}">
                     <img class="img-responsive" alt="{{ item.name }} Project" src="{{ site.data.settings.url }}/img/projects/{{ page.project_name }}/{{ item.picture }}"
                     />

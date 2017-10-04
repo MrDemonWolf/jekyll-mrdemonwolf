@@ -17,7 +17,7 @@ url: http://192.168.1.2:3000  #Dev URL
 
 menu:
 - {title: About, url: '#about'}
-- {title: Work, url: '#work'}
+- {title: Projects, url: 'projects'}
 - {title: Contact, url: '#contact'}
 
 #-------------------------------
@@ -44,10 +44,10 @@ hero:
 - {name: Gamer}
 
 #-------------------------------
-# Work Section
-# Make sure  put images in the /img/work/ folder.
-
-work:
+# Examples Section
+# Make sure  put images in the /img/examples/ folder.
+# Also a Max of 3
+examples:
 - {name: 'JSL Hub', picture: 'jslhub.jpg'}
 - {name: 'Aishazart', picture: 'aishazart.jpg'}
 
