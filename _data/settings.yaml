@@ -50,6 +50,22 @@ hero:
 examples:
 - {name: 'JSL Hub', picture: 'jslhub.jpg'}
 - {name: 'Aishazart', picture: 'aishazart.jpg'}
+- {name: 'Aishazart', picture: 'aishazart.jpg'}
+
+#-------------------------------
+# Projects Gallery Section
+# Filter
+project_gallery-fliter:
+- {title: 'All', name: 'all'}
+- {title: 'Adobe XD', name: 'adobe-xd'}
+- {title: 'HTML', name: 'html'}
+- {title: 'Wordpress', name: 'wordpress'}
+- {title: 'Personal', name: 'personal'}
+- {title: 'Cleints', name: 'cleints'}
+
+project_gallery-thumbnails:
+- {title: 'JSL Hub', fliter: 'wordpress', picture: 'jslhub.jpg' , url: 'jslhub'}
+- {title: 'Aishazart', fliter: 'wordpress', picture: 'aishazart.jpg', url: 'aishazart'}
 
 #-------------------------------
 # Social Icons and URls

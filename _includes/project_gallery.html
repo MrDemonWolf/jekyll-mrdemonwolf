@@ -1,0 +1,17 @@
+<!-- Project gallery -->
+<div class="container big-content-top">
+    <div class="row">
+        <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h1 class="project_gallery-title">Gallery</h1>
+        </div>
+
+        <div align="center">
+            {% for item in site.data.settings.project_gallery-fliter %}<button class="btn btn-default project_gallery_filter-button"
+                data-filter="{{ item.name }}">{{ item.title}}</button>{% endfor %}
+        </div>
+        <br/>
+    </div>
+    {% for item in site.data.settings.project_gallery-thumbnails %}<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter {{ item.fliter }}">
+        <a href="{{ site.data.settings.url }}/projects/{{ item.url }}"><img src="{{ site.data.settings.url }}/img/logos/logo.png" class="img-responsive"></a>
+    </div>{% endfor %}
+</div>
