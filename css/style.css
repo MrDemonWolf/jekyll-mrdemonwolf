@@ -257,9 +257,11 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active { border-color: #25aae1
 
 .project_title { color: #00328d; font-family: "Oswald", sans-serif; font-size: 2.5em; text-align: center; }
 
-.project_headers { font-family: "Oswald", sans-serif; font-size: 1.5em; }
+.project_header { font-family: "Oswald", sans-serif; font-size: 1.5em; text-align: center; }
 
-.project_dates { font-family: "Oswald", sans-serif; font-size: 1.25em; }
+.project_date { font-family: "Times New Roman", Times, serif; font-size: 1.25em; text-align: center; }
+
+.project_colors_picture { display: block; margin: 0 auto; }
 
 /* project_gallery.scss */
 .project_gallery-title { font-size: 2em; font-family: "Oswald", sans-serif; color: #00328d; text-align: center; font-weight: 500; margin-bottom: 25px; }

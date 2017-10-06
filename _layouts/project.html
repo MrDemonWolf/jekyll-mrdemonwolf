@@ -15,7 +15,7 @@ layout: default
             <div class="project_header">
                 Start Date
             </div>
-            <div class="project_dates">
+            <div class="project_date">
                 {{ page.project_start_date }}
             </div>
         </div>
@@ -23,16 +23,18 @@ layout: default
             <div class="project_header">
                 End Date
             </div>
-            <div class="project_dates">
+            <div class="project_date">
                 {{ page.project_end_date }}
             </div>
         </div>
         <div class="col-md-4">
             <div class="project_header">
                 Colors
-            </div <div class="project_colors">
-            <img class="img-responsive" alt="{{ page.project_title }} Project Colors" src="{{ site.data.settings.url }}/img/projects/{{ page.project_name }}/{{ page.project_colors }}"
-            />
+            </div>
+            <div class="project_color">
+                <img class="img-responsive project_colors_picture" alt="{{ page.project_title }} Project Colors" src="{{ site.data.settings.url }}/img/projects/{{ page.project_name }}/{{ page.project_colors }}"
+                />
+            </div>
         </div>
     </div>
     <div class="container">

@@ -49,8 +49,9 @@ hero:
 # Make sure  put images in the /img/examples/ folder.
 # Also a Max of 3
 examples:
-- {name: 'JSL Hub', picture: 'jslhub.jpg'}
-- {name: 'Aishazart', picture: 'aishazart.jpg'}
+- {title: 'JSL Hub', url: 'jslhub', picture: 'jslhub.jpg'}
+- {title: 'Aishazart', url: 'aishazart', picture: 'aishazart.jpg'}
+- {title: 'Stream Team', url: 'stream_team', picture: 'stream_team.jpg'}
 
 #-------------------------------
 # Projects Gallery Section
@@ -65,6 +66,8 @@ project_gallery-thumbnails:
 #Make sure  put images in the /img/project/thumbnails folder.
 - {title: 'JSL Hub', fliter: 'wordpress', picture: 'jslhub.jpg' , url: 'jslhub'}
 - {title: 'Aishazart', fliter: 'wordpress', picture: 'aishazart.jpg', url: 'aishazart'}
+- {title: 'Stream Team', fliter: 'adobe-xd', picture: 'stream_team.jpg', url: 'stream_team'}
+- {title: 'Sushi Restaurant', fliter: 'adobe-xd', picture: 'sushi_restaurant.jpg', url: 'sushi_restaurant'}
 
 #-------------------------------
 # Social Icons and URls
