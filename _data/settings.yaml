@@ -10,7 +10,7 @@ email: demonwolf@demonwolfdev.com
 # Website URL Section
 
 # url: https://mrdemonwolf.me
-url: http://localhost:3000  #Dev URL
+url: http://192.168.1.2:3000  #Dev URL
 
 #-------------------------------
 # Menu Section
@@ -51,6 +51,7 @@ hero:
 examples:
 - {title: 'JSL Hub', url: 'jslhub', picture: 'jslhub.jpg'}
 - {title: 'Aishazart', url: 'aishazart', picture: 'aishazart.jpg'}
+- {title: 'Stream Team', url: 'stream_team', picture: 'stream_team.jpg'}
 
 #-------------------------------
 # Projects Gallery Section
@@ -65,6 +66,8 @@ project_gallery-thumbnails:
 #Make sure  put images in the /img/project/thumbnails folder.
 - {title: 'JSL Hub', fliter: 'wordpress', picture: 'jslhub.jpg' , url: 'jslhub'}
 - {title: 'Aishazart', fliter: 'wordpress', picture: 'aishazart.jpg', url: 'aishazart'}
+- {title: 'Stream Team', fliter: 'adobe-xd', picture: 'stream_team.jpg', url: 'stream_team'}
+- {title: 'Sushi Restaurant', fliter: 'adobe-xd', picture: 'sushi_restaurant.jpg', url: 'sushi_restaurant'}
 
 #-------------------------------
 # Social Icons and URls
