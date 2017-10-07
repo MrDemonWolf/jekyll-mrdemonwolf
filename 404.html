@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Error 404</title>
+  <!-- Basic Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <!-- Font Awsome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+    crossorigin="anonymous" />
+  <!--Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+</head>
+<style>
+  /* Error Page Inline Styles */
+
+  .body {
+    padding-top: 20px;
+  }
+
+  /* Layout */
+
+  .jumbotron {
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    color: inherit;
+    padding: 10px 0px;
+  }
+
+  /* Everything but the jumbotron gets side spacing for mobile-first views */
+
+  .masthead,
+  .body-content,
+    {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Main marketing message and sign up button */
+
+  .jumbotron {
+    text-align: center;
+    background-color: transparent;
+  }
+
+  .jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+
+  /* Colors */
+
+  .green {
+    color: #5cb85c;
+  }
+
+  .orange {
+    color: #f0ad4e;
+  }
+
+  .red {
+    color: #d9534f;
+  }
+</style>
+<script type="text/javascript">
+  function loadDomain() {
+    var display = document.getElementById("display-domain");
+    display.innerHTML = document.domain;
+  }
+
+</script>
+</head>
+
+<body onload="javascript:loadDomain();" class="body">
+  <!-- Error Page Content -->
+  <div class="container">
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h1>
+        <i class="fa fa-frown-o red"></i> 404 Not Found</h1>
+      <p class="lead">We couldn't find what you're looking for on
+        <em>
+          <span id="display-domain"></span>
+        </em>.</p>
+      <p>
+        <a onclick=javascript:checkSite(); class="btn btn-default btn-lg">
+          <span class="green">Take Me To The Homepage</span>
+        </a>
+        <script type="text/javascript">
+          function checkSite() {
+            var currentSite = window.location.hostname;
+            window.location = "https://" + currentSite;
+          }
+        </script>
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="body-content">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>What happened?</h2>
+          <p class="lead">A 404 error status implies that the file or page that you're looking for could not be found.</p>
+        </div>
+        <div class="col-md-6">
+          <h2>What can I do?</h2>
+          <p class="lead">If you're a site visitor</p>
+          <p>Please use your browser's back button and check that you're in the right place. If you need immediate assistance,
+            please send us an email instead.</p>
+          <p class="lead">If you're the site owner</p>
+          <p>Please check that you're in the right place and get in touch with your website provider if you believe this to
+            be an error.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Error Page Content -->
+  <!-- Loading JS in footer -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap Javascript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+</body>
