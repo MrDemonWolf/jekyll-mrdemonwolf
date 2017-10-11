@@ -4,22 +4,22 @@
  * gulp modules
  */
 
-var argv          = require('yargs').argv;
-var autoprefixer  = require('autoprefixer');
-var browserync    = require('browser-sync').create();
-var cp            = require('child_process');
-var eslint        = require('gulp-eslint');
-var gulp          = require('gulp');
-var imagemin      = require('gulp-imagemin');
-var named         = require('vinyl-named');
-var newer         = require('gulp-newer');
-var plumber       = require('gulp-plumber');
-var pngquant      = require('imagemin-pngquant');
-var postcss       = require('gulp-postcss');
-var sass          = require('gulp-sass');
-var uglify        = require('gulp-uglify');
-var watch         = require('gulp-watch');
-var webpack       = require('webpack-stream')
+var argv = require('yargs').argv;
+var autoprefixer = require('autoprefixer');
+var browserync = require('browser-sync').create();
+var cp = require('child_process');
+var eslint = require('gulp-eslint');
+var gulp = require('gulp');
+var imagemin = require('gulp-imagemin');
+var named = require('vinyl-named');
+var newer = require('gulp-newer');
+var plumber = require('gulp-plumber');
+var pngquant = require('imagemin-pngquant');
+var postcss = require('gulp-postcss');
+var sass = require('gulp-sass');
+var uglify = require('gulp-uglify');
+var watch = require('gulp-watch');
+var webpack = require('webpack-stream')
 
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
@@ -73,7 +73,7 @@ gulp.task('jekyll-build', function (done) {
   } else {
     jekyllConfig += config.jekyll.config.development ? ',' + config.jekyll.config.development : '';
   }
-  return cp.spawn(jekyll, ['build', '--config', jekyllConfig], {stdio: 'inherit', env: process.env})
+  return cp.spawn(jekyll, ['build', '--config', jekyllConfig], { stdio: 'inherit', env: process.env })
     .on('close', done);
 });
 
@@ -89,7 +89,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('server', ['jekyll-build'], function() {
+gulp.task('server', ['jekyll-build'], function () {
   return browserync.init({
     port: config.port,
     server: {
@@ -101,9 +101,9 @@ gulp.task('server', ['jekyll-build'], function() {
 /**
  * Sass
  */
-gulp.task('sass', function() {
+gulp.task('sass', function () {
   return gulp.src(paths.sass + '/**/*')
-    .pipe(sass({outputStyle: config.sass.outputStyle}).on('error', sass.logError))
+    .pipe(sass({ outputStyle: config.sass.outputStyle }).on('error', sass.logError))
     .pipe(postcss([
       autoprefixer({
         browsers: config.autoprefixer.browsers
@@ -115,13 +115,13 @@ gulp.task('sass', function() {
 /**
  * Imagemin
  */
-gulp.task('imagemin', function() {
+gulp.task('imagemin', function () {
   return gulp.src(paths.imagesSrc + '/**/*')
     .pipe(plumber())
     .pipe(newer(paths.images))
     .pipe(imagemin({
       progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
+      svgoPlugins: [{ removeViewBox: false }],
       use: [pngquant()]
     }))
     .pipe(gulp.dest(paths.images));
@@ -130,11 +130,11 @@ gulp.task('imagemin', function() {
 /**
  * eslint
  */
-gulp.task('eslint', function() {
+gulp.task('eslint', function () {
   return gulp.src(entry)
-  .pipe(eslint())
-  .pipe(eslint.format())
-  .pipe(eslint.failOnError());
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failOnError());
 });
 
 /**
@@ -142,7 +142,7 @@ gulp.task('eslint', function() {
  *
  * Bundle JavaScript files
  */
-gulp.task('webpack', ['eslint'], function() {
+gulp.task('webpack', ['eslint'], function () {
   return gulp.src(entry)
     .pipe(plumber())
     .pipe(named())
@@ -172,7 +172,7 @@ gulp.task('build', build, function (done) {
   } else {
     jekyllConfig += config.jekyll.config.development ? ',' + config.jekyll.config.development : '';
   }
-  return cp.spawn(jekyll, ['build', '--config', jekyllConfig], {stdio: 'inherit', env: process.env})
+  return cp.spawn(jekyll, ['build', '--config', jekyllConfig], { stdio: 'inherit', env: process.env })
     .on('close', done);
 });
 
@@ -180,9 +180,9 @@ gulp.task('build', build, function (done) {
  * Default task, running just `gulp` will minify the images, compile the sass, js, and jekyll site
  * launch BrowserSync, and watch files. Tasks can be configured by demonwolfconfig.json
  */
-gulp.task('default', tasks, function() {
+gulp.task('default', tasks, function () {
   if (config.tasks.imagemin) {
-    watch(paths.imagesSrc + '/**/*', function() {
+    watch(paths.imagesSrc + '/**/*', function () {
       gulp.start('imagemin');
     });
   }

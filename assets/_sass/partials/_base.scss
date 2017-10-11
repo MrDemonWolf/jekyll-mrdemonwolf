@@ -1,4 +1,6 @@
-/* variables.scss */
+// Fonts
+$main-font: 'Oswald', sans-serif;
+$second-font: "Times New Roman", Times, serif;
 // Social Icons Color
 $twitter-color: #1da1f2;
 $twitch-color: #6441a5;
@@ -37,3 +39,4 @@ $site-url: 'https://mrdemonwolf.me';
 $button_background_effect_font: #ffffff;
 $button_background_effect: #00709f;
 
+@import "../modules/all";

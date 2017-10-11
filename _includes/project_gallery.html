@@ -11,6 +11,6 @@
         <br/>
     </div>
     {% for item in site.data.settings.project_gallery-thumbnails %}<div class="project_gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter {{ item.fliter }}">
-        <a href="{{ site.data.settings.url }}/projects/{{ item.url }}"><img src="{{ site.data.settings.url }}/img/projects/thumbnails/{{ item.picture }}" class="img-responsive"></a>
+        <a href="{{ site.url }}/projects/{{ item.url }}"><img src="{{ site.url }}//assets/images/projects/thumbnails/{{ item.picture }}" class="img-responsive"></a>
     </div>{% endfor %}
 </div>
