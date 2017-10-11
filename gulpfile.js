@@ -1,66 +1,219 @@
-var gulp = require('gulp');
-var bs = require('browser-sync');
-var sass = require('gulp-sass');
-var cp = require('child_process');
-
-var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
-var messages = {
-    jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
-};
+'use strict';
 
 /**
- * Default task, running just `gulp` will compile the sass,
- * compile the jekyll site, launch BrowserSync & watch files.
+ * gulp modules
  */
-gulp.task('default', ['browser-sync', 'watch']);
+
+var argv          = require('yargs').argv;
+var autoprefixer  = require('autoprefixer');
+var browserync    = require('browser-sync').create();
+var cp            = require('child_process');
+var eslint        = require('gulp-eslint');
+var gulp          = require('gulp');
+var imagemin      = require('gulp-imagemin');
+var named         = require('vinyl-named');
+var newer         = require('gulp-newer');
+var plumber       = require('gulp-plumber');
+var pngquant      = require('imagemin-pngquant');
+var postcss       = require('gulp-postcss');
+var sass          = require('gulp-sass');
+var uglify        = require('gulp-uglify');
+var watch         = require('gulp-watch');
+var webpack       = require('webpack-stream')
+
+var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+
+// Load the configuration & set variables
+var config = require('./demonwolf.config.js');
+var tasks = [];
+var build = [];
+var paths = [];
+var entry = [];
+
+/**
+ * Set default & build tasks
+ */
+Object.keys(config.tasks).forEach(function (key) {
+  if (config.tasks[key]) {
+    tasks.push(key == 'webpack' ? '_' + key : key);
+  }
+});
+
+Object.keys(config.tasks).forEach(function (key) {
+  if (config.tasks[key] && key != 'server') {
+    build.push(key);
+  }
+});
+
+/**
+ * Paths
+ */
+Object.keys(config.paths).forEach(function (key) {
+  if (key != 'assets') {
+    if (config.paths.assets === '') {
+      paths[key] = './' + config.paths[key];
+    } else {
+      paths[key] = config.paths.assets + '/' + config.paths[key];
+    }
+  }
+});
+
+for (var i = 0; i <= config.js.entry.length - 1; i++) {
+  entry.push(paths.jsSrc + '/' + config.js.entry[i]);
+}
 
 /**
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function (done) {
-    bs.notify(messages.jekyllBuild);
-    return cp.spawn(jekyll, ['build'], { stdio: 'inherit' })
-        .on('close', done);
+  var jekyllConfig = config.jekyll.config.default;
+  if (argv.production) {
+    process.env.JEKYLL_ENV = 'production';
+    jekyllConfig += config.jekyll.config.production ? ',' + config.jekyll.config.production : '';
+  } else {
+    jekyllConfig += config.jekyll.config.development ? ',' + config.jekyll.config.development : '';
+  }
+  return cp.spawn(jekyll, ['build', '--config', jekyllConfig], {stdio: 'inherit', env: process.env})
+    .on('close', done);
 });
+
 
 /**
- * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
+ * Rebuild Jekyll & do page reload
  */
-
-gulp.task('sass', function () {
-    return gulp.src('_scss/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(sass({ outputStyle: 'compact' }))
-        .pipe(gulp.dest('_site/css'))
-        .pipe(bs.reload({ stream: true }))
-        .pipe(gulp.dest('css'));
-});
-
-// Here to rerun the sass when a error happens
-gulp.task('sass:watch', function () {
-    gulp.watch('_sass/*.scss', ['sass']);
-});
-
-/**
- * Watch scss files for changes & recompile
- * Watch html/md files, run jekyll & reload BrowserSync
- */
-gulp.task('watch', function () {
-    gulp.watch('_scss/*.scss', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
-});
-
 gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-    bs.reload();
+  browserync.notify('Rebuilded Jekyll');
+  browserync.reload();
 });
 
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function () {
-    bs({
-        server: {
-            baseDir: '_site'
-        }
+gulp.task('server', ['jekyll-build'], function() {
+  return browserync.init({
+    port: config.port,
+    server: {
+      baseDir: config.paths.dest,
+    }
+  });
+});
+
+/**
+ * Sass
+ */
+gulp.task('sass', function() {
+  return gulp.src(paths.sass + '/**/*')
+    .pipe(sass({outputStyle: config.sass.outputStyle}).on('error', sass.logError))
+    .pipe(postcss([
+      autoprefixer({
+        browsers: config.autoprefixer.browsers
+      })
+    ]))
+    .pipe(gulp.dest(paths.css));
+});
+
+/**
+ * Imagemin
+ */
+gulp.task('imagemin', function() {
+  return gulp.src(paths.imagesSrc + '/**/*')
+    .pipe(plumber())
+    .pipe(newer(paths.images))
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngquant()]
+    }))
+    .pipe(gulp.dest(paths.images));
+});
+
+/**
+ * eslint
+ */
+gulp.task('eslint', function() {
+  return gulp.src(entry)
+  .pipe(eslint())
+  .pipe(eslint.format())
+  .pipe(eslint.failOnError());
+});
+
+/**
+ * Webpack
+ *
+ * Bundle JavaScript files
+ */
+gulp.task('webpack', ['eslint'], function() {
+  return gulp.src(entry)
+    .pipe(plumber())
+    .pipe(named())
+    .pipe(webpack({
+      watch: argv.watch ? true : false,
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest(paths.js));
+});
+
+/**
+ * For internal use only (webpack)
+ */
+gulp.task('_webpack', function () {
+  argv.watch = true;
+  gulp.start('webpack');
+});
+
+/**
+ * Build
+ */
+gulp.task('build', build, function (done) {
+  var jekyllConfig = config.jekyll.config.default;
+  if (argv.production) {
+    process.env.JEKYLL_ENV = 'production';
+    jekyllConfig += config.jekyll.config.production ? ',' + config.jekyll.config.production : '';
+  } else {
+    jekyllConfig += config.jekyll.config.development ? ',' + config.jekyll.config.development : '';
+  }
+  return cp.spawn(jekyll, ['build', '--config', jekyllConfig], {stdio: 'inherit', env: process.env})
+    .on('close', done);
+});
+
+/**
+ * Default task, running just `gulp` will minify the images, compile the sass, js, and jekyll site
+ * launch BrowserSync, and watch files. Tasks can be configured by demonwolfconfig.json
+ */
+gulp.task('default', tasks, function() {
+  if (config.tasks.imagemin) {
+    watch(paths.imagesSrc + '/**/*', function() {
+      gulp.start('imagemin');
     });
-})
+  }
+
+  if (config.tasks.sass) {
+    watch(paths.sass + '/**/*', function () {
+      gulp.start('sass');
+    });
+  }
+
+  if (config.tasks['server']) {
+    watch([
+      '!./node_modules/**/*',
+      '!./README.md',
+      '!' + paths.dest + '/**/*',
+      '_includes/**/*',
+      '_layouts/**/*',
+      '*.html',
+      './**/*.md',
+      './**/*.markdown',
+      paths.posts + '/**/*',
+      paths.css + '/**/*',
+      paths.js + '/**/*',
+      paths.images + '/**/*'
+    ], function () {
+      gulp.start('jekyll-rebuild');
+    });
+  }
+});
+
+/**
+ * Test
+ */
+gulp.task('test', ['build']);
