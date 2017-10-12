@@ -24,7 +24,7 @@ var webpack = require('webpack-stream')
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
 // Load the configuration & set variables
-var config = require('./demonwolf.config.js');
+var config = require('./mrdemonwolf.config.js');
 var tasks = [];
 var build = [];
 var paths = [];
@@ -65,6 +65,7 @@ for (var i = 0; i <= config.js.entry.length - 1; i++) {
 /**
  * Build the Jekyll Site
  */
+
 gulp.task('jekyll-build', function (done) {
   var jekyllConfig = config.jekyll.config.default;
   if (argv.production) {
@@ -76,8 +77,6 @@ gulp.task('jekyll-build', function (done) {
   return cp.spawn(jekyll, ['build', '--config', jekyllConfig], { stdio: 'inherit', env: process.env })
     .on('close', done);
 });
-
-
 /**
  * Rebuild Jekyll & do page reload
  */
@@ -178,7 +177,7 @@ gulp.task('build', build, function (done) {
 
 /**
  * Default task, running just `gulp` will minify the images, compile the sass, js, and jekyll site
- * launch BrowserSync, and watch files. Tasks can be configured by demonwolfconfig.json
+ * launch BrowserSync, and watch files. Tasks can be configured by mrdemonwolf.config.js
  */
 gulp.task('default', tasks, function () {
   if (config.tasks.imagemin) {
@@ -197,16 +196,16 @@ gulp.task('default', tasks, function () {
     watch([
       '!./node_modules/**/*',
       '!./README.md',
-      '!' + paths.dest + '/**/*',
+      '!./' + config.paths.dest + '/**/*',
       '_includes/**/*',
       '_layouts/**/*',
       '*.html',
       './**/*.md',
       './**/*.markdown',
-      paths.posts + '/**/*',
-      paths.css + '/**/*',
-      paths.js + '/**/*',
-      paths.images + '/**/*'
+      config.paths.posts + '/**/*',
+      config.paths.css + '/**/*',
+      config.paths.js + '/**/*',
+      config.paths.images + '/**/*'
     ], function () {
       gulp.start('jekyll-rebuild');
     });

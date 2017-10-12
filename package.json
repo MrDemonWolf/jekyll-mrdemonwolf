@@ -50,5 +50,6 @@
   "bugs": {
     "url": "https://github.com/MrDemonWolf/mrdemonwolf.github.io/issues"
   },
-  "homepage": "https://github.com/MrDemonWolf/mrdemonwolf.github.io"
+  "homepage": "https://github.com/MrDemonWolf/mrdemonwolf.github.io",
+  "dependencies": {}
 }

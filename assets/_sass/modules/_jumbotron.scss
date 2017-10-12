@@ -2,10 +2,10 @@
 .jumbotron {
 	background-color: transparent !important;
 }
-.hero { 
+.hero {
     text-align: center;
     color: white;
-    background: url(#{$site-url}/img/hero_bg.jpg) no-repeat bottom center;
+    background: url(#{$site-url}/assets/images/hero_bg.jpg) no-repeat bottom center;
     background-size: cover;
     height: 100%;
 	// padding-top: 8%;
@@ -39,22 +39,22 @@
         -ms-animation: animateWord 18s linear infinite 0s;
         animation: animateWord 18s linear infinite 0s;
 	}
-	& > span:nth-child(2) { 
-        -webkit-animation-delay: 3s; 
-        -ms-animation-delay: 3s; 
-        animation-delay: 3s; 
+	& > span:nth-child(2) {
+        -webkit-animation-delay: 3s;
+        -ms-animation-delay: 3s;
+        animation-delay: 3s;
         color: $hero-animate-text;
     }
-    & > span:nth-child(3) { 
-        -webkit-animation-delay: 6s; 
-        -ms-animation-delay: 6s; 
-        animation-delay: 6s; 
-        color: $hero-animate-text; 
+    & > span:nth-child(3) {
+        -webkit-animation-delay: 6s;
+        -ms-animation-delay: 6s;
+        animation-delay: 6s;
+        color: $hero-animate-text;
     }
-    & > span:nth-child(4) { 
-        -webkit-animation-delay: 9s; 
-        -ms-animation-delay: 9s; 
-        animation-delay: 9s; 
+    & > span:nth-child(4) {
+        -webkit-animation-delay: 9s;
+        -ms-animation-delay: 9s;
+        animation-delay: 9s;
         color: $hero-animate-text;
     }
 }
