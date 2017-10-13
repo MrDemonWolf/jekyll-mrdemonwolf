@@ -1,10 +1,8 @@
 #-------------------------------
 # General Site Settings
 
-title: MrDemonWolf
 name: MrDemonWolf
-description: MrDemonWolf is UX Designer, Gamer, Streamer, Youtuber. Freelancer for UX Design and Wordpress site builds. Want a new website for your company or etc.
-email: demonwolf@demonwolfdev.com
+google-analytics: UA-xxxx-1
 
 #-------------------------------
 # Menu Section

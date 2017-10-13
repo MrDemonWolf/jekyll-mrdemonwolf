@@ -2,25 +2,25 @@
 <html lang="en">
 
 <head>
-    <title>{{ page.title }} - {{ site.data.settings.title }}</title>
+    <title>{{ page.title }} - {{ site.title }}</title>
     <!-- Basic Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Basic meta and OG tags-->
     <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="{{ site.data.settings.title }}">
+    <meta itemprop="name" content="{{ site.title }}">
     <meta itemprop="description" content="{{ page.description }}">
     <meta itemprop="image" content="{{ site.url }}//assets/images/logos/logo.png ">
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="{{ site.data.settings.seo.type }}">
     <meta name="twitter:site" content="{{ site.data.settings.seo.twitter-site }}">
-    <meta name="twitter:title" content="{{ site.data.settings.title }} - {{ page.title }}" <meta name="twitter:description" content="{{ page.description }}">
+    <meta name="twitter:title" content="{{ site.title }} - {{ page.title }}" <meta name="twitter:description" content="{{ page.description }}">
     <meta name="twitter:creator" content="{{ site.data.settings.seo.twitter-creator }}">
     <meta name="twitter:image" content="{{ site.url }}//assets/images/logos/logo.png">
     <!-- Open Graph data -->
-    <meta property="og:title" content="{{ site.data.settings.title }} - {{ page.title }}" />
-    <meta property="og:site_name" content="{{ site.data.settings.title }}" />
+    <meta property="og:title" content="{{ site.title }} - {{ page.title }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:type" content="{{ site.data.settings.seo.type }}" />
     <meta property="og:url" content="{{ site.url }}" />
     <meta property="og:image" content="{{ site.url }}//assets/images/logos/logo.png" />
@@ -125,7 +125,7 @@
                     <div class="footer-copyright"> Copyright ©
                         <script>
                             document.write("" + new Date().getFullYear());
-                        </script> <a href="/">{{ site.data.settings.title }}</a> <span>, All rights reserved</span>
+                        </script> <a href="/">{{ site.title }}</a> <span>, All rights reserved</span>
                     </div>
                 </div>
                 <div class="col-md-4 col-md-offset-2 col-sm-12 footer-social ">{% for item in site.data.settings.social %}
