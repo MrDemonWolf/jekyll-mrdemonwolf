@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+// Fonts
+$main-font: 'Oswald', sans-serif;
+$second-font: "Times New Roman", Times, serif;
+// Social Icons Color
+$twitter-color: #1da1f2;
+$twitch-color: #6441a5;
+$youtube-color: #cd201f;
+$github-color: #333;
+$google-plus-color: #dd4b39;
+$facebook-color:#3b5998;
+$spotify-color: #1db954;
+$behance-color: #1769ff;
+$social-icon: #ffffff;
+// Footer Text
+$footer-color: #ffffff;
+$footer-color_link: #f2f2f2;
+$footer-background: #015274;
+// Footer Legal
+$footer-color-legal: #000000;
+$footer-color_link-legal: #3D3D3D;
+// Brand Color
+$brand-color: #00328d;
+$brand-color-alt: #25aae1;
+$brand-color-alt-2: #015274;
+// Menu Links
+$nav-bgDefault      : #ffffff;
+$nav-bgHighlight    : #ffffff;
+$nav-colDefault     : #25aae1;
+$nav-colHighlight   : #00328d;
+$nav-dropdown       : true;
+// Hero
+$hero-animate-text: #ffffff;
+// illustration
+$illustration-bg: #015274;
+// Site URLs
+// $site-url: 'https://mrdemonwolf.me';
+$site-url: 'http://localhost:4000'; /* Dev */
+// Buttons
+$button_background_effect_font: #ffffff;
+$button_background_effect: #00709f;

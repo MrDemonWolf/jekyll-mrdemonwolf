@@ -1,0 +1,64 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer-copyright {
+	font-size: 1.15em;
+  color: $footer-color;
+      padding: 10px 0;
+    margin-bottom: 0;
+	a {
+		color: $footer-color_link;
+		text-decoration: none;
+	}
+	a:hover {
+		color: lighten($footer-color_link, 15%);
+		text-decoration: none;
+  }
+}
+.copyright {
+  background-color: $footer-background;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.social-icon {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  background-color: $social-icon;
+  color: #fff;
+  text-align: center;
+  margin-right: 10px;
+  padding-top: 8px;
+  border-radius: 50%;
+}
+
+.footer-social li {
+  float: right;
+  display: flex;
+}
+@media (max-width: 768px) {
+    .footer-social {
+      display: flex;
+      justify-content: center;
+    }
+    .footer-copyright , .footer-legal {
+      text-align: center
+    }
+    .footer-copyright span {
+      display: none;
+    }
+}
+.footer-legal {
+  font-size: 1.15em;
+  color: $footer-color-legal;
+  padding: 10px 0;
+  margin-bottom: 0;
+	a {
+		color: $footer-color_link-legal;
+		text-decoration: none;
+	}
+	a:hover {
+		color: lighten($footer-color_link-legal, 15%);
+		text-decoration: none;
+  }
+}

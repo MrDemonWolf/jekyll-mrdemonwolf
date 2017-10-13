@@ -108,7 +108,7 @@ gulp.task('sass', function () {
         browsers: config.autoprefixer.browsers
       })
     ]))
-    .pipe(gulp.dest(paths.css));
+    .pipe(gulp.dest(paths.css))
 });
 
 /**
@@ -202,10 +202,10 @@ gulp.task('default', tasks, function () {
       '*.html',
       './**/*.md',
       './**/*.markdown',
-      config.paths.posts + '/**/*',
-      config.paths.css + '/**/*',
-      config.paths.js + '/**/*',
-      config.paths.images + '/**/*'
+      paths.posts + '/**/*',
+      paths.css + '/**/*',
+      paths.js + '/**/*',
+      paths.images + '/**/*'
     ], function () {
       gulp.start('jekyll-rebuild');
     });

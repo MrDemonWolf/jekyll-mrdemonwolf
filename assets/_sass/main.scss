@@ -1,1 +1,40 @@
-@import "partials/base";
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2. Vendors extensions
+// @import
+//   'vendor-extensions/';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
+
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
+
+// 5. Components
+@import
+  'components/jumbotron',
+  'components/about',
+  'components/contact',
+  'components/project_gallery',
+  'components/projects',
+  'components/work';
+
+// 6. Page-specific styles
+@import
+  'pages/legal';
+
+// 7. Themes
+@import
+  'themes/default';

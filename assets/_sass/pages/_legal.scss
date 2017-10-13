@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the legal page.
+// -----------------------------------------------------------------------------
+.privacy-statement-text {
+    font-size: 1.25em;
+    font-family: $second-font;
+    a {
+    color: #313131;
+    }
+    a:hover {
+    color: lighten(#313131, 25);
+    transition: all 500ms;
+	-webkit-transition: all 500ms;
+	-moz-transition: all 500ms;
+    }
+}
+.terms-of-service-text {
+    font-size: 1.25em;
+    font-family: $second-font;
+    a {
+    color: #313131;
+    }
+    a:hover {
+    color: lighten(#313131, 25);
+    transition: all 500ms;
+	-webkit-transition: all 500ms;
+	-moz-transition: all 500ms;
+    }
+}
+.last-modified {
+    font-size: 1em;
+    font-family: $second-font;
+}
