@@ -24,7 +24,7 @@ github_username: mrdemonwolf
 # Build settings
 markdown: kramdown
 plugins:
-  - jekyll-feed
+  # - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -36,4 +36,4 @@ exclude:
   - package.json
   - package-lock.json
   - README.md
-  # - lib
+  - lib
