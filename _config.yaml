@@ -13,9 +13,9 @@
 # you will see them access via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the template via {{ site.myvariable }}.
-title: "MrDemonWolf Boilerplate"
-email: your-email@domain.com
-description: Quick starter project for Jekyll including full setup for gulp, Sass, Autoprefixer, Browserify, Imagemin, Browsersync, PostCSS etc.
+title: "MrDemonWolf"
+email: demonwolf@demonwolfdev.com
+description: MrDemonWolf is UX Designer, Gamer, Streamer, Youtuber. Freelancer for UX Design and Wordpress site builds. Want a new website for your company or etc.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mrdemonwolf.me" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: mrdemonwolf
@@ -35,4 +35,4 @@ exclude:
   - package.json
   - package-lock.json
   - README.md
-  - lib
+  # - lib
