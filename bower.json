@@ -1,12 +1,12 @@
 {
-  "name": "mrdemonwolf.github.io",
-  "description": "mrdemonwolf.github.io",
+  "name": "mrdemonwolf.me",
+  "description": "mrdemonwolf.me",
   "main": "gulpfile.js",
   "authors": [
     "DemonWolf"
   ],
   "license": "BSD-2-Clause",
-  "homepage": "https://github.com/MrDemonWolf/mrdemonwolf.github.io",
+  "homepage": "https://github.com/MrDemonWolf/mrdemonwolf.me",
   "ignore": [
     "**/.*",
     "node_modules",
