@@ -6,9 +6,12 @@
   'abstracts/functions',
   'abstracts/mixins';
 
-// 2. Vendors extensions
-// @import
-//   'vendor-extensions/';
+// 2. Vendors and Vender extensions
+@import
+  'vendor/bootstrap.min',
+  'vendor/cookieconsent.min',
+  'vendor/font-awesome.min',
+  'vendor/jquery.fancybox.min';
 
 // 3. Base stuff
 @import
