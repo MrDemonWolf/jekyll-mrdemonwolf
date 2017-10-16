@@ -6,9 +6,11 @@
   'abstracts/functions',
   'abstracts/mixins';
 
-// 2. Vender extensions
-// @import
-  // 'vendor/';
+// 2. Vender & Vender extensions
+@import
+  '../lib/fancybox/css/jquery.fancybox.css',
+  '../ib/bootstrap/css/bootstrap.css',
+  '../lib/font-awesome/css/font-awesome.css';
 
 // 3. Base stuff
 @import
