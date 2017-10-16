@@ -44,23 +44,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}/favicon-16x16.png">
   <link rel="manifest" href="{{ site.url }}/manifest.json">
 
-  <!-- Frameworks -->
-  <!-- Font Awsome-->
-  <!-- <link href="{{ site.url }}/lib/font-awesome/css/font-awesome.css" rel="stylesheet"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
-    crossorigin="anonymous" />
-  <!--Bootstrap -->
-  <!-- <link href="{{ site.url }}/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w="
-    crossorigin="anonymous" />
-  <!-- Fancybox -->
-  <!-- <link href="{{ site.url }}/lib/fancybox/dist/jquery.fancybox.css" rel="stylesheet"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css" integrity="sha256-Plq9l9jMJkIx2PX9Rax0AkgNzFXpaC3YU/XFlL5MYFE="
-    crossorigin="anonymous" />
-  <!-- <link href="{{ site.url }}/lib/cookieconsent/build/cookieconsent.min.css" rel="stylesheet"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.4/cookieconsent.min.css" integrity="sha256-RWqxpxUH7ZGrrhTJ0I+v+zc6e8cRpm5ENBt7i3u3KrQ="
-    crossorigin="anonymous" />
-  <!-- Custom-->
+  <!-- Loading CSS-->
   <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
   <!-- Google Analytics -->
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
@@ -83,9 +67,7 @@
   </div>
 </body>
 <!-- Cookie Consent -->
-<!-- <script src="{{ site.url }}/lib/cookieconsent/build/cookieconsent.min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.4/cookieconsent.min.js" integrity="sha256-r0xmg4FKpSfK9TvePQIeaq/gCDO0Xy3q0EPIfteGRnQ="
-  crossorigin="anonymous"></script>
+<script src="{{ site.url }}/assets/js/vender/cookieconsent.min.js"></script>
 <script>
     window.addEventListener("load", function () {
       window.cookieconsent.initialise({
@@ -142,19 +124,11 @@
 </div>
 <!-- Loadidng JS in footer -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<!-- <script src="{{ site.url }}/lib/jquery/dist/jquery.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-<!-- <script src="{{ site.url }}/lib/letteringjs/jquery.lettering.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js" integrity="sha256-7sov0P4cWkfKMVHQ/NvnWVqcLSPYrPwxdz+MtZ+ahl8="
-  crossorigin="anonymous"></script>
-<!-- <script src="{{ site.url }}/lib/fancybox/dist/jquery.fancybox.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js" integrity="sha256-PyeEn7y37Cfw5xCU4Ub3G+A8Qx9zqMnAIaRGKjnfWiI="
-  crossorigin="anonymous"></script>
+<script src="{{ site.url }}/assets/vender/jquery.js"></script>
+<script src="{{ site.url }}/assets/vender/jquery.lettering.js"></script>
+<script src="{{ site.url }}/assets/vender/jquery.fancybox.js"></script>
 <!-- Bootstrap Javascript -->
-<!-- <script src="{{ site.url }}/lib/bootstrap/dist/js/bootstrap.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8="
-  crossorigin="anonymous"></script>
+<script src="{{ site.url }}/assets/vender//bootstrap.js"></script>
 <!-- Custom -->
 <script src="{{ site.url }}/assets/js/main.js"></script>
 
