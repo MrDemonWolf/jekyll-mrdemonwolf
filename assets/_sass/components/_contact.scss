@@ -1,6 +1,29 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the contact component.
 // -----------------------------------------------------------------------------
+.content-wrapper {
+  min-height: 100%;
+  position: relative;
+}
+.align-center {
+  text-align: center;
+}
+.row-contact {
+  margin: -20px 0 !important;
+  :after {
+  content: "" !important;
+  display: table !important;
+  clear: both !important;
+  }
+}
+.row-contact .col {
+  padding: 0 20px;
+  float: left;
+  box-sizing: border-box;
+}
+.row-contact .col.x-50 {
+  width: 50%;
+}
 .row-contact .col.x-100 {
   width: 100%;
 }
@@ -75,4 +98,3 @@
     max-width: 100%;
   }
 }
-
