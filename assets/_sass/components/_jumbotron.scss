@@ -1,88 +1,109 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the jumbotron component.
 // -----------------------------------------------------------------------------
-.jumbotron {
-  background-color: transparent !important;
-  padding-bottom: 27px;
-}
 .hero {
     text-align: center;
     color: white;
     background: url(#{$site-url}/assets/images/hero_bg.jpg) no-repeat bottom center;
     background-size: cover;
     height: 100%;
-	// padding-top: 8%;
-  // padding-bottom: 8%;
+    padding-bottom: 27px;
+
+    .heading {
+        vertical-align: middle;
+        font-size: 2em;
+    }
+
+    .body {
+        display: table-cell;
+    }
+
+    .text {
+        color: #ffffff;
+        font-family: $main-font;
+        font-size: 2em;
+        display: inline-block;
+    }
+
+    .animate-text {
+        font-family: $main-font;
+        font-size: 2em;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+
+        & span {
+            position: absolute;
+            opacity: 0;
+            overflow: hidden;
+            color: $hero-animate-text;
+            animation: animateWord 18s linear infinite 0s;
+        }
+
+        & > span:nth-child(2) {
+            animation-delay: 3s;
+            color: $hero-animate-text;
+        }
+
+        & > span:nth-child(3) {
+            animation-delay: 6s;
+            color: $hero-animate-text;
+        }
+
+        & > span:nth-child(4) {
+            animation-delay: 9s;
+            color: $hero-animate-text;
+        }
+    }
 }
-.hero-body {
-    display: table-cell;
-    vertical-align: middle;
-}
-.hero-heading {
-    font-size: 2em;
-}
-.hero-text {
-	color: #ffffff;
-	font-family: $main-font;
-	font-size: 2em;
-	display: inline-block;
-}
-.hero-animate-text {
-	font-family: $main-font;
-	font-size: 2em;
-    flex-wrap: wrap;
-    display: flex;
-	justify-content: center;
-	& span {
-	    position: absolute;
+
+@keyframes animateWord {
+    0% {
         opacity: 0;
-        overflow: hidden;
-        color: $hero-animate-text;
-        animation: animateWord 18s linear infinite 0s;
-	}
-	& > span:nth-child(2) {
-        -webkit-animation-delay: 3s;
-        -ms-animation-delay: 3s;
-        animation-delay: 3s;
-        color: $hero-animate-text;
     }
-    & > span:nth-child(3) {
-        -webkit-animation-delay: 6s;
-        -ms-animation-delay: 6s;
-        animation-delay: 6s;
-        color: $hero-animate-text;
+
+    2% {
+        opacity: 0;
+        transform: translateY(-30px);
     }
-    & > span:nth-child(4) {
-        -webkit-animation-delay: 9s;
-        -ms-animation-delay: 9s;
-        animation-delay: 9s;
-        color: $hero-animate-text;
+
+    5% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    17% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    20% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
-@-webkit-keyframes animateWord {
-    0% { opacity: 0; }
-    2% { opacity: 0; -webkit-transform: translateY(-30px); }
-    5% { opacity: 1; -webkit-transform: translateY(0px);}
-    17% { opacity: 1; -webkit-transform: translateY(0px); }
-    20% { opacity: 0; -webkit-transform: translateY(30px); }
-    80% { opacity: 0; }
-    100% { opacity: 0; }
-}
+
 .btn {
     border-radius: 5px;
     margin: 21px 0 0 0;
-    font-weight:700;
-}
-.btn.btn-primary {
-    color: $button_background_effect_font;
-    background-color: $button_background_effect;
-    // border-bottom: 4px solid #ddd;
-}
-.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover , .btn-primary:hover {
-    background: darken($button_background_effect, 15%);
-    color: button_background_effect_font;
-    // border-color: #ddd;
-  	transition: all 500ms;
-		-webkit-transition: all 500ms;
-		-moz-transition: all 500ms;
+    font-weight: 700;
+
+    &.btn-contact {
+        color: $button_background_effect_font;
+        background-color: $button_background_effect;
+
+        &.btn-contact.active.focus, .btn-contact.active:focus, .btn-contact.active:hover, .btn-contact:active.focus, .btn-contact:active:focus, .btn-contact:active:hover, .btn-contact:hover {
+            background: darken($button_background_effect, 15%);
+            color: button_background_effect_font;
+            transition: all 500ms;
+        }
+    }
 }
