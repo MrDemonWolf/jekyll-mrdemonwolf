@@ -32,43 +32,10 @@ $('.js-input').keyup(function () {
     }
 });
 $(document).ready(function () {
-    $(".fancybox").fancybox({
-        openEffect: "none",
-        closeEffect: "none"
-    });
-});
-
-
-$(document).ready(function () {
     setTimeout(function () {
         $("#cookieConsent").fadeIn(200);
     }, 4000);
     $("#closeCookieConsent, .cookieConsentOK").click(function () {
         $("#cookieConsent").fadeOut(200);
     });
-}); 
-// Project Gallery
-$(document).ready(function () {
-
-    $(".project_gallery_filter-button").click(function () {
-        var value = $(this).attr('data-filter');
-
-        if (value == "all") {
-            //$('.filter').removeClass('hidden');
-            $('.filter').show('1000');
-        }
-        else {
-            //$('.filter[filter-item="'+value+'"]').removeClass('hidden');
-            //$(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-            $(".filter").not('.' + value).hide('3000');
-            $('.filter').filter('.' + value).show('3000');
-
-        }
-    });
-
-    if ($(".project_gallery_filter-button").removeClass("active")) {
-        $(this).removeClass("active");
-    }
-    $(this).addClass("active");
-
 });
