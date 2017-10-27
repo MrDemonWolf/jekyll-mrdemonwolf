@@ -1,30 +1,36 @@
 <!-- Navbar -->
 <nav class="navbar navbar-default navbar-fixed-top" id="scroll_navbar">
-    <div class="container">
-        <div class="navbar-header">
-            <button id="ChangeToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <div id="navbar-hamburger">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-                            </div>
-                <div id="navbar-close" class="hidden">
+  <div class="container">
+    <div class="navbar-header">
+      <button id="ChangeToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <div id="navbar-hamburger">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </div>
+        <div id="navbar-close" class="hidden">
           <span class="glyphicon glyphicon-remove"></span>
         </div>
       </button>
-            <a class="navbar-brand navbar-logo logo-desktop" href="/"><img alt="{{ site.title }}" src="{{ site.url }}//assets/images/logos/logo_text.png"></a>
-            <a class="navbar-brand navbar-logo logo-mobile" href="/"><img alt="{{ site.title }}" src="{{ site.url }}//assets/images/logos/logo.png"></a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                {% for item in site.data.settings.menu %}
-                <li>
-                    <a href="{{ item.url }}" alt="{{ item.title }}">{{ item.title }}</a>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
+      <!-- Desktop Logo -->
+      <a class="navbar-brand navbar-logo logo-desktop" href="/">
+        <img alt="{{ site.title }}" src="{{ site.url }}//assets/images/logos/logo_text.png">
+      </a>
+      <!-- Mobile Logo -->
+      <a class="navbar-brand navbar-logo logo-mobile" href="/">
+        <img alt="{{ site.title }}" src="{{ site.url }}//assets/images/logos/logo.png">
+      </a>
     </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        {% for item in site.data.settings.menu %}
+        <li>
+          <a href="{{ item.url }}" alt="{{ item.title }}">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 </nav>
