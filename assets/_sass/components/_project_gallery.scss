@@ -1,13 +1,17 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the project gallery component.
 // -----------------------------------------------------------------------------
+.project_gallery {
+    display: inline-block;
+}
+
 .project_gallery-title {
     font-size: 2em;
     font-family: $main-font;
     color: $brand-color;
     text-align: center;
     font-weight: 500;
-    margin-bottom: 25px;
+    margin: 0px;
 }
 
 .project_gallery_filter {
