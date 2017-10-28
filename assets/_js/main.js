@@ -49,7 +49,7 @@ $(document).ready(function () {
 // Project Gallery
 $(document).ready(function () {
 
-    $(".project_gallery_filter-button").click(function () {
+  $(".project_filter-button").click(function () {
         var value = $(this).attr('data-filter');
 
         if (value == "all") {

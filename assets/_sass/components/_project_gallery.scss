@@ -2,61 +2,63 @@
 // This file contains all styles related to the project gallery component.
 // -----------------------------------------------------------------------------
 .project_gallery {
-    display: inline-block;
-}
+    .gallery {
+        display: inline-block;
+    }
 
-.project_gallery-title {
-    font-size: 2em;
-    font-family: $main-font;
-    color: $brand-color;
-    text-align: center;
-    font-weight: 500;
-    margin: 0px;
-}
+    .title {
+        font-size: 2em;
+        font-family: $main-font;
+        color: $brand-color;
+        text-align: center;
+        font-weight: 500;
+        margin: 0px;
+    }
 
-.project_gallery_filter {
-    padding-bottom: 10px;
-}
+    .project_filter {
+        padding-bottom: 10px;
+    }
 
-.project_gallery_filter-button {
-    font-size: 1.15em;
-    border: 1px solid $brand-color-alt;
-    border-radius: 5px;
-    text-align: center;
-    color: $brand-color-alt;
-
-    &:hover {
+    .project_filter-button {
         font-size: 1.15em;
         border: 1px solid $brand-color-alt;
         border-radius: 5px;
         text-align: center;
-        color: #ffffff;
-        background-color: $brand-color-alt;
-    }
-}
+        color: $brand-color-alt;
 
-.btn-default {
-    &:active {
-        .project_gallery_filter-button {
-            &:active {
-                background-color: $brand-color-alt;
-                color: #ffffff;
+        &:hover {
+            font-size: 1.15em;
+            border: 1px solid $brand-color-alt;
+            border-radius: 5px;
+            text-align: center;
+            color: #ffffff;
+            background-color: $brand-color-alt;
+        }
+    }
+
+    .btn-default {
+        &:active {
+            .project_gallery_filter-button {
+                &:active {
+                    background-color: $brand-color-alt;
+                    color: #ffffff;
+                }
             }
         }
     }
-}
 
-.project_gallery_image {
-    width: 100%;
-}
+    .image {
+        width: 100%;
+    }
 
-.project_gallery_product {
-    margin-bottom: 30px;
+    .project_gallery_product {
+        margin-bottom: 30px;
 
-    a > img:hover {
-        border: 0px solid rgba($brand-color-alt, 0.75);
-        transition: all 1s;
-        -webkit-transition: all 1s;
-        -moz-transition: all 1s;
+        a > img:hover {
+            border: 0px solid rgba($brand-color-alt, 0.75);
+            transition: all 1s;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+        }
     }
 }
