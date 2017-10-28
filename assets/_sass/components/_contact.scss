@@ -86,20 +86,21 @@
     color: #888;
     cursor: text;
     transition: transform .2s ease-in-out;
-    }
+
     .submit-btn {
-    display: inline-block;
-    background: #666;
-    color: #ffffff;
-    border-bottom: 4px solid #ddd;
-    font-family: $main-font;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 16px;
-    line-height: 24px;
-    padding: 8px 16px;
-    border: none;
-    cursor: pointer;
+        display: inline-block;
+        background: #666;
+        color: #ffffff;
+        border-bottom: 4px solid #ddd;
+        font-family: $main-font;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+    }
 }
 
 @media (max-width: 768px) {
