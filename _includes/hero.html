@@ -1,17 +1,21 @@
 <!-- Jumbotron Hero -->
 <div class="jumbotron hero">
-    <div class="container">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="row">
-                    <div class="jumbotron inner-hero">
-                        <h1 class="text">DemonWolf is a </h1>
-                        <div class="animate-text">
-                             {% for item in site.data.settings.hero %}<span>{{ item.name }}</span>{% endfor %}
-                        </div>
-                    </div><a class="btn btn-primary btn-lg" href="#contact" role="button">Contact Me</a>
-                </div>
+          <div class="jumbotron inner-hero">
+            <h1 class="text">DemonWolf is a </h1>
+            <div class="animate-text">
+              {% for item in site.data.settings.hero %}
+              <span>{{ item.name }}</span>{% endfor %}
             </div>
+          </div>
+          <div class="cta-button">
+            <a class="btn btn-primary btn-lg" href="#contact" role="button">Contact Me</a>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>

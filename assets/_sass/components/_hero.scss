@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-// This file contains all styles related to the jumbotron component.
+// This file contains all styles related to the hero component.
 // -----------------------------------------------------------------------------
 .hero {
     text-align: center;
@@ -7,6 +7,7 @@
     background: url(#{$site-url}/assets/images/hero_bg.jpg) no-repeat bottom center;
     background-size: cover;
     height: 100%;
+    padding-top: 27px;
     padding-bottom: 27px;
 
     .body {
@@ -22,6 +23,8 @@
 
     .inner-hero {
         background-color: transparent !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
     .animate-text {
@@ -52,6 +55,25 @@
         & > span:nth-child(4) {
             animation-delay: 9s;
             color: $hero-animate-text;
+        }
+    }
+    .cta-button {
+      padding-bottom: 15px;
+    }
+    .btn {
+        border-radius: 5px;
+        margin: 0 0 0 0;
+        font-weight: 700;
+
+        &.btn-contact {
+            color: $button_background_effect_font;
+            background-color: $button_background_effect;
+
+            &.btn-contact.active.focus, .btn-contact.active:focus, .btn-contact.active:hover, .btn-contact:active.focus, .btn-contact:active:focus, .btn-contact:active:hover, .btn-contact:hover {
+                background: darken($button_background_effect, 15%);
+                color: button_background_effect_font;
+                transition: all 500ms;
+            }
         }
     }
 }
@@ -87,22 +109,5 @@
 
     100% {
         opacity: 0;
-    }
-}
-
-.btn {
-    border-radius: 5px;
-    margin: 21px 0 0 0;
-    font-weight: 700;
-
-    &.btn-contact {
-        color: $button_background_effect_font;
-        background-color: $button_background_effect;
-
-        &.btn-contact.active.focus, .btn-contact.active:focus, .btn-contact.active:hover, .btn-contact:active.focus, .btn-contact:active:focus, .btn-contact:active:hover, .btn-contact:hover {
-            background: darken($button_background_effect, 15%);
-            color: button_background_effect_font;
-            transition: all 500ms;
-        }
     }
 }
