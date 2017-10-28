@@ -4,67 +4,82 @@
 
 html,
 body {
-  height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
+    height: 100%;
+
+    /* The html and body elements cannot have any padding or margin. */
 }
 
 /* Wrapper for page content to push down footer */
 #wrap {
-  min-height: 100%;
-  height: auto;
-  /* Negative indent footer by its height */
-  margin: 0 auto -60px;
-  /* Pad bottom by footer height */
-  padding: 0 0 60px;
+    min-height: 100%;
+    height: auto;
+
+    /* Negative indent footer by its height */
+    margin: 0 auto -60px;
+
+    /* Pad bottom by footer height */
+    padding: 0 0 60px;
 }
 
 /* Set the fixed height of the footer here */
 #footer {
-  height: 100px;
+    height: 100px;
 }
+
 @media (max-width: 768px) {
-  #footer {
-    height: 140px;
-  }
+    #footer {
+        height: 140px;
+    }
 }
+
 .img-circle {
     border-radius: 50%;
 }
+
 // Custom spaceings
 .big-content-top {
-	padding-top: 30px;
+    padding-top: 30px;
 }
+
 .big-content-bottom {
-	padding-bottom: 30px;
+    padding-bottom: 30px;
 }
+
 .small-content-top {
-	padding-top: 10px;
+    padding-top: 10px;
 }
+
 .small-content-bottom {
-	padding-bottom: 10px;
+    padding-bottom: 10px;
 }
+
 .page-header_center {
-  text-align: center;
+    text-align: center;
 }
+
 // Center Row
 .row-centered {
-    text-align:center;
+    text-align: center;
 }
+
 // Center Col
 .col-centered {
     margin: 0 auto;
     float: none;
 }
+
 // #s
 #about {
-  padding-top: 25px;
-  padding-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
+
 #work {
-  padding-top: 25px;
-  padding-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
+
 #contact {
-  padding-top: 25px;
-  padding-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
