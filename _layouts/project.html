@@ -5,14 +5,14 @@ layout: default
 <div class="container project">
     <div class="row">
         <div class="col-md-12">
-            <div class="project_title">
+            <div class="title">
                 {{ page.project_title }}
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-md-4">
-            <div class="project_header">
+            <div class="header">
                 Start Date
             </div>
             <div class="project_date">
@@ -20,19 +20,19 @@ layout: default
             </div>
         </div>
         <div class="col-md-4">
-            <div class="project_header">
+            <div class="header">
                 End Date
             </div>
-            <div class="project_date">
+            <div class="date">
                 {{ page.project_end_date }}
             </div>
         </div>
         <div class="col-md-4">
-            <div class="project_header">
+            <div class="header">
                 Colors
             </div>
-            <div class="project_color">
-                <img class="img-responsive project_colors_picture" alt="{{ page.project_title }} Project Colors" src="{{ site.url }}//assets/images/projects/{{ page.project_name }}/{{ page.project_colors }}"
+            <div>
+                <img class="img-responsive colors" alt="{{ page.project_title }} Project Colors" src="{{ site.url }}//assets/images/projects/{{ page.project_name }}/{{ page.project_colors }}"
                 />
             </div>
         </div>

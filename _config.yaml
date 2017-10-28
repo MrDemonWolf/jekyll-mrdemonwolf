@@ -22,8 +22,8 @@ github_username: mrdemonwolf
 
 # Build settings
 markdown: kramdown
-plugins:
-  # - jekyll-feed
+permalink: pretty
+
 exclude:
   - Gemfile
   - Gemfile.lock

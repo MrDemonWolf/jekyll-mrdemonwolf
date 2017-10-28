@@ -39,6 +39,13 @@ $(document).ready(function () {
         $("#cookieConsent").fadeOut(200);
     });
 });
+// Fancy Box loading.
+$(document).ready(function () {
+  $(".fancybox").fancybox({
+    openEffect: "none",
+    closeEffect: "none"
+  });
+});
 // Project Gallery
 $(document).ready(function () {
 
