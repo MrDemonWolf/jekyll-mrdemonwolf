@@ -3,56 +3,58 @@ layout: default
 ---
 {{ content }}
 <div class="container project">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="title">
+        {{ page.project_title }}
+      </div>
+      <hr class="line">
+    </div>
+  </div>
+  <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <div class="title">
-                {{ page.project_title }}
-            </div>
-            <hr class="line">
+      <div class="col-md-4">
+        <div class="header">
+          Start Date
         </div>
+        <div class="date">
+          {{ page.project_start_date }}
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="header">
+          End Date
+        </div>
+        <div class="date">
+          {{ page.project_end_date }}
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="header">
+          Colors
+        </div>
+        <div>
+          <img class="img-responsive colors" alt="{{ page.project_title }} Project Colors" src="{{ site.url }}//assets/images/projects/{{ page.project_name }}/{{ page.project_colors }}"
+          />
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="container">
     <div class="row">
-        <div class="col-md-4">
-            <div class="header">
-                Start Date
-            </div>
-            <div class="date">
-                {{ page.project_start_date }}
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="header">
-                End Date
-            </div>
-            <div class="date">
-                {{ page.project_end_date }}
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="header">
-                Colors
-            </div>
-            <div>
-                <img class="img-responsive colors" alt="{{ page.project_title }} Project Colors" src="{{ site.url }}//assets/images/projects/{{ page.project_name }}/{{ page.project_colors }}"
-                />
-            </div>
-        </div>
+      <div class="list-group gallery">{% for item in page.project_images %}
+        <div class='col-xs-12 col-md-4'>
+          <div class='text-right'>
+            <div class='text-muted project-name'>{{ item.title }}</div>
+          </div>
+          <a class="thumbnail fancybox" rel="ligthbox" href="{{ site.url }}//assets/images/projects/{{ page.project_name }}/{{ item.picture }}">
+            <img class="img-responsive" alt="{{ item.name }} Project" src="{{ site.url }}//assets/images/projects/{{ page.project_name }}/{{ item.picture }}"
+            />
+          </a>
+        </div>{% endfor %}
+      </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="list-group gallery">{% for item in page.project_images %}
-                <div class='col-xs-12 col-md-4'>
-                    <div class='text-right'>
-                        <div class='text-muted project-name'>{{ item.title }}</div>
-                    </div>
-                    <a class="thumbnail fancybox" rel="ligthbox" href="{{ site.url }}//assets/images/projects/{{ page.project_name }}/{{ item.picture }}">
-                    <img class="img-responsive" alt="{{ item.name }} Project" src="{{ site.url }}//assets/images/projects/{{ page.project_name }}/{{ item.picture }}"
-                    />
-                </a>
-                </div>{% endfor %}
-            </div>
-        </div>
-    </div>
+  </div>
 
 
 </div>
