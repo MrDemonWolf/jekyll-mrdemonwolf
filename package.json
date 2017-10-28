@@ -15,7 +15,6 @@
     "server-production": "gulp server --production"
   },
   "author": "MrDemonWolf",
-  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "browser-sync": "^2.18.13",

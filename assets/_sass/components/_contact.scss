@@ -18,36 +18,36 @@
         display: table !important;
         clear: both !important;
     }
-}
 
-.row-contact .col {
-    padding: 0 20px;
-    float: left;
-    box-sizing: border-box;
-}
+    .col {
+        padding: 0 20px;
+        float: left;
+        box-sizing: border-box;
+    }
 
-.row-contact .col.x-50 {
-    width: 50%;
-}
+    .col.x-50 {
+        width: 50%;
+    }
 
-.row-contact .col.x-100 {
-    width: 100%;
+    .col.x-100 {
+        width: 100%;
+    }
 }
 
 .get-in-touch {
     max-width: 85%;
     margin: 0 auto;
     position: relative;
-}
 
-.get-in-touch .title {
-    text-align: center;
-    font-family: $main-font;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 1.75em;
-    line-height: 48px;
-    padding-bottom: 32px;
+    .title {
+        text-align: center;
+        font-family: $main-font;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 1.75em;
+        line-height: 48px;
+        padding-bottom: 32px;
+    }
 }
 
 .contact-form .form-field {
@@ -86,9 +86,8 @@
     color: #888;
     cursor: text;
     transition: transform .2s ease-in-out;
-}
-
-.contact-form .submit-btn {
+    }
+    .submit-btn {
     display: inline-block;
     background: #666;
     color: #ffffff;
