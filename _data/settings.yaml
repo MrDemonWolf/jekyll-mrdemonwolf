@@ -1,9 +1,5 @@
 #-------------------------------
 # General Site Settings
-
-name: MrDemonWolf
-google-analytics: UA-107275871-1
-
 #-------------------------------
 # Menu Section
 
@@ -20,6 +16,7 @@ seo:
   twitter-creator: 'https://www.twitter.com/mrdemonwolf'
   twitter-site: 'https://www.twitter.com/mrdemonwolf'
   type: 'website'
+  google-analytics: UA-107275871-1
 
 #-------------------------------
 # About Section

@@ -34,7 +34,7 @@ layout: default
           Colors
         </div>
         <div>
-          <img class="img-responsive colors" alt="{{ page.project_title }} Project Colors" src="{{ site.url }}//assets/images/projects/{{ page.project_name }}/{{ page.project_colors }}"
+          <img class="img-responsive colors" alt="{{ page.project_title }} Project Colors" src="{{ site.url }}{{ site.baseurl }}//assets/images/projects/{{ page.project_name }}/{{ page.project_colors }}"
           />
         </div>
       </div>
@@ -47,8 +47,8 @@ layout: default
           <div class='text-right'>
             <div class='text-muted project-name'>{{ item.title }}</div>
           </div>
-          <a class="thumbnail fancybox" rel="ligthbox" href="{{ site.url }}//assets/images/projects/{{ page.project_name }}/{{ item.picture }}">
-            <img class="img-responsive" alt="{{ item.name }} Project" src="{{ site.url }}//assets/images/projects/{{ page.project_name }}/{{ item.picture }}"
+          <a class="thumbnail fancybox" rel="ligthbox" href="{{ site.url }}{{ site.baseurl }}//assets/images/projects/{{ page.project_name }}/{{ item.picture }}">
+            <img class="img-responsive" alt="{{ item.name }} Project" src="{{ site.url }}{{ site.baseurl }}//assets/images/projects/{{ page.project_name }}/{{ item.picture }}"
             />
           </a>
         </div>{% endfor %}
