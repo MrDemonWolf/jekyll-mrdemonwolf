@@ -71,7 +71,33 @@
     ga('send', 'pageview');
   </script>
   <!-- End Google Analytics -->
-
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "{{ site.title}}",
+    "mainEntityOfPage": "{{ site.url }}{{ site.baseurl }}/",
+    "url": "{{ site.url }}{{ site.baseurl }}/",
+    "sameAs": [
+      "{{ site.data.setttings.social-link.spotify}}",
+      "{{ site.data.setttings.social-link.spotify}}",
+      "{{ site.data.setttings.social-link.spotify}}",
+      "{{ site.data.setttings.social-link.spotify}}",
+      "{{ site.data.setttings.social-link.spotify}}"
+    ],
+    "email": "{{ site.email }}",
+    "foundingDate": "2012",
+    "foundingLocation": "Wisconsin, United States",
+    "member": {
+      "@type": "Person",
+      "name": "Nathan Hernniges",
+      "jobTitle": "Owner",
+      "nationality": "American",
+      "url": "https://www.keybase.com/demonwolf/"
+    },
+    "logo": "{{ site.url }}{{ site.baseurl }}/assets/logos/logo.png",
+  }
+  </script>
 </head>
 
 <body>

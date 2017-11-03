@@ -67,6 +67,13 @@ social:
 - {icon: 'fa-github', color: 'github-color', url: 'https://www.github.com/mrdemonwolf'}
 - {icon: 'fa-youtube', color: 'youtube-color', url: 'https://www.youtube.com/mrdemonwolf'}
 - {icon: 'fa-twitch', color: 'twitch-color', url: 'https://www.twitch.tv/mrdemonwolf/'}
+social-url:
+  spotify: https://open.spotify.com/user/demonwolf97
+  twitter: http://www.twitter.com/mrdemonwolf
+  github: https://www.github.com/mrdemonwolf
+  youtube: https://www.youtube.com/mrdemonwolf
+  twitch: https://www.twitch.tv/mrdemonwolf
+
 
 #-------------------------------
 # Modified Date
