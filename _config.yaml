@@ -19,6 +19,8 @@ description: MrDemonWolf is UX Designer, Gamer, Streamer, Youtuber. Freelancer f
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mrdemonwolf.me" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: mrdemonwolf
+encoding: UTF-8
+brand-color: '#00328d'
 
 # Build settings
 markdown: kramdown

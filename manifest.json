@@ -1,6 +1,6 @@
 {
-    "name": "mrdemonwolf.me",
-    "short_name": "MrDemonWolf",
+    "name": "{{ site.title }}",
+    "short_name": "{{ site.title }}",
     "icons": [
         {
             "src": "/android-icon-36x36.png",
@@ -35,7 +35,7 @@
         }
     ],
     "background_color": "#FAFAFA",
-    "theme_color": "#00328d",
+    "theme_color": "{{ site.brand-color }}",
     "display": "standalone",
     "orientation": "portrait"
 }
