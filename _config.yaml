@@ -16,6 +16,7 @@
 title: "MrDemonWolf"
 email: demonwolf@demonwolfdev.com
 description: MrDemonWolf is UX Designer, Gamer, Streamer, Youtuber. Freelancer for UX Design and Wordpress site builds. Want a new website for your company or etc.
+keywords:
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mrdemonwolf.me" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: mrdemonwolf
