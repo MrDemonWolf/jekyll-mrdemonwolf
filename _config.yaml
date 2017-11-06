@@ -15,8 +15,8 @@
 # in the template via {{ site.myvariable }}.
 title: "MrDemonWolf"
 email: demonwolf@demonwolfdev.com
-description: MrDemonWolf is UX Designer, Gamer, Streamer, Youtuber. Freelancer for UX Design and Wordpress site builds. Want a new website for your company or etc.
-keywords:
+description: MrDemonWolf Front-End Devloper ,Gamer, Streamer, Youtuber.
+keywords: ux designer, front-end devloper, front-end development ,gamer, streamer, youtuber
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mrdemonwolf.me" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: mrdemonwolf

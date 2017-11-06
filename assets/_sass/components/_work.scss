@@ -3,6 +3,9 @@
 // ----------------------------------------------------------------------------
 .gallery {
     display: inline-block;
+    .thumbnail {
+      border: none;
+    }
 }
 
 a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
