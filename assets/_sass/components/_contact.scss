@@ -40,11 +40,11 @@
     position: relative;
 
     .title {
-        text-align: center;
         font-family: $main-font;
+        color: $brand-color;
+        text-align: center;
         text-transform: uppercase;
-        letter-spacing: 3px;
-        font-size: 1.75em;
+        font-size: 2em;
         line-height: 48px;
         padding-bottom: 32px;
     }
