@@ -31,9 +31,12 @@ hero-title: Nathan Henniges is a
 hero:
 - {name: Streamer}
 - {name: YouTuber}
-# - {name: Front-end Developer}
+- {name: Front-end Developer}
 - {name: UX Designer}
 - {name: Gamer}
+hero-button:
+  title: Contact Me
+  url: '#contact'
 
 #-------------------------------
 # Examples Section
