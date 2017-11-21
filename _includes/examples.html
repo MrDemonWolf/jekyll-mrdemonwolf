@@ -3,7 +3,7 @@
     <div class="row">
       <h1 class="landing_header"> Project Examples</h1>
         <div class='list-group gallery'>{% for item in site.data.settings.examples %}
-            <div class='col-xs-12 col-md-4'>
+            <div class='col-xs-12 col-sm-6 col-md-4'>
                 <a class="thumbnail" href="{{ site.url }}{{ site.baseurl }}/projects/{{ item.url }}">
                     <img class="img-responsive" alt="{{ item.title }} Project" src="{{ site.url }}{{ site.baseurl }}//assets/images/projects/thumbnails/{{ item.picture }}" />
                     <div class='text-right'>
