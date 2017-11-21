@@ -143,7 +143,7 @@
     <!-- Footer copyright with auto update year. -->
     <div class="copyright">
       <div class="container">
-        <div class="col-md-6 col-sm-12">
+        <div class="col-md-5 col-sm-12">
           <div class="footer-copyright"> Copyright ©
             <script>
               document.write("" + new Date().getFullYear());
@@ -152,7 +152,7 @@
             <span>, All rights reserved</span>
           </div>
         </div>
-        <div class="col-md-4 col-md-offset-2 col-sm-12 footer-social ">
+        <div class="col-md-5 col-md-offset-2 col-sm-12 footer-social ">
           <ul>{% for item in site.data.settings.social %}
             <li>
               <a href="{{ item.url }}">
@@ -168,10 +168,12 @@
 <!-- Loadidng JS -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/lib/jquery/js/jquery.min.js"></script>
+<!-- Lettering.js -->
 <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/lib/letteringjs/js/jquery.lettering.js"></script>
+<!-- Fancybox -->
 <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/lib/fancybox/js/jquery.fancybox.min.js"></script>
-<!-- Bootstrap Javascript -->
-<script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+<!-- Bootstrap Vaildator -->
+<script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/lib/bootstrap-validator/js/validator.min.js"></script>
 <!-- Custom -->
 <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/js/main.js"></script>
 

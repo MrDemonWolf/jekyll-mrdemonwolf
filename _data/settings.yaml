@@ -13,8 +13,8 @@ menu:
 # SEO Section
 
 seo:
-  twitter-creator: 'https://www.twitter.com/mrdemonwolf'
-  twitter-site: 'https://www.twitter.com/mrdemonwolf'
+  twitter-creator: '@mrdemonwolf'
+  twitter-site: '@mrdemonwolf'
   type: 'website'
   google-analytics: UA-107275871-1
 
