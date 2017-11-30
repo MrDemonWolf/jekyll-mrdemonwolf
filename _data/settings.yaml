@@ -28,12 +28,14 @@ about:
 #-------------------------------
 # Hero
 hero-title: Nathan Henniges is a
+
 hero:
 - {name: Streamer}
 - {name: YouTuber}
 - {name: Front-end Developer}
 - {name: UX Designer}
 - {name: Gamer}
+
 hero-button:
   title: Contact Me
   url: '#contact'
@@ -50,14 +52,15 @@ examples:
 #-------------------------------
 # Projects Gallery Section
 # Filter
+
 project_gallery-fliter:
 - {title: 'All', name: 'all'}
 - {title: 'Adobe XD', name: 'adobe-xd'}
 - {title: 'HTML', name: 'html'}
 - {title: 'Wordpress', name: 'wordpress'}
 
-project_gallery-thumbnails:
 #Make sure  put images in the /img/project/thumbnails folder.
+project_gallery-thumbnails:
 - {title: 'JSL Hub', fliter: 'wordpress', picture: 'jslhub.jpg' , url: 'jslhub'}
 - {title: 'Aishazart', fliter: 'wordpress', picture: 'aishazart.jpg', url: 'aishazart'}
 - {title: 'Stream Team', fliter: 'adobe-xd', picture: 'stream_team.jpg', url: 'stream_team'}
@@ -72,6 +75,7 @@ social:
 - {icon: 'fa-github', color: 'github-color', url: 'https://www.github.com/mrdemonwolf'}
 - {icon: 'fa-youtube', color: 'youtube-color', url: 'https://www.youtube.com/mrdemonwolf'}
 - {icon: 'fa-twitch', color: 'twitch-color', url: 'https://www.twitch.tv/mrdemonwolf/'}
+
 social-url:
   spotify: https://open.spotify.com/user/demonwolf97
   twitter: http://www.twitter.com/mrdemonwolf
