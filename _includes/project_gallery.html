@@ -1,16 +1,25 @@
 <!-- Project gallery -->
 <div class="container project_gallery">
-    <div class="row">
-        <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h1 class="title">Past Projects</h1>
-        </div>
-        <div align="center" class="project_filter">
-            {% for item in site.data.settings.project_gallery-fliter %}<button class="btn btn-default project_filter-button"
-                data-filter="{{ item.name }}">{{ item.title}}</button>{% endfor %}
-        </div>
-        <br/>
+  <div class="row">
+    <div class="gallery col-md-12">
+      <h1 class="title">Past Projects</h1>
     </div>
-    {% for item in site.data.settings.project_gallery-thumbnails %}<div class="product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter {{ item.fliter }}">
-        <a href="{{ site.url }}{{ site.baseurl }}/projects/{{ item.url }}"><img src="{{ site.url }}{{ site.baseurl }}//assets/images/projects/thumbnails/{{ item.picture }}" class="img-responsive"></a>
-    </div>{% endfor %}
+    <div align="center" class="project_filter">
+      {% for item in site.data.settings.project_gallery-fliter %}
+      <button class="btn btn-default project_filter-button" data-filter="{{ item.name }}">{{ item.title}}</button>{% endfor %}
+    </div>
+    <br/>
+  </div>
+  {% for item in site.data.settings.project_gallery-thumbnails %} {% capture modulo %}{{ forloop.index | modulo: 3 }}{% endcapture
+  %} {% if modulo == '1' %}
+  <div class="row">
+    {% endif %}
+    <div class="product col-md-4 col-sm-12 filter {{ item.fliter }}">
+      <a href="{{ site.url }}{{ site.baseurl }}/projects/{{ item.url }}">
+        <img src="{{ site.url }}{{ site.baseurl }}/assets/images/projects/thumbnails/{{ item.picture }}" class="img-responsive">
+      </a>
+    </div>
+    {% if modulo == '0' or forloop.last %}
+  </div>
+  {% endif %} {% endfor %}
 </div>
