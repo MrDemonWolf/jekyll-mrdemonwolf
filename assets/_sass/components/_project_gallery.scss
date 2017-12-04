@@ -10,7 +10,6 @@
         font-size: 2em;
         font-family: $main-font;
         color: $brand-color;
-        text-align: center;
         font-weight: 500;
         margin: 0px;
     }
@@ -38,7 +37,7 @@
 
     .btn-default {
         &:active {
-            .project_gallery_filter-button {
+            .project_filter-button {
                 &:active {
                     background-color: $brand-color-alt;
                     color: #ffffff;

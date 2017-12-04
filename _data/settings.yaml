@@ -63,7 +63,7 @@ project_gallery-thumbnails:
 - {title: 'JSL Hub', fliter: 'wordpress', picture: 'jslhub.jpg' , url: 'jslhub'}
 - {title: 'Aishazart', fliter: 'wordpress', picture: 'aishazart.png', url: 'aishazart'}
 - {title: 'Stream Team', fliter: 'adobe-xd', picture: 'stream_team.png', url: 'stream_team'}
-- {title: 'Sushi Restaurant', fliter: 'adobe-xd', picture: 'stream_team.jpg', url: 'sushi_restaurant'}
+- {title: 'Sushi Restaurant', fliter: 'adobe-xd', picture: 'stream_team.png', url: 'sushi_restaurant'}
 
 #-------------------------------
 # Social Icons and URls
