@@ -60,7 +60,7 @@ project_gallery-fliter:
 
 #Make sure  put images in the /images/project/thumbnails folder.
 project_gallery-thumbnails:
-- {title: 'JSL Hub', fliter: 'wordpress', picture: 'jslhub.png' , url: 'jslhub'}
+- {title: 'JSL Hub', fliter: 'html', picture: 'jslhub.png' , url: 'jslhub'}
 - {title: 'Aishazart', fliter: 'wordpress', picture: 'aishazart.png', url: 'aishazart'}
 - {title: 'Stream Team', fliter: 'adobe-xd', picture: 'stream_team.png', url: 'stream_team'}
 - {title: 'Sushi Restaurant', fliter: 'adobe-xd', picture: 'sushi_restaurant.png', url: 'sushi_restaurant'}

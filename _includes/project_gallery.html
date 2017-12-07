@@ -10,16 +10,12 @@
       <br/>
     </div>
   </div>
-  {% for item in site.data.settings.project_gallery-thumbnails %} {% capture modulo %}{{ forloop.index | modulo: 3 }}{% endcapture
-  %} {% if modulo == '1' %}
-  <div class="row">
-    {% endif %}
+  <div class="container">
+    {% for item in site.data.settings.project_gallery-thumbnails %}
     <div class="product col-lg-4 col-md-4 col-sm-12 col-xs-12 filter {{ item.fliter }}">
       <a href="{{ site.url }}{{ site.baseurl }}/projects/{{ item.url }}">
         <img src="{{ site.url }}{{ site.baseurl }}/assets/images/projects/thumbnails/{{ item.picture }}" class="img-responsive">
       </a>
-    </div>
-    {% if modulo == '0' or forloop.last %}
+    </div>{% endfor %}
   </div>
-  {% endif %} {% endfor %}
 </div>
