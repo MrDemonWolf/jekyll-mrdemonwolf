@@ -25,19 +25,19 @@ $(function () {
 });
 // Contact us effect for when clicked into the form.
 $('.js-input').keyup(function () {
-    if ($(this).val()) {
-        $(this).addClass('not-empty');
-    } else {
-        $(this).removeClass('not-empty');
-    }
+  if ($(this).val()) {
+    $(this).addClass('not-empty');
+  } else {
+    $(this).removeClass('not-empty');
+  }
 });
 $(document).ready(function () {
-    setTimeout(function () {
-        $("#cookieConsent").fadeIn(200);
-    }, 4000);
-    $("#closeCookieConsent, .cookieConsentOK").click(function () {
-        $("#cookieConsent").fadeOut(200);
-    });
+  setTimeout(function () {
+    $("#cookieConsent").fadeIn(200);
+  }, 4000);
+  $("#closeCookieConsent, .cookieConsentOK").click(function () {
+    $("#cookieConsent").fadeOut(200);
+  });
 });
 // Fancy Box loading.
 $(document).ready(function () {
@@ -50,24 +50,41 @@ $(document).ready(function () {
 $(document).ready(function () {
 
   $(".project_filter-button").click(function () {
-        var value = $(this).attr('data-filter');
+    var value = $(this).attr('data-filter');
 
-        if (value == "all") {
-            //$('.filter').removeClass('hidden');
-            $('.filter').show('1000');
-        }
-        else {
-            //$('.filter[filter-item="'+value+'"]').removeClass('hidden');
-            //$(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-            $(".filter").not('.' + value).hide('3000');
-            $('.filter').filter('.' + value).show('3000');
-
-        }
-    });
-
-    if ($(".project_gallery_filter-button").removeClass("active")) {
-        $(this).removeClass("active");
+    if (value == "all") {
+      $('.filter').show('1000');
     }
-    $(this).addClass("active");
+    else {
+      $(".filter").not('.' + value).hide('3000');
+      $('.filter').filter('.' + value).show('3000');
+
+    }
+  });
+
+  if ($(".project_gallery_filter-button").removeClass("active")) {
+    $(this).removeClass("active");
+  }
+  $(this).addClass("active");
 
 });
+// Twitch Banner
+(function () {
+  var username, api_key, twitchBanner;
+  // Infos
+  username = 'summit1g';
+  api_key = 'n9zpqgrbidq5bujz49eilfkf2lvpnly';
+  twitchBanner = $('.twitchBanner');
+  // Appens link to banner
+  twitchBanner.attr("href", "https://www.twitch.tv" + username);
+
+  $.getJSON('https://api.twitch.tv/kraken/streams/' + username + '?client_id=' + api_key + '&callback=?', function (data) {
+    if (data.stream) {
+      twitchBanner.removeClass('hidden');
+    }
+    else {
+      twitchBanner.addClass('hidden');
+    }
+  });
+
+})();

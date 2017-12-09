@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the twitch banner component.
+// -----------------------------------------------------------------------------
+.twitchBanner {
+    display: block;
+    width: 100%;
+    color: #fff;
+    background-color: $brand-color-alt;
+
+    &:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .text {}
+
+    .icon {
+        font-size: 2em;
+        display: inline;
+    }
+
+    .pulsing {
+        // box-shadow: inset 0 0 0 3px #FFF;
+        transition: transform 0.2s, opacity 0.2s;
+        animation: pulsing 1s infinite;
+
+        @keyframes pulsing {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(2);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+    }
+}
