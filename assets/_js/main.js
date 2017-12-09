@@ -68,23 +68,3 @@ $(document).ready(function () {
   $(this).addClass("active");
 
 });
-// Twitch Banner
-(function () {
-  var username, api_key, twitchBanner;
-  // Infos
-  username = 'summit1g';
-  api_key = 'n9zpqgrbidq5bujz49eilfkf2lvpnly';
-  twitchBanner = $('.twitchBanner');
-  // Appens link to banner
-  twitchBanner.attr("href", "https://www.twitch.tv" + username);
-
-  $.getJSON('https://api.twitch.tv/kraken/streams/' + username + '?client_id=' + api_key + '&callback=?', function (data) {
-    if (data.stream) {
-      twitchBanner.removeClass('hidden');
-    }
-    else {
-      twitchBanner.addClass('hidden');
-    }
-  });
-
-})();

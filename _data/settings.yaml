@@ -10,6 +10,13 @@ menu:
 - {title: Contact, url: '#contact'}
 
 #-------------------------------
+# Menu Section
+
+twitchbanner:
+  username: tsoding
+  apikey: n9zpqgrbidq5bujz49eilfkf2lvpnly
+
+#-------------------------------
 # SEO Section
 
 seo:

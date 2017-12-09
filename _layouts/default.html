@@ -55,6 +55,8 @@
   <link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/lib/bootstrap/css/bootstrap.min.css">
   <!-- Fancybox -->
   <link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/lib/fancybox/css/jquery.fancybox.min.css">
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/lib/jquery/js/jquery.min.js"></script>
   <!-- EU Cookie -->
   <link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/lib/cookieconsent/css/cookieconsent.min.css">
   <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/lib/cookieconsent/js/cookieconsent.min.js"></script>
@@ -105,8 +107,7 @@
 <body>
   <!-- Website Content -->
   <div id="wrap">
-    {% include twitchBanner.html %}
-    {{ content }}
+    {% include twitchBanner.html %} {{ content }}
   </div>
 </body>
 <!-- EU Cookie notice -->
@@ -128,6 +129,26 @@
       }
     })
   });
+
+</script>
+<script>
+  // Twitch Banner
+  (function () {
+    var username, api_key, twitchBanner;
+    // Infos
+    username = '{{ site.data.settings.twitchbanner.username }}';
+    api_key = '{{ site.data.settings.twitchbanner.apikey }}';
+    twitchBanner = $('.twitchBanner');
+    // Appens link to banner
+    twitchBanner.attr("href", "https://www.twitch.tv" + username);
+
+    $.getJSON('https://api.twitch.tv/kraken/streams/' + username + '?client_id=' + api_key + '&callback=?', function (data) {
+      if (data.stream) {
+        twitchBanner.removeClass('hidden');
+      }
+    });
+
+  })();
 
 </script>
 <!-- Footer -->
@@ -167,8 +188,6 @@
   </footer>
 </div>
 <!-- Loadidng JS -->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/lib/jquery/js/jquery.min.js"></script>
 <!-- Bootstrap Javascript -->
 <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/lib/bootstrap/js/bootstrap.min.js"></script>
 <!-- Lettering.js -->

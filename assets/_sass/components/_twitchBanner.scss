@@ -12,7 +12,10 @@
         color: #fff;
     }
 
-    .text {}
+    .text {
+      font-family: $main-font;
+      font-size: 1em;
+    }
 
     .icon {
         font-size: 2em;
