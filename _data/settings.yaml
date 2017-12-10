@@ -13,7 +13,7 @@ menu:
 # Menu Section
 
 twitchbanner:
-  username: tsoding
+  username: mrdemonwolf
   apikey: n9zpqgrbidq5bujz49eilfkf2lvpnly
 
 #-------------------------------
@@ -34,6 +34,7 @@ about:
 
 #-------------------------------
 # Hero
+
 hero-title: Nathan Henniges is a
 
 hero:
@@ -49,7 +50,8 @@ hero-button:
 
 #-------------------------------
 # Examples Section
-# Also a Max of 3
+# Max of 3
+
 examples:
 - {title: 'JSL Hub', url: 'jslhub', picture: 'jslhub.png'}
 - {title: 'Aishazart', url: 'aishazart', picture: 'aishazart.png'}
@@ -65,7 +67,7 @@ project_gallery-fliter:
 - {title: 'HTML', name: 'html'}
 - {title: 'Wordpress', name: 'wordpress'}
 
-#Make sure  put images in the /images/project/thumbnails folder.
+#Make sure to put images in the /images/project/thumbnails folder.
 project_gallery-thumbnails:
 - {title: 'JSL Hub', fliter: 'html', picture: 'jslhub.png' , url: 'jslhub'}
 - {title: 'Aishazart', fliter: 'wordpress', picture: 'aishazart.png', url: 'aishazart'}
