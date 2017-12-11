@@ -145,6 +145,7 @@
     $.getJSON('https://api.twitch.tv/kraken/streams/' + username + '?client_id=' + api_key + '&callback=?', function (data) {
       if (data.stream) {
         twitchBanner.removeClass('hidden');
+        console.log(JSON.stringify(data, undefined, 2));
       }
     });
 
