@@ -16,6 +16,9 @@
     font-family: $main-font;
     font-size: 1.5em;
     font-style: normal;
+    a:hover {
+      text-decoration: none;
+    }
 }
 
 @media (max-width: 991px) {
