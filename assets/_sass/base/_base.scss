@@ -67,12 +67,18 @@ body {
     margin: 0 auto;
     float: none;
 }
+
 // Landing page header
 .landing_header {
-  font-family: $main-font;
-  color: $brand-color;
-  font-size: 2.25em;
-  text-align: center;
+    font-family: $main-font;
+    color: $brand-color;
+    font-size: 2.25em;
+    text-align: center;
+}
+
+.ul-np {
+    padding: 0px;
+    margin: 0px;
 }
 
 // #s

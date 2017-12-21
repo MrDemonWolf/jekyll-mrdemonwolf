@@ -49,6 +49,8 @@
 
 
   <!-- Frameworks -->
+  <!-- Normalize -->
+  <link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/lib/normalize/css/normalize.css">
   <!-- Font Awsome-->
   <link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/lib/font-awesome/css/font-awesome.min.css">
   <!--Bootstrap -->
@@ -175,7 +177,7 @@
           </div>
         </div>
         <div class="col-md-5 col-md-offset-2 col-sm-12 footer-social ">
-          <ul>{% for item in site.data.settings.social %}
+          <ul class="ul-np">{% for item in site.data.settings.social %}
             <li>
               <a href="{{ item.url }}">
                 <i class="fa {{ item.icon }} social-icon {{ item.color }}" aria-hidden="true"></i>
