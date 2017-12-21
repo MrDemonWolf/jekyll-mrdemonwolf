@@ -13,7 +13,7 @@ menu:
 # Menu Section
 
 twitchbanner:
-  username: summit1g
+  username: mrdemonwolf
   apikey: n9zpqgrbidq5bujz49eilfkf2lvpnly
 
 #-------------------------------
@@ -23,7 +23,7 @@ seo:
   twitter-creator: '@mrdemonwolf'
   twitter-site: '@mrdemonwolf'
   type: 'website'
-google-analytics: 'UA-107275871-1'
+google-analytics: UA-107275871-1
 
 #-------------------------------
 # About Section

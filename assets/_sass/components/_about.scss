@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the about component.
 // -----------------------------------------------------------------------------
-.illustration {
+.profile_pic {
     @extend .img-circle;
 
     width: 75%;
@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     margin: 0px auto;
-    background-color: $illustration-bg;
+    background-color: $profile_pic-bg;
 }
 
 .about_text {
@@ -28,7 +28,7 @@
         margin-right: 1em;
     }
 
-    .illustration {
+    .profile_pic {
         width: 40%;
         height: 40%;
         float: none;
