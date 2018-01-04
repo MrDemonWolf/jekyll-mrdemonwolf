@@ -47,16 +47,19 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}{{ site.baseurl }}/favicon-16x16.png">
   <link rel="manifest" href="{{ site.url }}{{ site.baseurl }}/manifest.json">
 
-
   <!-- Frameworks -->
+  <!-- Normalize -->
+  <link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/lib/normalize/css/normalize.css">
   <!-- Font Awsome-->
   <link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/lib/font-awesome/css/font-awesome.min.css">
   <!--Bootstrap -->
   <link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/lib/bootstrap/css/bootstrap.min.css">
-  <!-- Fancybox -->
-  <link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/lib/fancybox/css/jquery.fancybox.min.css">
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/lib/jquery/js/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.22.0/mediaelement-and-player.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.22.0/mediaelementplayer.min.css">
+  <!-- Fancybox -->
+  <link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/lib/fancybox/css/jquery.fancybox.min.css">
   <!-- EU Cookie -->
   <link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/lib/cookieconsent/css/cookieconsent.min.css">
   <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/lib/cookieconsent/js/cookieconsent.min.js"></script>
@@ -101,6 +104,15 @@
     },
     "logo": "{{ site.url }}{{ site.baseurl }}/assets/logos/logo.png"
   }
+  </script>
+  <script>
+    var radioAPI = "https://radio.mrdemonwolf.me/api/nowplaying/1";
+    $(document).ready(function getData() {
+      $.getJSON(radioAPI, function (json) {
+        var listen = json.station.listen_url;
+        $('.audio source').attr('src', listen);
+      })
+    });
   </script>
 </head>
 
@@ -175,7 +187,7 @@
           </div>
         </div>
         <div class="col-md-5 col-md-offset-2 col-sm-12 footer-social ">
-          <ul>{% for item in site.data.settings.social %}
+          <ul class="ul-np">{% for item in site.data.settings.social %}
             <li>
               <a href="{{ item.url }}">
                 <i class="fa {{ item.icon }} social-icon {{ item.color }}" aria-hidden="true"></i>

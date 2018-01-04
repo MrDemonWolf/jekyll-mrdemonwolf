@@ -1,0 +1,20 @@
+<!-- Gallery -->
+<div class="container showcase_gallery">
+  <div class="row">
+    <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div align="center" class="showcase_filter">
+        {% for item in page.gallery-fliter %}
+        <button class="btn btn-default showcase_filter-button" data-filter="{{ item.name }}">{{ item.title}}</button>{% endfor %}
+      </div>
+      <br/>
+    </div>
+  </div>
+  <div class="container">
+    {% for item in page.gallery-thumbnails %}
+    <div class="product col-lg-4 col-md-4 col-sm-12 col-xs-12 filter {{ item.fliter }}">
+      <a href="{{ site.url }}{{ site.baseurl }}/work/{{ item.url }}">
+        <img src="{{ site.url }}{{ site.baseurl }}/assets/images/projects/thumbnails/{{ item.picture }}" class="img-responsive">
+      </a>
+    </div>{% endfor %}
+  </div>
+</div>

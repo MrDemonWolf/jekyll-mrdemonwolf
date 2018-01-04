@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the page header component.
+// -----------------------------------------------------------------------------
+.page_header {
+    text-align: center;
+    height: 100%;
+    background: #015274;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin: 0px;
+
+    .text {
+        color: #ffffff;
+        font-family: $main-font;
+        font-size: 3.15em;
+        display: inline-block;
+    }
+
+    .inner {
+        background-color: transparent !important;
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        .header {
+            font-family: $main-font;
+            color: #ffffff;
+            font-size: .75em;
+        }
+    }
+}

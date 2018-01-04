@@ -1,0 +1,43 @@
+<script>
+  var radioAPI = "https://radio.mrdemonwolf.me/api/nowplaying/1";
+  $(document).ready(function getData() {
+    $.getJSON(radioAPI, function (json) {
+      var title = json.station.name;
+      var description = json.station.description;
+      var songname = json.now_playing.song.title;
+      var listen = json.station.listen_url;
+      $('#radio-title').text(title);
+      $('#radio-description').text(description);
+      $('#song-name').text(songname);
+      console.log(listen);
+    })
+  });
+  $(document).ready(function getCurrentListeners() {
+    $.getJSON(radioAPI, function (json) {
+      var listeners = json.listeners.current;
+      $('#listeners').text(listeners)
+      console.log(listeners);
+      myToggle = setTimeout(getCurrentListeners, 2000);
+    })
+  });
+  function setPlayer() {
+    $('audio').mediaelementplayer({
+      features: ['playpause', 'current','volume']
+    })
+};
+  setTimeout(setPlayer, 8000);
+</script>
+<div class="container">
+  <div class="col-md-8">
+    <div class="player">
+      <audio class="audio" controls="controls">
+        <source type="audio/mpeg" src="https://radio.mrdemonwolf.me/radio/8000/radio.mp3">
+      </audio>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div id="song-name"></div>
+    <div id="radio-title"></div>
+    <div id="listeners"></div>
+  </div>
+</div>
