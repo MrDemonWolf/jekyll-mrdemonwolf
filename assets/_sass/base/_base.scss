@@ -84,3 +84,7 @@ body {
     padding-top: $content_panding;
     padding-bottom: $content_panding;
 }
+
+#page_header {
+  @extend .big-content-bottom;
+}

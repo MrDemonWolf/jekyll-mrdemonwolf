@@ -6,6 +6,7 @@
 menu:
 - {title: Home, url: '#'}
 - {title: About, url: '#about'}
+- {title: Work, url: 'work'}
 - {title: Projects, url: 'projects'}
 - {title: Contact, url: '#contact'}
 
@@ -61,19 +62,17 @@ examples:
 # Projects Gallery Section
 # Filter
 
-project_gallery-fliter:
+projects_gallery-fliter:
 - {title: 'All', name: 'all'}
 - {title: 'Adobe XD', name: 'adobe-xd'}
 - {title: 'HTML', name: 'html'}
 - {title: 'Wordpress', name: 'wordpress'}
+- {title: 'Jekyll', name: 'jekyll'}
 
 #Make sure to put images in the /images/project/thumbnails folder.
-project_gallery-thumbnails:
-- {title: 'JSL Hub', fliter: 'html', picture: 'jslhub.png' , url: 'jslhub'}
-- {title: 'Aishazart', fliter: 'wordpress', picture: 'aishazart.png', url: 'aishazart'}
+projects_gallery-thumbnails:
 - {title: 'Stream Team', fliter: 'adobe-xd', picture: 'stream_team.png', url: 'stream_team'}
 - {title: 'Sushi Restaurant', fliter: 'adobe-xd', picture: 'sushi_restaurant.png', url: 'sushi_restaurant'}
-- {title: 'Alan Crytex', fliter: 'html', picture: 'alancrytex.png', url: 'alancrytex'}
 
 #-------------------------------
 # Social Icons and URls
@@ -91,7 +90,6 @@ social-url:
   github: https://www.github.com/mrdemonwolf
   youtube: https://www.youtube.com/mrdemonwolf
   twitch: https://www.twitch.tv/mrdemonwolf
-
 
 #-------------------------------
 # Modified Date

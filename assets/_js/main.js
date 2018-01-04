@@ -46,10 +46,10 @@ $(document).ready(function () {
     closeEffect: "none"
   });
 });
-// Project Gallery
+// Gallery
 $(document).ready(function () {
 
-  $(".project_filter-button").click(function () {
+  $(".showcase_filter-button").click(function () {
     var value = $(this).attr('data-filter');
 
     if (value == "all") {
@@ -62,7 +62,7 @@ $(document).ready(function () {
     }
   });
 
-  if ($(".project_gallery_filter-button").removeClass("active")) {
+  if ($(".showcase_gallery_filter-button").removeClass("active")) {
     $(this).removeClass("active");
   }
   $(this).addClass("active");
