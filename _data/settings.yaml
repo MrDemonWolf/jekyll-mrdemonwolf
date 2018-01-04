@@ -7,7 +7,8 @@ menu:
 - {title: Home, url: '#'}
 - {title: About, url: '#about'}
 - {title: Work, url: 'work'}
-- {title: Projects, url: 'projects'}
+# - {title: Projects, url: 'projects'}
+# - {title: Radio, url: 'radio'}
 - {title: Contact, url: '#contact'}
 
 #-------------------------------
@@ -57,22 +58,6 @@ examples:
 - {title: 'JSL Hub', url: 'jslhub', picture: 'jslhub.png'}
 - {title: 'Aishazart', url: 'aishazart', picture: 'aishazart.png'}
 - {title: 'Alan Crytex', url: 'alancrytex', picture: 'alancrytex.png'}
-
-#-------------------------------
-# Projects Gallery Section
-# Filter
-
-projects_gallery-fliter:
-- {title: 'All', name: 'all'}
-- {title: 'Adobe XD', name: 'adobe-xd'}
-- {title: 'HTML', name: 'html'}
-- {title: 'Wordpress', name: 'wordpress'}
-- {title: 'Jekyll', name: 'jekyll'}
-
-#Make sure to put images in the /images/project/thumbnails folder.
-projects_gallery-thumbnails:
-- {title: 'Stream Team', fliter: 'adobe-xd', picture: 'stream_team.png', url: 'stream_team'}
-- {title: 'Sushi Restaurant', fliter: 'adobe-xd', picture: 'sushi_restaurant.png', url: 'sushi_restaurant'}
 
 #-------------------------------
 # Social Icons and URls
