@@ -53,12 +53,13 @@ hero-button:
 
 #-------------------------------
 # Examples Section
-# Max of 3
+example-header: Past Examples
 
+# Max of 3
 examples:
-- {title: 'JSL Hub', url: 'jslhub', picture: 'jslhub.png'}
-- {title: 'Aishazart', url: 'aishazart', picture: 'aishazart.png'}
-- {title: 'Alan Crytex', url: 'alancrytex', picture: 'alancrytex.png'}
+- {title: 'JSL Hub', url: 'jslhub', picture: 'jslhub.png', type: "work"}
+- {title: 'Aishazart', url: 'aishazart', picture: 'aishazart.png', type: "work"}
+- {title: 'Alan Crytex', url: 'alancrytex', picture: 'alancrytex.png', type: "work"}
 
 #-------------------------------
 # Social Icons and URls

@@ -2,11 +2,11 @@
 layout: default
 ---
 {{ content }}
-<div class="container project">
+<div class="container work">
   <div class="row">
     <div class="col-md-12">
       <div class="title">
-        {{ page.project_title }}
+        {{ page.work_title }}
       </div>
       <hr class="line">
     </div>
@@ -18,7 +18,7 @@ layout: default
           Start Date
         </div>
         <div class="date">
-          {{ page.project_start_date }}
+          {{ page.work_start_date }}
         </div>
       </div>
       <div class="col-md-4">
@@ -26,7 +26,7 @@ layout: default
           End Date
         </div>
         <div class="date">
-          {{ page.project_end_date }}
+          {{ page.work_end_date }}
         </div>
       </div>
       <div class="col-md-4">
@@ -34,7 +34,7 @@ layout: default
           Colors
         </div>
         <div>
-          <img class="img-responsive colors" alt="{{ page.project_title }} Project Colors" src="{{ site.url }}{{ site.baseurl }}/assets/images/projects/{{ page.project_name }}/{{ page.project_colors }}"
+          <img class="img-responsive colors" alt="{{ page.work_title }} Work Colors" src="{{ site.url }}{{ site.baseurl }}/assets/images/work/{{ page.work_name }}/{{ page.work_colors }}"
           />
         </div>
       </div>
@@ -42,19 +42,17 @@ layout: default
   </div>
   <div class="container">
     <div class="row">
-      <div class="list-group gallery">{% for item in page.project_images %}
+      <div class="list-group gallery">{% for item in page.work_images %}
         <div class='col-xs-12 col-md-4'>
           <div class='text-right'>
-            <div class='text-muted project-name'>{{ item.title }}</div>
+            <div class='text-muted work-name'>{{ item.title }}</div>
           </div>
-          <a class="thumbnail fancybox" rel="ligthbox" href="{{ site.url }}{{ site.baseurl }}/assets/images/projects/{{ page.project_name }}/{{ item.picture }}">
-            <img class="img-responsive" alt="{{ item.name }} Project" src="{{ site.url }}{{ site.baseurl }}/assets/images/projects/{{ page.project_name }}/{{ item.picture }}"
+          <a class="thumbnail fancybox" rel="ligthbox" href="{{ site.url }}{{ site.baseurl }}/assets/images/work/{{ page.work_name }}/{{ item.picture }}">
+            <img class="img-responsive" alt="{{ item.name }} Project" src="{{ site.url }}{{ site.baseurl }}/assets/images/work/{{ page.work_name }}/{{ item.picture }}"
             />
           </a>
         </div>{% endfor %}
       </div>
     </div>
   </div>
-
-
 </div>
