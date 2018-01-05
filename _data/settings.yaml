@@ -7,8 +7,8 @@ menu:
 - {title: Home, url: '#'}
 - {title: About, url: '#about'}
 - {title: Work, url: 'work'}
-# - {title: Projects, url: 'projects'}
-# - {title: Radio, url: 'radio'}
+- {title: Projects, url: 'projects'}
+- {title: Radio, url: 'radio'}
 - {title: Contact, url: '#contact'}
 
 #-------------------------------
@@ -25,7 +25,8 @@ seo:
   twitter-creator: '@mrdemonwolf'
   twitter-site: '@mrdemonwolf'
   type: 'website'
-google-analytics: UA-107275871-1
+
+# google-analytics: UA-107275871-1
 
 #-------------------------------
 # About Section
@@ -68,13 +69,6 @@ social:
 - {icon: 'fa-github', color: 'github-color', url: 'https://www.github.com/mrdemonwolf'}
 - {icon: 'fa-youtube', color: 'youtube-color', url: 'https://www.youtube.com/mrdemonwolf'}
 - {icon: 'fa-twitch', color: 'twitch-color', url: 'https://www.twitch.tv/mrdemonwolf/'}
-
-social-url:
-  spotify: https://open.spotify.com/user/demonwolf97
-  twitter: http://www.twitter.com/mrdemonwolf
-  github: https://www.github.com/mrdemonwolf
-  youtube: https://www.youtube.com/mrdemonwolf
-  twitch: https://www.twitch.tv/mrdemonwolf
 
 #-------------------------------
 # Modified Date

@@ -68,51 +68,51 @@
   <!-- Google Analytics -->
   <script>
     (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
         (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', '{{ site.data.settings.google-analytics }}', 'auto');
     ga('send', 'pageview');
+
   </script>
   <!-- End Google Analytics -->
   <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Organization",
-    "name": "{{ site.title}}",
-    "mainEntityOfPage": "{{ site.url }}{{ site.baseurl }}/",
-    "url": "{{ site.url }}{{ site.baseurl }}/",
-    "sameAs": [
-      "{{ site.data.settings.social-url.spotify }}",
-      "{{ site.data.settings.social-url.twitter }}",
-      "{{ site.data.settings.social-url.github }}",
-      "{{ site.data.settings.social-url.youtube }}",
-      "{{ site.data.settings.social-url.twitch }}"
-    ],
-    "email": "{{ site.email }}",
-    "foundingDate": "2016",
-    "foundingLocation": "Wisconsin, United States",
-    "member": {
-      "@type": "Person",
-      "name": "Nathan Hernniges",
-      "jobTitle": "Owner",
-      "nationality": "American",
-      "url": "https://www.keybase.com/demonwolf/"
-    },
-    "logo": "{{ site.url }}{{ site.baseurl }}/assets/logos/logo.png"
-  }
-  </script>
-  <script>
-    var radioAPI = "https://radio.mrdemonwolf.me/api/nowplaying/1";
-    $(document).ready(function getData() {
-      $.getJSON(radioAPI, function (json) {
-        var listen = json.station.listen_url;
-        $('.audio source').attr('src', listen);
-      })
-    });
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "{{ site.title}}",
+      "mainEntityOfPage": "{{ site.url }}{{ site.baseurl }}/",
+      "url": "{{ site.url }}{{ site.baseurl }}/",
+      "sameAs": [{ %
+          for item in site.data.settings.social %
+        }
+        "{{ item.url }}" { %
+          if forloop.last == false %
+        }, { % endif %
+        } { % endfor %
+        }
+      ],
+      "email": "{{ site.email }}",
+      "foundingDate": "2016",
+      "foundingLocation": "Wisconsin, United States",
+      "member": {
+        "@type": "Person",
+        "name": "Nathan Hernniges",
+        "jobTitle": "Owner",
+        "nationality": "American",
+        "url": "https://www.keybase.com/demonwolf/"
+      },
+      "logo": "{{ site.url }}{{ site.baseurl }}/assets/logos/logo.png"
+    }
+
   </script>
 </head>
 
@@ -154,7 +154,8 @@
     // Appens link to banner
     twitchBanner.attr("href", "https://www.twitch.tv" + username);
 
-    $.getJSON('https://api.twitch.tv/kraken/streams/' + username + '?client_id=' + api_key + '&callback=?', function (data) {
+    $.getJSON('https://api.twitch.tv/kraken/streams/' + username + '?client_id=' + api_key + '&callback=?', function (
+      data) {
       if (data.stream) {
         twitchBanner.removeClass('hidden');
       }
@@ -181,6 +182,7 @@
           <div class="footer-copyright"> Copyright ©
             <script>
               document.write("" + new Date().getFullYear());
+
             </script>
             <a href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
             <span>, All rights reserved</span>
