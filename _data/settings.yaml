@@ -7,8 +7,8 @@ menu:
 - {title: Home, url: '#'}
 - {title: About, url: '#about'}
 - {title: Work, url: 'work'}
-- {title: Projects, url: 'projects'}
-- {title: Radio, url: 'radio'}
+# - {title: Projects, url: 'projects'}
+# - {title: Radio, url: 'radio'}
 - {title: Contact, url: '#contact'}
 
 #-------------------------------
