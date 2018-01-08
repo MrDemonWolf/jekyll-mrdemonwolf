@@ -6,6 +6,7 @@
     color: $footer-color;
     padding: 10px 0;
     margin-bottom: 0;
+    display: inline-block;
 
     a {
         color: $footer-color_link;
@@ -37,7 +38,6 @@
 }
 
 .footer-social {
-  margin-left: 20px;
     li {
         float: right;
         display: flex;
@@ -64,6 +64,7 @@
     color: $footer-color-legal;
     padding: 10px 0;
     margin-bottom: 0;
+    display: inline-block;
 
     a {
         color: $footer-color_link-legal;

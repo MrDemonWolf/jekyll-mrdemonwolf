@@ -118,9 +118,7 @@
 
 <body>
   <!-- Website Content -->
-  <div id="wrap">
     {% include twitchBanner.html %} {{ content }}
-  </div>
 </body>
 <!-- EU Cookie notice -->
 <script>
@@ -165,20 +163,11 @@
 
 </script>
 <!-- Footer -->
-<div id="footer">
   <footer>
-    <!-- Legal Infos -->
-    <div class="container">
-      <div class="col-md-12 text-right">
-        <div class="footer-legal">
-          <a href="{{ site.url }}{{ site.baseurl }}/legal/privacy-statement/">Privacy Statement</a>
-        </div>
-      </div>
-    </div>
     <!-- Footer copyright with auto update year. -->
     <div class="copyright">
       <div class="container">
-        <div class="col-md-5 col-sm-12">
+        <div class="col-md-6 col-sm-12">
           <div class="footer-copyright"> Copyright ©
             <script>
               document.write("" + new Date().getFullYear());
@@ -187,8 +176,11 @@
             <a href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
             <span>, All rights reserved</span>
           </div>
+          <div class="footer-legal">
+            <a href="{{ site.url }}{{ site.baseurl }}/legal/privacy-statement/">Privacy Statement</a>
+          </div>
         </div>
-        <div class="col-md-5 col-md-offset-2 col-sm-12 footer-social ">
+        <div class="col-md-6 col-sm-12 footer-social ">
           <ul class="ul-np">{% for item in site.data.settings.social %}
             <li>
               <a href="{{ item.url }}">
@@ -200,7 +192,6 @@
       </div>
     </div>
   </footer>
-</div>
 <!-- Loadidng JS -->
 <!-- Bootstrap Javascript -->
 <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/lib/bootstrap/js/bootstrap.min.js"></script>
