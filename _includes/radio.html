@@ -2,10 +2,15 @@
   var radioAPI = "https://radio.mrdemonwolf.me/api/nowplaying/1";
   $(document).ready(function getData() {
     $.getJSON(radioAPI, function (json) {
+      var listen = json.station.listen_url;
+      $('.audio source').attr('src', listen);
+    })
+  });
+  $(document).ready(function getData() {
+    $.getJSON(radioAPI, function (json) {
       var title = json.station.name;
       var description = json.station.description;
       var songname = json.now_playing.song.title;
-      var listen = json.station.listen_url;
       $('#radio-title').text(title);
       $('#radio-description').text(description);
       $('#song-name').text(songname);
@@ -20,6 +25,7 @@
       myToggle = setTimeout(getCurrentListeners, 2000);
     })
   });
+
 </script>
 <div class="container">
   <div class="col-md-8">

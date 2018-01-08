@@ -12,12 +12,43 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     border-color: $brand-color-alt;
 }
 
-.project-name {
+.work-name {
     font-size: 1.25em;
     text-align: center;
     text-decoration: none;
 
     &:hover {
         text-decoration: none;
+    }
+}
+
+.work {
+    .gallery {
+        display: inline-block;
+        margin-top: 25px;
+    }
+
+    .title {
+        color: $brand-color;
+        font-family: $main-font;
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .header {
+        font-family: $main-font;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .date {
+        font-family: $second-font;
+        font-size: 1.25em;
+        text-align: center;
+    }
+
+    .colors {
+        display: block;
+        margin: 0 auto;
     }
 }

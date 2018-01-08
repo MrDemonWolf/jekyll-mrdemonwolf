@@ -25,7 +25,8 @@ seo:
   twitter-creator: '@mrdemonwolf'
   twitter-site: '@mrdemonwolf'
   type: 'website'
-google-analytics: UA-107275871-1
+
+# google-analytics: UA-107275871-1
 
 #-------------------------------
 # About Section
@@ -52,12 +53,13 @@ hero-button:
 
 #-------------------------------
 # Examples Section
-# Max of 3
+example-header: Past Examples
 
+# Max of 3
 examples:
-- {title: 'JSL Hub', url: 'jslhub', picture: 'jslhub.png'}
-- {title: 'Aishazart', url: 'aishazart', picture: 'aishazart.png'}
-- {title: 'Alan Crytex', url: 'alancrytex', picture: 'alancrytex.png'}
+- {title: 'JSL Hub', url: 'jslhub', picture: 'jslhub.png', type: "work"}
+- {title: 'Aishazart', url: 'aishazart', picture: 'aishazart.png', type: "work"}
+- {title: 'Alan Crytex', url: 'alancrytex', picture: 'alancrytex.png', type: "work"}
 
 #-------------------------------
 # Social Icons and URls
@@ -68,13 +70,6 @@ social:
 - {icon: 'fa-github', color: 'github-color', url: 'https://www.github.com/mrdemonwolf'}
 - {icon: 'fa-youtube', color: 'youtube-color', url: 'https://www.youtube.com/mrdemonwolf'}
 - {icon: 'fa-twitch', color: 'twitch-color', url: 'https://www.twitch.tv/mrdemonwolf/'}
-
-social-url:
-  spotify: https://open.spotify.com/user/demonwolf97
-  twitter: http://www.twitter.com/mrdemonwolf
-  github: https://www.github.com/mrdemonwolf
-  youtube: https://www.youtube.com/mrdemonwolf
-  twitch: https://www.twitch.tv/mrdemonwolf
 
 #-------------------------------
 # Modified Date
