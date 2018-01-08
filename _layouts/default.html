@@ -118,7 +118,7 @@
 
 <body>
   <!-- Website Content -->
-    {% include twitchBanner.html %} {{ content }}
+  {% include twitchBanner.html %} {{ content }}
 </body>
 <!-- EU Cookie notice -->
 <script>
@@ -163,35 +163,38 @@
 
 </script>
 <!-- Footer -->
-  <footer>
-    <!-- Footer copyright with auto update year. -->
-    <div class="copyright">
-      <div class="container">
-        <div class="col-md-6 col-sm-12">
-          <div class="footer-copyright"> Copyright ©
-            <script>
-              document.write("" + new Date().getFullYear());
+<footer>
+  <!-- Footer copyright with auto update year. -->
+  <div class="copyright">
+    <div class="container">
+      <div class="col-md-6 col-sm-12">
+        <div class="footer-copyright"> Copyright ©
+          <script>
+            document.write("" + new Date().getFullYear());
 
-            </script>
-            <a href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
-            <span>, All rights reserved</span>
-          </div>
-          <div class="footer-legal">
-            <a href="{{ site.url }}{{ site.baseurl }}/legal/privacy-statement/">Privacy Statement</a>
-          </div>
+          </script>
+          <a href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
+          <span>, All rights reserved</span>
         </div>
-        <div class="col-md-6 col-sm-12 footer-social ">
-          <ul class="ul-np">{% for item in site.data.settings.social %}
-            <li>
-              <a href="{{ item.url }}">
-                <i class="fa {{ item.icon }} social-icon {{ item.color }}" aria-hidden="true"></i>
-              </a>
-            </li>{% endfor %}
-          </ul>
+        <div class="spacer">
+          |
+        </div>
+        <div class="footer-legal">
+          <a href="{{ site.url }}{{ site.baseurl }}/legal/privacy-statement/">Privacy Statement</a>
         </div>
       </div>
+      <div class="col-md-6 col-sm-12 footer-social ">
+        <ul class="ul-np">{% for item in site.data.settings.social %}
+          <li>
+            <a href="{{ item.url }}">
+              <i class="fa {{ item.icon }} social-icon {{ item.color }}" aria-hidden="true"></i>
+            </a>
+          </li>{% endfor %}
+        </ul>
+      </div>
     </div>
-  </footer>
+  </div>
+</footer>
 <!-- Loadidng JS -->
 <!-- Bootstrap Javascript -->
 <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/lib/bootstrap/js/bootstrap.min.js"></script>
