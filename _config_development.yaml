@@ -3,5 +3,4 @@
 # you will see them access via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the template via {{ site.myvariable }}.
-url: "http://localhost:4000"
 baseurl: ""
