@@ -12,8 +12,8 @@
   <div class="container">
     {% for item in page.gallery-thumbnails %}
     <div class="product col-lg-4 col-md-4 col-sm-12 col-xs-12 filter {{ item.fliter }}">
-      <a href="{{ site.baseurl }}/{{ page.url-path }}/{{ item.url }}">
-        <img src="{{ site.baseurl }}/assets/images/{{ page.url-path }}/thumbnails/{{ item.picture }}" class="img-responsive">
+      <a href="{{ site.subpath }}/{{ page.url-path }}/{{ item.url }}">
+        <img src="{{ site.subpath }}/assets/images/{{ page.url-path }}/thumbnails/{{ item.picture }}" class="img-responsive">
       </a>
     </div>{% endfor %}
   </div>
