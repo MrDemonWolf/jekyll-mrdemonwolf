@@ -4,8 +4,8 @@
     <h1 class="landing_header">{{ site.data.settings.example-header }}</h1>
     <div class='list-group gallery'>{% for item in site.data.settings.examples %}
       <div class='col-xl-4 col-md-4 col-sm-12 col-xs-12'>
-        <a class="thumbnail" href="{{ site.baseurl }}/work/{{ item.url }}">
-          <img class="img-responsive" alt="{{ item.title }} Project" src="{{ site.baseurl }}/assets/images/{{ item.type }}/thumbnails/{{ item.picture }}"
+        <a class="thumbnail" href="{{ site.subpath }}/work/{{ item.url }}">
+          <img class="img-responsive" alt="{{ item.title }} Project" src="{{ site.subpath }}/assets/images/{{ item.type }}/thumbnails/{{ item.picture }}"
           />
           <div class='text-right'>
             <div class='text-muted project-name'>{{ item.title }}</div>
