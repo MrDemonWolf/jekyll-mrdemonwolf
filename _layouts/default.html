@@ -147,7 +147,7 @@
     api_key = '{{ site.data.settings.twitchbanner.apikey }}';
     twitchBanner = $('.twitchBanner');
     // Appens link to banner
-    twitchBanner.attr("href", "https://www.twitch.tv" + username);
+    twitchBanner.attr("href", "https://www.twitch.tv/" + username);
 
     $.getJSON('https://api.twitch.tv/kraken/streams/' + username + '?client_id=' + api_key + '&callback=?', function (
       data) {
