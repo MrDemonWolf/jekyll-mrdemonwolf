@@ -18,7 +18,7 @@ email: demonwolf@demonwolfdev.com
 description: MrDemonWolf is UX Designer, Gamer, Streamer, Youtuber. Freelancer for UX Design and Wordpress site builds. Want a new website for your company or etc.
 keywords: ux designer, front-end devloper, front-end development ,gamer, streamer, youtuber
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://mrdemonwolf.me" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://mrdemonwolf-f5a653ae63.drafts.github.io/mrdemonwolf.me/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: mrdemonwolf
 encoding: UTF-8
 brand-color: '#00328d'
