@@ -29,7 +29,7 @@ permalink: pretty
 
 exclude:
   - Gemfile
-
+  - Gemfile.lock
   - mrdemonwolf.config.js
   - gulpfile.js
   - LICENSE
