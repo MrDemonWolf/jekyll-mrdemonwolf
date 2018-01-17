@@ -63,6 +63,7 @@
   <!-- EU Cookie -->
   <link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/lib/cookieconsent/css/cookieconsent.min.css">
   <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/lib/cookieconsent/js/cookieconsent.min.js"></script>
+  <!-- End Frameworks -->
   <!-- Custom -->
   <link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/css/main.css">
   <!-- Google Analytics -->
@@ -84,6 +85,7 @@
 
   </script>
   <!-- End Google Analytics -->
+  <!-- Google Structured Data -->
   <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -91,14 +93,8 @@
       "name": "{{ site.title}}",
       "mainEntityOfPage": "{{ site.url }}{{ site.baseurl }}/",
       "url": "{{ site.url }}{{ site.baseurl }}/",
-      "sameAs": [{ %
-          for item in site.data.settings.social %
-        }
-        "{{ item.url }}" { %
-          if forloop.last == false %
-        }, { % endif %
-        } { % endfor %
-        }
+      "sameAs": [{% for item in site.data.settings.social %}
+        "{{ item.url }}" {% if forloop.last == false %},{% endif %} {% endfor %}
       ],
       "email": "{{ site.email }}",
       "foundingDate": "2016",
@@ -114,6 +110,7 @@
     }
 
   </script>
+  <!-- End Google Structured Data -->
 </head>
 
 <body>
@@ -150,7 +147,7 @@
     api_key = '{{ site.data.settings.twitchbanner.apikey }}';
     twitchBanner = $('.twitchBanner');
     // Appens link to banner
-    twitchBanner.attr("href", "https://www.twitch.tv" + username);
+    twitchBanner.attr("href", "https://www.twitch.tv/" + username);
 
     $.getJSON('https://api.twitch.tv/kraken/streams/' + username + '?client_id=' + api_key + '&callback=?', function (
       data) {
