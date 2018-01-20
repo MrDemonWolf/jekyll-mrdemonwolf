@@ -22,9 +22,9 @@ module.exports = {
 
   jekyll: {
     config: {
-      default:      "_config.yml",
-      development:  "_config_development.yml",
-      production:   "_config.yml",
+      default:      "_config.yaml",
+      development:  "_config_development.yaml",
+      production:   "_config.yaml",
     }
   },
 
