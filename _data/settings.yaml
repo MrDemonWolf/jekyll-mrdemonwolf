@@ -42,11 +42,12 @@ about:
 hero-title: Nathan Henniges is a
 
 hero:
-- {name: Streamer}
-- {name: YouTuber}
 - {name: Front-end Developer}
 - {name: UX Designer}
+- {name: Streamer}
+- {name: YouTuber}
 - {name: Gamer}
+- {name: DJ}
 
 hero-button:
   title: Contact Me

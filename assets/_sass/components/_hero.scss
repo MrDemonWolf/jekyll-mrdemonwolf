@@ -61,6 +61,11 @@
             animation-delay: 12s;
             color: $hero-animate-text;
         }
+        & > span:nth-child(6) {
+    animation-delay: 15s;
+    color: $hero-animate-text;
+}
+
     }
 
     .cta-button {
