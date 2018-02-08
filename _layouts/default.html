@@ -93,8 +93,14 @@
       "name": "{{ site.title}}",
       "mainEntityOfPage": "{{ site.data.settings.seo.url }}/",
       "url": "{{ site.data.settings.seo.url }}/",
-      "sameAs": [{% for item in site.data.settings.social %}
-        "{{ item.url }}" {% if forloop.last == false %},{% endif %} {% endfor %}
+      "sameAs": [{ %
+          for item in site.data.settings.social %
+        }
+        "{{ item.url }}" { %
+          if forloop.last == false %
+        }, { % endif %
+        } { % endfor %
+        }
       ],
       "email": "{{ site.email }}",
       "foundingDate": "2016",
@@ -160,38 +166,40 @@
 
 </script>
 <!-- Footer -->
-<footer>
-  <!-- Footer copyright with auto update year. -->
-  <div class="copyright">
-    <div class="container">
-      <div class="col-md-6 col-sm-12">
-        <div class="footer-copyright"> Copyright ©
-          <script>
-            document.write("" + new Date().getFullYear());
+<div class="footer">
+  <footer>
+    <!-- Footer copyright with auto update year. -->
+    <div class="copyright">
+      <div class="container">
+        <div class="col-md-6 col-sm-12">
+          <div class="footer-copyright"> Copyright ©
+            <script>
+              document.write("" + new Date().getFullYear());
 
-          </script>
-          <a href="{{ site.subpath }}">{{ site.title }}</a>
-          <span>, All rights reserved</span>
+            </script>
+            <a href="{{ site.subpath }}">{{ site.title }}</a>
+            <span>, All rights reserved</span>
+          </div>
+          <div class="spacer">
+            |
+          </div>
+          <div class="footer-legal">
+            <a href="{{ site.subpath }}/legal/privacy-statement/">Privacy Statement</a>
+          </div>
         </div>
-        <div class="spacer">
-          |
+        <div class="col-md-6 col-sm-12 footer-social ">
+          <ul class="ul-np">{% for item in site.data.settings.social %}
+            <li>
+              <a href="{{ item.url }}">
+                <i class="fa {{ item.icon }} social-icon {{ item.color }}" aria-hidden="true"></i>
+              </a>
+            </li>{% endfor %}
+          </ul>
         </div>
-        <div class="footer-legal">
-          <a href="{{ site.subpath }}/legal/privacy-statement/">Privacy Statement</a>
-        </div>
-      </div>
-      <div class="col-md-6 col-sm-12 footer-social ">
-        <ul class="ul-np">{% for item in site.data.settings.social %}
-          <li>
-            <a href="{{ item.url }}">
-              <i class="fa {{ item.icon }} social-icon {{ item.color }}" aria-hidden="true"></i>
-            </a>
-          </li>{% endfor %}
-        </ul>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
+</div>
 <!-- Loadidng JS -->
 <!-- Bootstrap Javascript -->
 <script type="text/javascript" src="{{ site.subpath }}/assets/lib/bootstrap/js/bootstrap.min.js"></script>
