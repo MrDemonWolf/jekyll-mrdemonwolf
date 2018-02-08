@@ -1,6 +1,21 @@
 // -----------------------------------------------------------------------------
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 .img-circle {
     border-radius: 50%;
 }
@@ -55,5 +70,5 @@
 }
 
 #page_header {
-  @extend .small-content-bottom;
+    @extend .small-content-bottom;
 }
