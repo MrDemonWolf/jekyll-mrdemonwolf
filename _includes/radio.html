@@ -3,17 +3,13 @@
   $(document).ready(function getData() {
     $.getJSON(radioAPI, function (json) {
       var listen = json.station.listen_url;
-      $('.audio source').attr('src', listen);
-    })
-  });
-  $(document).ready(function getData() {
-    $.getJSON(radioAPI, function (json) {
       var title = json.station.name;
       var description = json.station.description;
       var songname = json.now_playing.song.title;
       $('#radio-title').text(title);
       $('#radio-description').text(description);
       $('#song-name').text(songname);
+      $('.audio source').attr('src', listen);
       console.log(listen);
     })
   });
