@@ -93,14 +93,8 @@
       "name": "{{ site.title}}",
       "mainEntityOfPage": "{{ site.data.settings.seo.url }}/",
       "url": "{{ site.data.settings.seo.url }}/",
-      "sameAs": [{ %
-          for item in site.data.settings.social %
-        }
-        "{{ item.url }}" { %
-          if forloop.last == false %
-        }, { % endif %
-        } { % endfor %
-        }
+      "sameAs": [{% for item in site.data.settings.social %}
+        "{{ item.url }}" {% if forloop.last == false %},{% endif %} {% endfor %}
       ],
       "email": "{{ site.email }}",
       "foundingDate": "2016",
