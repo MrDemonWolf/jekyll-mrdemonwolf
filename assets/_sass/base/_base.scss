@@ -20,23 +20,6 @@ body {
     border-radius: 50%;
 }
 
-// Custom spaceings
-.big-content-top {
-    padding-top: 30px;
-}
-
-.big-content-bottom {
-    padding-bottom: 30px;
-}
-
-.small-content-top {
-    padding-top: 10px;
-}
-
-.small-content-bottom {
-    padding-bottom: 10px;
-}
-
 // Center Row
 .row-centered {
     text-align: center;
@@ -70,5 +53,5 @@ body {
 }
 
 #page_header {
-    @extend .small-content-bottom;
+    padding-bottom: 10px;
 }

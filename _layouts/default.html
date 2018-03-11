@@ -93,8 +93,14 @@
       "name": "{{ site.title}}",
       "mainEntityOfPage": "{{ site.data.settings.seo.url }}/",
       "url": "{{ site.data.settings.seo.url }}/",
-      "sameAs": [{% for item in site.data.settings.social %}
-        "{{ item.url }}" {% if forloop.last == false %},{% endif %} {% endfor %}
+      "sameAs": [{ %
+          for item in site.data.settings.social %
+        }
+        "{{ item.url }}" { %
+          if forloop.last == false %
+        }, { % endif %
+        } { % endfor %
+        }
       ],
       "email": "{{ site.email }}",
       "foundingDate": "2016",
@@ -167,16 +173,10 @@
         <div class="col-md-6 col-sm-12">
           <div class="footer-copyright"> Copyright ©
             <script>
-              document.write("" + new Date().getFullYear());
+              document.write(new Date().getFullYear());
 
             </script>
-            <a href="{{ site.subpath }}">{{ site.title }}</a>
-            <span>, All rights reserved</span>
-          </div>
-          <div class="spacer">
-            |
-          </div>
-          <div class="footer-legal">
+            <a href="{{ site.subpath }}">{{ site.title }}</a> |
             <a href="{{ site.subpath }}/legal/privacy-statement/">Privacy Statement</a>
           </div>
         </div>
