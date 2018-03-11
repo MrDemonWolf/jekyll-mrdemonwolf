@@ -7,8 +7,10 @@
 
 #message {
     height: 100px;
+}
 
-    .label {
+.message {
+    &.label {
         top: 1px;
         bottom: clear;
     }
