@@ -72,6 +72,7 @@ social:
 - {icon: 'fa-github', color: 'github-color', url: 'https://www.github.com/mrdemonwolf'}
 - {icon: 'fa-youtube', color: 'youtube-color', url: 'https://www.youtube.com/mrdemonwolf'}
 - {icon: 'fa-twitch', color: 'twitch-color', url: 'https://www.twitch.tv/mrdemonwolf/'}
+- {icon: 'fa-linkedin', color: 'linkedin-color', url: 'https://www.linkedin.com/in/nathan-henniges/'}
 
 #-------------------------------
 # Modified Date

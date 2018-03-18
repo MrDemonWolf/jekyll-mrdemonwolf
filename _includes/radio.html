@@ -1,5 +1,5 @@
 <script>
-  var radioAPI = "https://radio.mrdemonwolf.me/api/nowplaying/1";
+  var radioAPI = "https://dj.mrdemonwolf.me/api/nowplaying/1";
   $(document).ready(function getData() {
     $.getJSON(radioAPI, function (json) {
       var listen = json.station.listen_url;
@@ -27,7 +27,7 @@
   <div class="col-md-8">
     <div class="player">
       <audio class="audio" controls="controls">
-        <source type="audio/mpeg" src="https://radio.mrdemonwolf.me/radio/8000/radio.mp3">
+        <source type="audio/mpeg" src="https://dj.mrdemonwolf.me/radio/8000/radio.mp3">
       </audio>
     </div>
   </div>

@@ -35,6 +35,11 @@ footer {
         margin-right: 10px;
         padding-top: 8px;
         border-radius: 50%;
+
+        &:hover {
+            background-color: $social-icon;
+            transition: 500ms;
+        }
     }
 
     .footer-social {
