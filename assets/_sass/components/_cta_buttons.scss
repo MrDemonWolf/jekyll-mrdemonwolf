@@ -1,0 +1,24 @@
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the cta buttons component.
+// -----------------------------------------------------------------------------
+.btn-cta {
+    border-radius: 5px;
+    margin: 0 0 0 0;
+    font-weight: 700;
+    &.btn-cta:active:focus {
+      color: $button_background_effect_font;
+      background-color: $button_background_effect;
+      &.btn-cta.active.focus,
+      .btn-cta.active:focus,
+      .btn-cta.active:hover,
+      .btn-cta:active.focus,
+      .btn-cta:active:focus,
+      .btn-cta:active:hover,
+      .btn-cta:hover {
+        background: darken($button_background_effect, 15%);
+        color: button_background_effect_font;
+        transition: all 500ms;
+      }
+    }
+  }

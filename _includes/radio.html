@@ -1,39 +1,80 @@
 <script>
   var radioAPI = "https://dj.mrdemonwolf.me/api/nowplaying/1";
-  $(document).ready(function getData() {
+  $(document).ready(function getRadioData() {
     $.getJSON(radioAPI, function (json) {
       var listen = json.station.listen_url;
       var title = json.station.name;
+      var dj = json.live.streamer_name;
       var description = json.station.description;
       var songname = json.now_playing.song.title;
+      var songartist = json.now_playing.song.artist;
       $('#radio-title').text(title);
       $('#radio-description').text(description);
       $('#song-name').text(songname);
+      $('#song-artist').text(songartist)
       $('.audio source').attr('src', listen);
       console.log(listen);
     })
   });
-  $(document).ready(function getCurrentListeners() {
+  $(document).ready(function getRadioDataUpdate() {
     $.getJSON(radioAPI, function (json) {
       var listeners = json.listeners.current;
+      var songname = json.now_playing.song.title;
+      var songartist = json.now_playing.song.artist;
+      $('#song-name').text(songname);
+      $('#song-artist').text(songartist)
       $('#listeners').text(listeners)
-      console.log(listeners);
-      myToggle = setTimeout(getCurrentListeners, 2000);
+      console.log(`There are ${listeners} current viewers.  Current playing ${songname} by ${songartist}`);
+      myToggle = setTimeout(getRadioDataUpdate, 60000);
     })
   });
 
 </script>
-<div class="container">
-  <div class="col-md-8">
-    <div class="player">
-      <audio class="audio" controls="controls">
-        <source type="audio/mpeg" src="https://dj.mrdemonwolf.me/radio/8000/radio.mp3">
-      </audio>
+<div class="radio">
+  <div class="container">
+    <div class="col-xs-12 col-md-6">
+      <div class="player">
+        <audio class="audio" controls="controls">
+          <source type="audio/mpeg" src="https://dj.mrdemonwolf.me/radio/8000/radio.mp3">
+        </audio>
+        <div class="details">
+          <div class="title">
+            <div id="radio-title">Loading....</div>
+          </div>
+          <div class="info">
+            Currently Playing:
+            <div class="songinfo">
+              <div id="song-name">Loading....</div>
+              <div id="song-artist"></div>
+            </div>
+            <div class="current-listeners">
+              There are
+              <div id="listeners">0</div> listeners.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <div class="download">
+        <a type="button" class="btn btn-primary btn-xs" href="https://dj.mrdemonwolf.me/radio/8000/radio.mp3" target="_blank" download>Download</a>
+        (May have to right click and save link as) and open in either VLC or Windows Media Player.
+      </div>
     </div>
   </div>
-  <div class="col-md-4">
-    <div id="song-name"></div>
-    <div id="radio-title"></div>
-    <div id="listeners"></div>
+</div>
+<!-- <div class="container">
+    <div class="col-md-12">
+      <div class="title">
+        Radio Title
+      </div>`
+
+    </div>
+    <div class="col-md-6">
+      <div class="header">Current Song Playing</div>
+    </div>
   </div>
 </div>
+<div id="song-name"></div>
+<div id="song-artist"></div>
+<div id="listeners"></div> -->

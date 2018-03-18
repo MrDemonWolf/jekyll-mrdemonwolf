@@ -1,0 +1,36 @@
+.radio {
+    padding-top: 25px;
+
+    .player {
+        .download {
+            display: inline;
+        }
+    }
+
+    .details {
+        .title {
+            font-family: $main-font;
+            font-size: 2em;
+            font-weight: 700;
+        }
+
+        .info {
+            display: inline;
+
+            .songinfo {
+                display: inline;
+
+                // #song-name, #song-artist {
+                //     display: inline;
+                // }
+
+            }
+        }
+
+        .current-listeners {
+            #listeners {
+                display: inline;
+            }
+        }
+    }
+}

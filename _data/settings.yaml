@@ -7,8 +7,8 @@ menu:
 - {title: Home, url: '/'}
 - {title: About, url: '/#about'}
 - {title: Work, url: '/work'}
-# - {title: Projects, url: 'projects'}
-# - {title: Radio, url: 'radio'}
+# - {title: Projects, url: '/projects'}
+- {title: Radio, url: '/radio'}
 - {title: Contact, url: '/#contact'}
 
 #-------------------------------
@@ -59,9 +59,9 @@ example-header: Past Examples
 
 # Max of 3
 examples:
-- {title: 'JSL Hub', url: 'jslhub', picture: 'jslhub.png', type: "work"}
-- {title: 'Aishazart', url: 'aishazart', picture: 'aishazart.png', type: "work"}
-- {title: 'Alan Crytex', url: 'alancrytex', picture: 'alancrytex.png', type: "work"}
+- {title: 'JSL Hub', url: 'jslhub', picture: 'jslhub.png', type: 'work'}
+- {title: 'Aishazart', url: 'aishazart', picture: 'aishazart.png', type: 'work'}
+- {title: 'Alan Crytex', url: 'alancrytex', picture: 'alancrytex.png', type: 'work'}
 
 #-------------------------------
 # Social Icons and URls
@@ -77,6 +77,6 @@ social:
 #-------------------------------
 # Modified Date
 
-modified-date: September 25, 2017
+modified-date: March 18, 2018
 
 #-------------------------------
