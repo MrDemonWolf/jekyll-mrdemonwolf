@@ -1,80 +1,81 @@
-<script>
-  var radioAPI = "https://dj.mrdemonwolf.me/api/nowplaying/1";
-  $(document).ready(function getRadioData() {
-    $.getJSON(radioAPI, function (json) {
-      var listen = json.station.listen_url;
-      var title = json.station.name;
-      var dj = json.live.streamer_name;
-      var description = json.station.description;
-      var songname = json.now_playing.song.title;
-      var songartist = json.now_playing.song.artist;
-      $('#radio-title').text(title);
-      $('#radio-description').text(description);
-      $('#song-name').text(songname);
-      $('#song-artist').text(songartist)
-      $('.audio source').attr('src', listen);
-      console.log(listen);
-    })
-  });
-  $(document).ready(function getRadioDataUpdate() {
-    $.getJSON(radioAPI, function (json) {
-      var listeners = json.listeners.current;
-      var songname = json.now_playing.song.title;
-      var songartist = json.now_playing.song.artist;
-      $('#song-name').text(songname);
-      $('#song-artist').text(songartist)
-      $('#listeners').text(listeners)
-      console.log(`There are ${listeners} current viewers.  Current playing ${songname} by ${songartist}`);
-      myToggle = setTimeout(getRadioDataUpdate, 60000);
-    })
-  });
-
-</script>
 <div class="radio">
   <div class="container">
-    <div class="col-xs-12 col-md-6">
-      <div class="player">
-        <audio class="audio" controls="controls">
-          <source type="audio/mpeg" src="https://dj.mrdemonwolf.me/radio/8000/radio.mp3">
-        </audio>
-        <div class="details">
-          <div class="title">
-            <div id="radio-title">Loading....</div>
+    <div class="script">
+      <script type="text/javascript">
+        var radioAPI = "https://proxima.musiquefuture.com:2199/rpc/mrdemonwolf/streaminfo.get";
+        $(document).ready(function getRadioData() {
+          $.getJSON(radioAPI, function (json) {
+            const radio_title = json.data[0].title;
+            const currently_playing = json.data[0].song;
+            $(`#radio_title`).text(radio_title);
+            $(`#radio_current_song`).text(currently_playing);
+          })
+        });;
+        //<![CDATA[
+        $(document).ready(function () {
+          $("#jquery_jplayer_1").jPlayer({
+            ready: function () {
+              $(this).jPlayer("setMedia", {
+                mp3: "http://proxima.musiquefuture.com:8030/listen.mp3"
+              });
+            },
+            swfPath: "/assets/lib/jplayer/js/jquery.jplayer.swf",
+            supplied: "mp3",
+            wmode: "window",
+            useStateClassSkin: true,
+            autoBlur: false,
+            smoothPlayBar: true,
+            keyEnabled: true,
+            remainingDuration: true,
+            toggleDuration: true
+          });
+        });
+        //]]>
+
+      </script>
+    </div>
+    <div class="col-md-4">
+      <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+      <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+        <div class="jp-type-single">
+          <div class="jp-gui jp-interface">
+            <div class="jp-controls">
+              <button class="jp-play" role="button" tabindex="0">play</button>
+              <button class="jp-stop" role="button" tabindex="0">stop</button>
+            </div>
+            <div class="jp-progress">
+              <div class="jp-seek-bar">
+                <div class="jp-play-bar"></div>
+              </div>
+            </div>
+            <div class="jp-volume-controls">
+              <button class="jp-mute" role="button" tabindex="0">mute</button>
+              <button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+              <div class="jp-volume-bar">
+                <div class="jp-volume-bar-value"></div>
+              </div>
+            </div>
+            <div class="jp-time-holder">
+              <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+              <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+              <div class="jp-toggles">
+                <button class="jp-repeat" role="button" tabindex="0">repeat</button>
+              </div>
+            </div>
           </div>
-          <div class="info">
-            Currently Playing:
-            <div class="songinfo">
-              <div id="song-name">Loading....</div>
-              <div id="song-artist"></div>
-            </div>
-            <div class="current-listeners">
-              There are
-              <div id="listeners">0</div> listeners.
-            </div>
+          <div class="jp-details">
+            <div class="title">Title</div>
+            <div id="radio_title">Loading...</div>
+            <div class="title">Current Song</div>
+            <div id="radio_current_song">Loading...</div>
+          </div>
+          <div class="jp-no-solution">
+            <span>Update Required</span>
+            To play the media you will need to either update your browser to a recent version or update your
+            <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
           </div>
         </div>
       </div>
     </div>
-    <div class="col-xs-12 col-md-6">
-      <div class="download">
-        <a type="button" class="btn btn-primary btn-xs" href="https://dj.mrdemonwolf.me/radio/8000/radio.mp3" target="_blank" download>Download</a>
-        (May have to right click and save link as) and open in either VLC or Windows Media Player.
-      </div>
-    </div>
   </div>
 </div>
-<!-- <div class="container">
-    <div class="col-md-12">
-      <div class="title">
-        Radio Title
-      </div>`
-
-    </div>
-    <div class="col-md-6">
-      <div class="header">Current Song Playing</div>
-    </div>
-  </div>
-</div>
-<div id="song-name"></div>
-<div id="song-artist"></div>
-<div id="listeners"></div> -->
