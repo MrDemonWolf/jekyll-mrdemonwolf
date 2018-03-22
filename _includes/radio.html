@@ -1,40 +1,44 @@
 <div class="radio">
-  <div class="container">
-    <div class="script">
-      <script type="text/javascript">
-        var radioAPI = "https://proxima.musiquefuture.com:2199/rpc/mrdemonwolf/streaminfo.get";
-        $(document).ready(function getRadioData() {
+  <div class="script">
+    <script type="text/javascript">
+      var radioAPI = "https://proxima.musiquefuture.com:2199/rpc/mrdemonwolf/streaminfo.get";
+      $(document).ready(function getRadioData() {
+        $.getJSON(radioAPI, function (json) {})
+        $(document).ready(function getRadioDataUpdate() {
           $.getJSON(radioAPI, function (json) {
             const radio_title = json.data[0].title;
             const currently_playing = json.data[0].song;
             $(`#radio_title`).text(radio_title);
             $(`#radio_current_song`).text(currently_playing);
+            myToggle = setTimeout(getRadioDataUpdate, 10000);
           })
-        });;
-        //<![CDATA[
-        $(document).ready(function () {
-          $("#jquery_jplayer_1").jPlayer({
-            ready: function () {
-              $(this).jPlayer("setMedia", {
-                mp3: "http://proxima.musiquefuture.com:8030/listen.mp3"
-              });
-            },
-            swfPath: "/assets/lib/jplayer/js/jquery.jplayer.swf",
-            supplied: "mp3",
-            wmode: "window",
-            useStateClassSkin: true,
-            autoBlur: false,
-            smoothPlayBar: true,
-            keyEnabled: true,
-            remainingDuration: true,
-            toggleDuration: true
-          });
         });
-        //]]>
+      });;
+      //<![CDATA[
+      $(document).ready(function () {
+        $("#jquery_jplayer_1").jPlayer({
+          ready: function () {
+            $(this).jPlayer("setMedia", {
+              mp3: "http://proxima.musiquefuture.com:8030/listen.mp3"
+            });
+          },
+          swfPath: "/assets/lib/jplayer/js/jquery.jplayer.swf",
+          supplied: "mp3",
+          wmode: "window",
+          useStateClassSkin: true,
+          autoBlur: false,
+          smoothPlayBar: true,
+          keyEnabled: true,
+          remainingDuration: true,
+          toggleDuration: true
+        });
+      });
+      //]]>
 
-      </script>
-    </div>
-    <div class="col-md-4">
+    </script>
+  </div>
+  <div class="container">
+    <div class="col-md-7">
       <div id="jquery_jplayer_1" class="jp-jplayer"></div>
       <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
         <div class="jp-type-single">
@@ -57,17 +61,7 @@
             </div>
             <div class="jp-time-holder">
               <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-              <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-              <div class="jp-toggles">
-                <button class="jp-repeat" role="button" tabindex="0">repeat</button>
-              </div>
             </div>
-          </div>
-          <div class="jp-details">
-            <div class="title">Title</div>
-            <div id="radio_title">Loading...</div>
-            <div class="title">Current Song</div>
-            <div id="radio_current_song">Loading...</div>
           </div>
           <div class="jp-no-solution">
             <span>Update Required</span>
@@ -76,6 +70,19 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="col-md-5">
+      <div class="details">
+        <div class="title">Title:</div>
+        <div id="radio_title">Loading...</div>
+        <div class="title">Current Song</div>
+        <div id="radio_current_song">Loading...</div>
+      </div>
+      {% if site.data.settings.songrequest == true %}
+      <div class="songrequest">
+        <a type="button" class="btn btn-large btn-block btn-default" href="{{ site.subpath }}/radio/songrequest" target="_blank">Request Song</a>
+      </div>
+      {% endif %}
     </div>
   </div>
 </div>

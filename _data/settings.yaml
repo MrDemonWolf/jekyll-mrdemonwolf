@@ -8,7 +8,7 @@ menu:
 - {title: About, url: '/#about'}
 - {title: Work, url: '/work'}
 # - {title: Projects, url: '/projects'}
-# - {title: Radio, url: '/radio'}
+- {title: Radio, url: '/radio'}
 - {title: Contact, url: '/#contact'}
 
 #-------------------------------
@@ -73,6 +73,11 @@ social:
 - {icon: 'fa-youtube', color: 'youtube-color', url: 'https://www.youtube.com/mrdemonwolf'}
 - {icon: 'fa-twitch', color: 'twitch-color', url: 'https://www.twitch.tv/mrdemonwolf/'}
 - {icon: 'fa-linkedin', color: 'linkedin-color', url: 'https://www.linkedin.com/in/nathan-henniges/'}
+
+#-------------------------------
+# Enable Song Requests
+
+songrequest: false
 
 #-------------------------------
 # Modified Date
