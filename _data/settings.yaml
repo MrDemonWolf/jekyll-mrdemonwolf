@@ -77,7 +77,7 @@ social:
 #-------------------------------
 # Enable Song Requests
 
-songrequest: true
+songrequest: false
 
 #-------------------------------
 # Modified Date
