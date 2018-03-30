@@ -1,7 +1,8 @@
 <div class="radio">
   <div class="script">
     <script type="text/javascript">
-      var radioAPI = "https://proxima.musiquefuture.com:2199/rpc/mrdemonwolf/streaminfo.get";
+      var radioAPI = "https://proxima.radiovendor.com:2199/rpc/mrdemonwolf/streaminfo.get";
+
       $(document).ready(function getRadioData() {
         $.getJSON(radioAPI, function (json) {})
         $(document).ready(function getRadioDataUpdate() {
@@ -19,7 +20,8 @@
         $("#jquery_jplayer_1").jPlayer({
           ready: function () {
             $(this).jPlayer("setMedia", {
-              mp3: "http://proxima.musiquefuture.com:8030/listen.mp3"
+              mp3: "http://proxima.radiovendor.com:8030/listen.mp3"
+
             });
           },
           swfPath: "/assets/lib/jplayer/js/jquery.jplayer.swf",
