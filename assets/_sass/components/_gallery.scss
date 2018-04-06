@@ -70,12 +70,15 @@
     }
 
     .project-name {
+        font-family: $main-font;
+        font-weight: 700;
         text-transform: uppercase;
         text-align: center;
         position: relative;
-        font-size: 17px;
+        font-size: 1em;
         padding: 10px;
-        background: rgba(0, 0, 0, 0.6);
+        background:$brand-color-alt;
+        color: #ffffff;
     }
 
     a.project-page {
@@ -83,7 +86,7 @@
         text-decoration: none;
         padding: 7px 14px;
         border: 1px solid #fff;
-        margin: 50px 0 0 0;
+        margin: 25% 0 0 0;
         background-color: transparent;
 
         &:hover {
