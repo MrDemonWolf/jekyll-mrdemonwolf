@@ -32,30 +32,19 @@ $('.js-input').keyup(function () {
   }
 });
 $(document).ready(function () {
-  setTimeout(function () {
-    $("#cookieConsent").fadeIn(200);
-  }, 4000);
-  $("#closeCookieConsent, .cookieConsentOK").click(function () {
-    $("#cookieConsent").fadeOut(200);
-  });
-});
-// Fancy Box loading.
-$(document).ready(function () {
+  // Fancy Box loading.
   $(".fancybox").fancybox({
     openEffect: "none",
     closeEffect: "none"
   });
-});
-// Gallery
-$(document).ready(function () {
 
+  // Gallery
   $(".showcase_filter-button").click(function () {
     var value = $(this).attr('data-filter');
 
     if (value == "all") {
       $('.filter').show('1000');
-    }
-    else {
+    } else {
       $(".filter").not('.' + value).hide('3000');
       $('.filter').filter('.' + value).show('3000');
 
@@ -67,4 +56,14 @@ $(document).ready(function () {
   }
   $(this).addClass("active");
 
+  setTimeout(function () {
+    $("#cookieConsent").fadeIn(200);
+  }, 4000);
+  $("#closeCookieConsent, .cookieConsentOK").click(function () {
+    $("#cookieConsent").fadeOut(200);
+  });
+
+  $('.close-notice').on('click', function (c) {
+    $('#twitchBanner').fadeOut('fast', function (c) {})
+  })
 });

@@ -1,20 +1,8 @@
 <div class="radio">
   <div class="script">
+    <script type="text/javascript" src="https://proxima.radiovendor.com:2199/system/streaminfo.js"></script>
+    <script type="text/javascript" src="https://proxima.radiovendor.com:2199/system/recenttracks.js"></script>
     <script type="text/javascript">
-      var radioAPI = "https://proxima.radiovendor.com:2199/rpc/mrdemonwolf/streaminfo.get";
-
-      $(document).ready(function getRadioData() {
-        $.getJSON(radioAPI, function (json) {})
-        $(document).ready(function getRadioDataUpdate() {
-          $.getJSON(radioAPI, function (json) {
-            const radio_title = json.data[0].title;
-            const currently_playing = json.data[0].song;
-            $(`#radio_title`).text(radio_title);
-            $(`#radio_current_song`).text(currently_playing);
-            myToggle = setTimeout(getRadioDataUpdate, 10000);
-          })
-        });
-      });;
       //<![CDATA[
       $(document).ready(function () {
         $("#jquery_jplayer_1").jPlayer({
@@ -28,6 +16,7 @@
           supplied: "mp3",
           wmode: "window",
           useStateClassSkin: true,
+          globalVolume: true,
           autoBlur: false,
           smoothPlayBar: true,
           keyEnabled: true,
@@ -49,11 +38,6 @@
               <button class="jp-play" role="button" tabindex="0">play</button>
               <button class="jp-stop" role="button" tabindex="0">stop</button>
             </div>
-            <div class="jp-progress">
-              <div class="jp-seek-bar">
-                <div class="jp-play-bar"></div>
-              </div>
-            </div>
             <div class="jp-volume-controls">
               <button class="jp-mute" role="button" tabindex="0">mute</button>
               <button class="jp-volume-max" role="button" tabindex="0">max volume</button>
@@ -72,13 +56,43 @@
           </div>
         </div>
       </div>
+      <div id="cc_tunein">
+        <a href="https://proxima.radiovendor.com:2199/tunein/mrdemonwolf.pls">
+          <img align="absmiddle" src="https://proxima.radiovendor.com:2199/system/images/tunein-pls.png" border="0" alt="Winamp, iTunes"
+            title="Winamp, iTunes" />
+        </a>
+        <a href="https://proxima.radiovendor.com:2199/tunein/mrdemonwolf.asx">
+          <img align="absmiddle" src="https://proxima.radiovendor.com:2199/system/images/tunein-asx.png" border="0" alt="Windows Media Player"
+            title="Windows Media Player" />
+        </a>
+        <a href="https://proxima.radiovendor.com:2199/tunein/mrdemonwolf.ram">
+          <img align="absmiddle" src="https://proxima.radiovendor.com:2199/system/images/tunein-ram.png" border="0" alt="Real Player"
+            title="Real Player" />
+        </a>
+        <a href="https://proxima.radiovendor.com:2199/tunein/mrdemonwolf.qtl">
+          <img align="absmiddle" src="https://proxima.radiovendor.com:2199/system/images/tunein-qtl.png" border="0" alt="QuickTime"
+            title="QuickTime" />
+        </a>
+      </div>
     </div>
     <div class="col-md-5">
       <div class="details">
         <div class="title">Title:</div>
-        <div id="radio_title">Loading...</div>
+        <div id="radio_title">
+          <span class="cc_streaminfo" data-type="title" data-username="mrdemonwolf">Loading...</span>
+        </div>
         <div class="title">Current Song</div>
-        <div id="radio_current_song">Loading...</div>
+        <div id="radio_current_song">
+          <span class="cc_streaminfo" data-type="song" data-username="mrdemonwolf">Loading...</span>
+        </div>
+        <div class="title"> Current Listeners</div>
+        <div class="current_listeners">
+          <span class="cc_streaminfo" data-type="listeners" data-username="mrdemonwolf">Loading...</span>
+        </div>
+        <div class="title">Status</div>
+        <div id="status">
+          <span class="cc_streaminfo" data-type="server" data-username="mrdemonwolf">Loading Status...</span>
+        </div>
       </div>
       {% if site.data.settings.songrequest == true %}
       <div class="songrequest">
@@ -86,5 +100,6 @@
       </div>
       {% endif %}
     </div>
+    <div class="cc_recenttracks_list recent_songs" data-username="mrdemonwolf">Loading ...</div>
   </div>
 </div>

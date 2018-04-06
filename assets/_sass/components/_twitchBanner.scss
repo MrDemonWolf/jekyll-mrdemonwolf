@@ -2,14 +2,20 @@
 // This file contains all styles related to the twitch banner component.
 // -----------------------------------------------------------------------------
 .twitchBanner {
+    padding-top: 8px;
+    padding-bottom: 8px;
     display: block;
     width: 100%;
-    color: #fff;
-    background-color: $brand-color-alt;
+    background-color: #6441a5;
 
-    &:hover {
-        text-decoration: none;
+    a {
         color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+            color: #fff;
+        }
     }
 
     .text {
@@ -19,6 +25,7 @@
 
     .icon {
         display: inline;
+        color: #ffffff;
     }
 
     .pulsing {
@@ -42,9 +49,12 @@
             }
         }
     }
-}
 
-#twitchBanner {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    .close-notice {
+        font-size: 1em;
+        top: 0;
+        right: 0;
+        display: inline;
+        position: absolute;
+    }
 }

@@ -104,20 +104,27 @@
     color: #888;
     cursor: text;
     transition: transform .2s ease-in-out;
+}
 
-    .submit-btn {
-        display: inline-block;
-        background: #666;
-        color: #ffffff;
-        border-bottom: 4px solid #ddd;
-        font-family: $main-font;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 16px;
-        line-height: 24px;
-        padding: 8px 16px;
-        border: none;
-        cursor: pointer;
+.contact-form .btn {
+    display: inline-block;
+    border-bottom: 4px solid #ddd;
+    font-family: $main-font;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 16px;
+    border: none;
+}
+
+@media (max-width: 990px) {
+    .contact-form .form-field {
+        margin: 18px 0;
+    }
+
+    .contact-form .btn {
+        margin: 0 0 30px;
     }
 }
 

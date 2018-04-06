@@ -1,9 +1,12 @@
-<a class="twitchBanner hidden" id="twitchBanner" target="_blank">
+<div class="twitchBanner hidden" id="twitchBanner">
   <div class="container">
-    <div class="text text-center">I am Live. Click to come watch me on Twitch
-      <div class="icon">
-        <i class="fa fa-twitch twitch-color pulsing icon" aria-hidden="true"></i>
+    <a class="link" href="https://www.twitch.tv/{{ site.data.settings.twitchbanner.username }}" id="twitchBanner" target="_blank">
+      <div class="text text-center">Currently Live! Click to view the live stream.
+        <div class="icon">
+          <i class="fab fa-twitch pulsing icon" aria-hidden="true"></i>
+        </div>
       </div>
-    </div>
+    </a>
+    <i class="fas fa-times close-notice" aria-hidden="true"></i>
   </div>
-</a>
+</div>

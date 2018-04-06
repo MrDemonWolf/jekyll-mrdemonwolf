@@ -51,7 +51,7 @@
   <!-- Normalize -->
   <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/lib/normalize/css/normalize.css">
   <!-- Font Awsome-->
-  <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/lib/font-awesome/css/fontawesome-all.min.css">
   <!--Bootstrap -->
   <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/lib/bootstrap/css/bootstrap.min.css">
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -64,8 +64,6 @@
   <!-- Jplayer -->
   <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/lib/jplayer/skin/blue.monday/css/jplayer.blue.monday.min.css">
   <script type="text/javascript" src="{{ site.subpath }}/assets/lib/jplayer/js/jquery.jplayer.min.js"></script>
-  <!-- Radio songrequest -->
-  <script type="text/javascript" src="https://proxima.musiquefuture.com:2199/system/request.js"></script>
   <!-- End Frameworks -->
   <!-- Custom -->
   <link rel="stylesheet" type="text/css" href="{{ site.subpath }}/assets/css/main.css">
@@ -155,9 +153,7 @@
     // Infos
     username = '{{ site.data.settings.twitchbanner.username }}';
     api_key = '{{ site.data.settings.twitchbanner.apikey }}';
-    twitchBanner = $('.twitchBanner');
-    // Appens link to banner
-    twitchBanner.attr("href", "https://www.twitch.tv/" + username);
+    twitchBanner = $('#twitchBanner');
 
     $.getJSON('https://api.twitch.tv/kraken/streams/' + username + '?client_id=' + api_key + '&callback=?', function (
       data) {
@@ -169,34 +165,34 @@
 
 </script>
 <!-- Footer -->
-<div class="footer">
-  <footer>
-    <!-- Footer copyright with auto update year. -->
-    <div class="copyright">
-      <div class="container">
-        <div class="col-md-6 col-sm-12">
-          <div class="footer-content"> Copyright ©
-            <script>
-              document.write(new Date().getFullYear());
+<footer>
+  <!-- Footer copyright with auto update year. -->
+  <div class="copyright">
+    <div class="container">
+      <div class="col-md-4 col-sm-12">
+        <div class="footer-content"> Copyright ©
+          <script>
+            document.write(new Date().getFullYear());
 
-            </script>
-            <a href="{{ site.subpath }}">{{ site.title }}</a> |
-            <a href="{{ site.subpath }}/legal/privacy-statement/">Privacy Statement</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-12 footer-social ">
-          <ul class="ul-np">{% for item in site.data.settings.social %}
-            <li>
-              <a href="{{ item.url }}">
-                <i class="fa {{ item.icon }} social-icon {{ item.color }}" aria-hidden="true"></i>
-              </a>
-            </li>{% endfor %}
-          </ul>
+          </script>
+          <a href="{{ site.subpath }}">{{ site.title }}</a>
         </div>
       </div>
+      <div class="col-md-2 col-sm-12">
+        <a href="{{ site.subpath }}/legal/privacy-statement/">Privacy Statement</a>
+      </div>
+      <div class="col-md-6 col-sm-12 footer-social ">
+        <ul class="ul-np">{% for item in site.data.settings.social %}
+          <li>
+            <a href="{{ item.url }}">
+              <i class="fab {{ item.icon }} social-icon {{ item.color }}" aria-hidden="true"></i>
+            </a>
+          </li>{% endfor %}
+        </ul>
+      </div>
     </div>
-  </footer>
-</div>
+  </div>
+</footer>
 <!-- Loadidng JS -->
 <!-- Bootstrap Javascript -->
 <script type="text/javascript" src="{{ site.subpath }}/assets/lib/bootstrap/js/bootstrap.min.js"></script>

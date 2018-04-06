@@ -8,10 +8,11 @@
     padding-top: 32px;
     padding-bottom: 32px;
     margin: 0px;
+    font-weight: 700;
 
     .text {
         color: #ffffff;
-        font-family: $main-font;
+        font-family: $second-font;
         font-size: 3.15em;
         display: inline-block;
     }
@@ -24,6 +25,7 @@
         .header {
             font-family: $main-font;
             color: #ffffff;
+            font-weight: 700;
             font-size: .75em;
         }
     }

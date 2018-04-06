@@ -1,63 +1,67 @@
 .radio {
-    padding-top: 25px;
-
-    .player {
-        .download {
-            display: inline;
-        }
+  padding-top: 25px;
+  .player {
+    .download {
+      display: inline;
     }
-
-    .details {
-        .title {
-            font-family: $main-font;
-            font-size: 1.15em;
-            font-weight: 700;
-        }
-
-        .info {
-            display: inline;
-
-            .songinfo {
-                display: inline;
-
-                #song-name,
-                #song-artist {
-                    display: inline;
-                }
-            }
-        }
-
-        .current-listeners {
-            #listeners {
-                display: inline;
-            }
-        }
+  }
+  .details {
+    .title {
+      font-family: $main-font;
+      font-size: 1.15em;
+      font-weight: 700;
     }
+    .info {
+      display: inline;
+      .songinfo {
+        display: inline;
+        #song-name,
+        #song-artist {
+          display: inline;
+        }
+      }
+    }
+    .current-listeners {
+      #listeners {
+        display: inline;
+      }
+    }
+  }
 }
 
 .radio_songreqeust {
-    label {
-        padding-left: 0px;
-        font-family: $main-font;
-        font-weight: 700;
-        font-size: 1.15em;
-    }
+  label {
+    padding-left: 0px;
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 1.15em;
+  }
 }
 
 .radio_thankyou {
-    .header {
-        font-family: $main-font;
-        font-weight: 700;
-        font-size: 1.5em;
-    }
+  .header {
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+  .sub-header {
+    font-family: $second-font;
+    font-size: 1em;
+  }
+  .button {
+    padding-top: 28px;
+    width: 25%;
+  }
+}
 
-    .sub-header {
-        font-family: $second-font;
-        font-size: 1em;
+@media (max-width: 320px) {
+  .jp-audio {
+    width: 100%;
+    .jp-controls {
+      width: 75%;
     }
-
-    .button {
-        padding-top: 28px;
-        width: 25%;
-    }
+  }
+  .jp-volume-controls {
+    left: 200px;
+  }
 }
