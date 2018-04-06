@@ -4,13 +4,14 @@
     <h1 class="landing_header">{{ site.data.settings.example-header }}</h1>
     <div class='list-group gallery'>{% for item in site.data.settings.examples %}
       <div class='col-xl-4 col-md-4 col-sm-12 col-xs-12'>
-        <a class="thumbnail" href="{{ site.subpath }}/work/{{ item.url }}">
+        <div class="image-hovereffect">
           <img class="img-responsive" alt="{{ item.title }} Project" src="{{ site.subpath }}/assets/images/{{ item.type }}/thumbnails/{{ item.picture }}"
           />
-          <div class='text-right'>
+          <div class='overlay'>
             <div class='text-muted project-name'>{{ item.title }}</div>
+            <a href="{{ site.subpath }}/work/{{ item.url }}" class="project-page">View</a>
           </div>
-        </a>
+        </div>
       </div>{% endfor %}
     </div>
   </div>
