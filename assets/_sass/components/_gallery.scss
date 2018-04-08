@@ -2,6 +2,8 @@
 // This file contains all styles related to the showcase gallery component.
 // -----------------------------------------------------------------------------
 .showcase_gallery {
+  padding-top: $content_panding;
+  padding-bottom: $content_panding;
     .gallery {
         display: inline-block;
     }
