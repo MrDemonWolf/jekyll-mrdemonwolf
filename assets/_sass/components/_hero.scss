@@ -2,90 +2,102 @@
 // This file contains all styles related to the hero component.
 // -----------------------------------------------------------------------------
 .hero {
-  text-align: center;
-  color: white;
-  background: url(../images/hero_bg.jpg) no-repeat bottom center;
-  background-size: cover;
-  height: 100%;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  .body {
-    display: table-cell;
-  }
-  .text {
-    color: #ffffff;
-    font-family: $main-font;
-    font-size: 3.15em;
-    display: inline-block;
-  }
-  .inner-hero {
-    background-color: transparent !important;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  .animate-text {
-    font-family: $main-font;
-    font-size: 2.15em;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    & span {
-      position: absolute;
-      opacity: 0;
-      overflow: hidden;
-      color: $hero-animate-text;
-      animation: animateWord 18s linear infinite 0s;
+    color: white;
+    background: url(../images/hero_bg.jpg) no-repeat bottom center;
+    background-size: cover;
+    height: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    .text {
+        color: #ffffff;
+        font-family: $main-font;
+        font-size: 3.15em;
+        display: inline-block;
     }
-    &>span:nth-child(2) {
-      animation-delay: 3s;
-      color: $hero-animate-text;
+
+    .inner-hero {
+        background-color: transparent !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
-    &>span:nth-child(3) {
-      animation-delay: 6s;
-      color: $hero-animate-text;
+
+    .animate-text {
+        font-family: $main-font;
+        font-size: 2.15em;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+
+        & span {
+            position: absolute;
+            opacity: 0;
+            overflow: hidden;
+            color: $hero-animate-text;
+            animation: animateWord 18s linear infinite 0s;
+        }
+
+        & > span:nth-child(2) {
+            animation-delay: 3s;
+            color: $hero-animate-text;
+        }
+
+        & > span:nth-child(3) {
+            animation-delay: 6s;
+            color: $hero-animate-text;
+        }
+
+        & > span:nth-child(4) {
+            animation-delay: 9s;
+            color: $hero-animate-text;
+        }
+
+        & > span:nth-child(5) {
+            animation-delay: 12s;
+            color: $hero-animate-text;
+        }
+
+        & > span:nth-child(6) {
+            animation-delay: 15s;
+            color: $hero-animate-text;
+        }
     }
-    &>span:nth-child(4) {
-      animation-delay: 9s;
-      color: $hero-animate-text;
+
+    .cta-button {
+        padding-bottom: 15px;
     }
-    &>span:nth-child(5) {
-      animation-delay: 12s;
-      color: $hero-animate-text;
-    }
-    &>span:nth-child(6) {
-      animation-delay: 15s;
-      color: $hero-animate-text;
-    }
-  }
-  .cta-button {
-    padding-bottom: 15px;
-  }
 }
 
 @keyframes animateWord {
-  0% {
-    opacity: 0;
-  }
-  2% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  5% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-  17% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-  20% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
+
+    2% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    5% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    17% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    20% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }

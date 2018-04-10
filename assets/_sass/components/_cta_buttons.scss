@@ -9,9 +9,9 @@
     background-color: $button_background;
     cursor: pointer;
 
-    &:active, :focus, :hover {
+    &:active, &:focus, &:hover {
         background: darken($button_background_effect, 15%);
-        color: button_background_effect_font;
+        color: $button_background_effect_font;
         transition: all 500ms;
     }
 }
