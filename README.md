@@ -1,4 +1,4 @@
-﻿# MrDemonWolf website
+﻿# jekyll-mrdemonwolf
 
 ## Copyright
 
